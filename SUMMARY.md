@@ -10,7 +10,11 @@
 ## Key concepts
 
 * [API instantiation](/key-concepts/api-instantiation.md)
+* [DataTypes](/key-concepts/data-types.md)
+* [DataFormat](/key-concepts/data-format.md)
+* [Get a project](/key-concepts/get-project.md)
 
 ## Model
 
-* [ContensisClientConfiguration](/model/managementclientconfiguration.md)
+* [ManagementClientConfiguration](/model/managementclientconfiguration.md)
+* [Project](/model/project.md)
