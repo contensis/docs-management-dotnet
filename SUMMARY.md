@@ -12,9 +12,12 @@
 * [API instantiation](/key-concepts/api-instantiation.md)
 * [DataTypes](/key-concepts/data-types.md)
 * [DataFormat](/key-concepts/data-format.md)
-* [Get a project](/key-concepts/get-project.md)
+* [Localization](/key-concepts/localization.md)
+* [Get a project](/key-concepts/project-get.md)
+* [Get an entry](/key-concepts/entry-get.md)
 
 ## Model
 
 * [ManagementClientConfiguration](/model/managementclientconfiguration.md)
 * [Project](/model/project.md)
+* [Entry](/model/entry.md)
