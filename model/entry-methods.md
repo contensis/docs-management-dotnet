@@ -1,5 +1,15 @@
 # Entry methods
 
+* [Get(string fieldName)](#get)
+* [Get&lt;T&gt;(string fieldName)](#get-t)
+* [HasValue(string fieldName)](#hasvalue)
+* [Save()](#save)
+* [SaveAsync()](#saveasync)
+* [Publish()](#publish)
+* [PublishAsync()](#publishasync)
+* [Delete()](#delete)
+* [DeleteAsync()](#deleteasync)
+
 ## Get
 
 Gets a field from an entry by *fieldName* and returns a dynamic object instance. 
@@ -106,7 +116,7 @@ if (entry.HasValue("title"))
 
 ## Save
 
-Saves.
+Saves an entry instance.
 
 ### Syntax
 
@@ -147,3 +157,227 @@ catch(Exception ex)
     // Handle anything else, e.g. network error
 }
 ```
+
+---
+
+## SaveAsync
+
+Saves an entry instance asynchronously.
+
+### Syntax
+
+```cs
+public async Task SaveAsync()
+{
+}
+```
+
+### Return value
+> Type: Task
+
+### Remarks
+
+On a successful save, the entry instance is updated with the new version details controlled from the service. An exception will be thrown if there is any issue with the save, which could be either a data validation issue, an unexpected issue in the service or a local exception.
+
+### Example
+
+```cs
+// Make a change to an entry
+entry.Set("title", "Forrest Gump");
+
+try
+{
+    // Save the changes asynchronously
+    entry.SaveAsnyc();
+}
+catch(RestRequestException restEx)
+{
+    // Handle service error
+}
+catch(ValidationException valEx)
+{
+    // Handle data validation errors
+}
+catch(Exception ex)
+{
+    // Handle anything else, e.g. network error
+}
+```
+
+---
+
+## Publish
+
+Publishes an entry instance.
+
+### Syntax
+
+```cs
+public void Publish()
+{
+}
+```
+
+### Return value
+> Type: void
+
+### Remarks
+
+On a successful publish, the entry instance is updated with the new version details controlled from the service. An WorkflowException will be thrown if there is any issue with the publish workflow state change. Other exception types could be thrown if there are any data validation issues, unexpected issue in the service or a local exception.
+
+### Example
+
+```cs
+{
+    // Publish the version of the entry
+    entry.Publish();
+}
+catch(WorkflowException wfEx)
+{
+    // Handle workflow state change error
+}
+catch(RestRequestException restEx)
+{
+    // Handle service error
+}
+catch(ValidationException valEx)
+{
+    // Handle data validation errors
+}
+catch(Exception ex)
+{
+    // Handle anything else, e.g. network error
+}
+```
+
+---
+
+## PublishAsync
+
+Publishes an entry instance asynchronously.
+
+### Syntax
+
+```cs
+public async Task PublishAsync()
+{
+}
+```
+
+### Return value
+> Type: Task
+
+### Remarks
+
+On a successful publish, the entry instance is updated with the new version details controlled from the service. An WorkflowException will be thrown if there is any issue with the publish workflow state change. Other exception types could be thrown if there are any data validation issues, unexpected issue in the service or a local exception.
+
+### Example
+
+```cs
+{
+    // Publish the version of the entry
+    await entry.PublishAsync();
+}
+catch(WorkflowException wfEx)
+{
+    // Handle workflow state change error
+}
+catch(RestRequestException restEx)
+{
+    // Handle service error
+}
+catch(ValidationException valEx)
+{
+    // Handle data validation errors
+}
+catch(Exception ex)
+{
+    // Handle anything else, e.g. network error
+}
+```
+
+---
+
+## Delete
+
+Delete an entry instance.
+
+### Syntax
+
+```cs
+public void Delete()
+{
+}
+```
+
+### Return value
+> Type: void
+
+### Remarks
+
+On a successful delete, the entry data is set to null.
+
+### Example
+
+```cs
+{
+    // Delete the entry variation
+    entry.Delete();
+}
+catch(RestRequestException restEx)
+{
+    // Handle service error
+}
+catch(ValidationException valEx)
+{
+    // Handle data validation errors
+}
+catch(Exception ex)
+{
+    // Handle anything else, e.g. network error
+}
+```
+
+---
+
+## DeleteAsync
+
+Delete an entry instance asynchronously.
+
+### Syntax
+
+```cs
+public async Task DeleteAsync()
+{
+}
+```
+
+### Return value
+> Type: Task
+
+### Remarks
+
+On a successful delete, the entry data is set to null.
+
+### Example
+
+```cs
+{
+    // Delete the entry variation
+    await entry.DeleteAsync();
+}
+catch(RestRequestException restEx)
+{
+    // Handle service error
+}
+catch(ValidationException valEx)
+{
+    // Handle data validation errors
+}
+catch(Exception ex)
+{
+    // Handle anything else, e.g. network error
+}
+```
+
+---

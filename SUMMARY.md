@@ -21,3 +21,4 @@
 * [ManagementClientConfiguration](/model/managementclientconfiguration.md)
 * [Project](/model/project.md)
 * [Entry](/model/entry.md)
+    * [Entry methods](/model/entry-methods.md)
