@@ -16,6 +16,7 @@
 * [Get a project](/key-concepts/project-get.md)
 * [Create an entry](/key-concepts/entry-new.md)
 * [Get an entry](/key-concepts/entry-get.md)
+* [Listing entries](/key-concepts/entry-list.md)
 
 ## Model
 
