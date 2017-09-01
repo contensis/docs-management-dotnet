@@ -2,6 +2,7 @@
 
 * [Get(string fieldName)](#get)
 * [Get&lt;T&gt;(string fieldName)](#get-t)
+* [Set(string fieldName, object value)](#set)
 * [HasValue(string fieldName)](#hasvalue)
 * [Save()](#save)
 * [SaveAsync()](#saveasync)
@@ -74,6 +75,46 @@ string title = entry.Get<string>("title")
 ```
 
 ---
+
+
+## Set
+
+
+
+### Syntax
+
+```cs
+public void Set(string fieldName, object value)
+{
+}
+```
+
+### Parameters
+
+*fieldName*
+> Type: string  
+> The name of the requested field
+
+*value*
+> Type: object  
+> The value for the field
+
+### Remarks
+
+The type and value for the field will be validated when the entry is saved.
+
+### Example
+
+```cs
+// Set the title field value
+entry.Set("title", "Star Trek - Into Darkness");
+```
+
+---
+
+
+
+
 
 ## HasValue
 
