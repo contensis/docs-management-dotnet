@@ -12,11 +12,11 @@
         document.body.appendChild(element);
     };
 
-    var init = function() {
+    //var init = function() {
         renderVersionSelectorScript();
-    };
+    //};
 
-    gitbook.events.bind("page.change", init);
+    //gitbook.events.bind("page.change", init);
 })();
 
 ES6Promise.polyfill();
