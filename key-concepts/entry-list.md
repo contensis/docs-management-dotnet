@@ -43,12 +43,19 @@ The parameters can optionally specified in any combination.
 
 ```cs
 using Zengenti.Contensis.Management;
+using Zengenti.Data
 
-// Create a client
+// Create an API client
 var client = ManagementClient.Create();
 
+// Get movies with default paging options in the default language
+var movies = client.Entries.List("movie");
+
+// Get movies with default paging options in French
+var movies = client.Entries.List("movie", "fr-FR");
+
 // Get movies with paging options
-var movies = client.Entries.List("movie", PageOptions: new PageOptions(0,10) });
+var movies = client.Entries.List("movie", pageOptions: new PageOptions(0,10) });
 
 // Get actors with default paging options and a specified order
 var movies = client.Entries.List("actor", order: new [] { "name", "-dateOfBirth" } });
@@ -93,12 +100,19 @@ The parameters can optionally specified in any combination.
 
 ```cs
 using Zengenti.Contensis.Management;
+using Zengenti.Data
 
-// Create a client
+// Create an API client
 var client = ManagementClient.Create();
 
+// Get movies with default paging options in the default language
+var movies = await client.Entries.ListAsync("movie");
+
+// Get movies with default paging options in French
+var movies = await client.Entries.ListAsync("movie", "fr-FR");
+
 // Get movies with paging options
-var movies = await client.Entries.ListAsync("movie", PageOptions: new PageOptions(0,10) });
+var movies = await client.Entries.ListAsync("movie", pageOptions: new PageOptions(0,10) });
 
 // Get actors with default paging options and a specified order
 var movies = await client.Entries.ListAsync("actor", order: new [] { "name", "-dateOfBirth" } });
