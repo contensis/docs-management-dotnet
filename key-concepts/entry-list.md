@@ -48,17 +48,20 @@ using Zengenti.Data
 // Create an API client
 var client = ManagementClient.Create();
 
+// Get the project
+var project = client.Projects.Get("website");
+
 // Get movies with default paging options in the default language
-var movies = client.Entries.List("movie");
+var movies = project.Entries.List("movie");
 
 // Get movies with default paging options in French
-var movies = client.Entries.List("movie", "fr-FR");
+var movies = project.Entries.List("movie", "fr-FR");
 
 // Get movies with paging options
-var movies = client.Entries.List("movie", pageOptions: new PageOptions(0,10) });
+var movies = project.Entries.List("movie", pageOptions: new PageOptions(0,10) });
 
 // Get actors with default paging options and a specified order
-var movies = client.Entries.List("actor", order: new [] { "name", "-dateOfBirth" } });
+var movies = project.Entries.List("actor", order: new [] { "name", "-dateOfBirth" } });
 ```
 ---
 
@@ -105,16 +108,19 @@ using Zengenti.Data
 // Create an API client
 var client = ManagementClient.Create();
 
+// Get the project
+var project = client.Projects.Get("website");
+
 // Get movies with default paging options in the default language
-var movies = await client.Entries.ListAsync("movie");
+var movies = await project.Entries.ListAsync("movie");
 
 // Get movies with default paging options in French
-var movies = await client.Entries.ListAsync("movie", "fr-FR");
+var movies = await project.Entries.ListAsync("movie", "fr-FR");
 
 // Get movies with paging options
-var movies = await client.Entries.ListAsync("movie", pageOptions: new PageOptions(0,10) });
+var movies = await project.Entries.ListAsync("movie", pageOptions: new PageOptions(0,10) });
 
 // Get actors with default paging options and a specified order
-var movies = await client.Entries.ListAsync("actor", order: new [] { "name", "-dateOfBirth" } });
+var movies = await project.Entries.ListAsync("actor", order: new [] { "name", "-dateOfBirth" } });
 ```
 ---
