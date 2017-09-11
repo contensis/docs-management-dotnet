@@ -36,7 +36,7 @@ The client ID and shared secret are obtained from [API key management](https://z
 
 ### API initialisation example
 
-This example demonstrates how the default configuration can be set using the [ManagementClientConfiguration](/model/contensisclientconfiguration.md) type.
+This example demonstrates how the default configuration can be set using the [ManagementClientConfiguration](/model/managementclientconfiguration.md) type.
 
 ```cs
 using Zengenti.Contensis.Management;
