@@ -37,8 +37,11 @@ using Zengenti.Contensis.Management;
 // Create a client
 var client = ManagementClient.Create();
 
+// Retrieve the relevant project
+var movieDbProject = client.Projects.Get("moviedb");
+
 // Create a new Movie entry
-var movie = client.Entries.New("movie");
+var movie = movieDbProject.Entries.New("movie");
 ```
 ---
 
@@ -80,8 +83,11 @@ using Zengenti.Contensis.Management;
 // Create a client
 var client = ManagementClient.Create();
 
+// Retrieve the relevant project
+var movieDbProject = client.Projects.Get("moviedb");
+
 // Create a new Movie entry for french
-var movie = client.Entries.New("movie", "fr-FR");
+var movie = movieDbProject.Entries.New("movie", "fr-FR");
 ```
 ---
 
@@ -128,8 +134,11 @@ using Zengenti.Contensis.Management;
 // Create a client
 var client = ManagementClient.Create();
 
+// Retrieve the relevant project
+var movieDbProject = client.Projects.Get("moviedb");
+
 // Create a new Movie entry for french
-var movie = client.Entries.New("movie", "fr-FR", "ff1c8adf-2bd7-4ebe-88b2-37ce280d89f8");
+var movie = movieDbProject.Entries.New("movie", "fr-FR", "ff1c8adf-2bd7-4ebe-88b2-37ce280d89f8");
 ```
 ---
 
@@ -179,7 +188,10 @@ var client = ManagementClient.Create();
 // Get a Guid
 var entryId = Guid.Parse("ff1c8adf-2bd7-4ebe-88b2-37ce280d89f8");
 
+// Retrieve the relevant project
+var movieDbProject = client.Projects.Get("moviedb");
+
 // Create a new Movie entry for french
-var movie = client.Entries.New("movie", "fr-FR", entryId);
+var movie = movieDbProject.Entries.New("movie", "fr-FR", entryId);
 ```
 ---
