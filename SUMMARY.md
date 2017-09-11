@@ -20,7 +20,14 @@
 
 ## Model
 
-* [ManagementClientConfiguration](/model/managementclientconfiguration.md)
 * [Project](/model/project.md)
 * [Entry](/model/entry.md)
     * [Entry methods](/model/entry-methods.md)
+* [Asset](/model/asset.md)
+* [ManagementClientConfiguration](/model/managementclientconfiguration.md)
+---
+* [ComposedField](/model/composed.md)
+* [DateRange](/model/daterange.md)
+* [Image](/model/image.md)
+* [Location](/model/location.md)
+* [Quote](/model/quote.md)
