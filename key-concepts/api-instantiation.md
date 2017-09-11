@@ -31,7 +31,7 @@ The default configuration becomes effective for all ContensisClient instantiatio
 
 This is a useful feature for websites that are created using a .NET based framework such as NancyFx or Asp.net MVC.
 
-The client ID and shared secret are obtained from [API key management](https://zenhub.zengenti.com/Contensis/9/kb/content-types-and-entries/api-keys/api-key-overview.aspx). They can then be used to call the security service to obtain a claims-based bearer token, and to validate that the user can access resources from the service.
+The client ID and shared secret are obtained from [API key management](https://zenhub.zengenti.com/Contensis/10.0/kb/content-types-and-entries/api-keys/api-key-overview.aspx). They can then be used to call the security service to obtain a claims-based bearer token, and to validate that the user can access resources from the service.
 
 
 ### API initialisation example

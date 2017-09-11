@@ -1,6 +1,6 @@
 # Entries
 
-A full [overview of entries can be found here](https://zenhub.zengenti.com/Contensis/9/kb/content-types-and-entries/entries/Entries-overview.aspx).
+A full [overview of entries can be found here](https://zenhub.zengenti.com/Contensis/10.0/kb/content-types-and-entries/entries/Entries-overview.aspx).
 
 An entry definition in the Management API contains a mixture of standard properties and properties that have been defined by the content type that an entry is based on.
 

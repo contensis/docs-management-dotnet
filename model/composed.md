@@ -1,6 +1,6 @@
 # Composed fields
 
-The *ComposedField* type contains the data that the [Composer editor](https://zenhub.zengenti.com/Contensis/9/kb/content-types-and-entries/field-editors/Composer.aspx) defines. It is a read-only list of *ComposedFieldItem* instances, which expose a *Type* property and *Value* methods. The *Value* methods return the data for the field. The *Type* property is a name given to an *allowed field type validation* defined in the content type that the entry is based on.
+The *ComposedField* type contains the data that the [Composer editor](https://zenhub.zengenti.com/Contensis/10.0/kb/content-types-and-entries/field-editors/Composer.aspx) defines. It is a read-only list of *ComposedFieldItem* instances, which expose a *Type* property and *Value* methods. The *Value* methods return the data for the field. The *Type* property is a name given to an *allowed field type validation* defined in the content type that the entry is based on.
 
 An *allowed field type* is essentially any standard field (such as Image, Heading, Location, etc.) that restricts what types of field can be added to a *ComposedField*.
 
