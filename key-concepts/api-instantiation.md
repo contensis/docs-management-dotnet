@@ -18,7 +18,7 @@ var client = ManagementClient.Create();
 Creating a client from outside a Contensis website
 
 ```cs
-var client = ManagementClient.Create("http://cms.contensis.com", "{client_id}", "{shared_secret}");
+var client = ManagementClient.Create("https://cms.cloud.contensis.com", "{client_id}", "{shared_secret}");
 ```
 
 ## Default configuration
@@ -36,13 +36,13 @@ The client ID and shared secret are obtained from [API key management](https://z
 
 ### API initialisation example
 
-This example demonstrates how the default configuration can be set using the [ContensisClientConfiguration](/model/contensisclientconfiguration.md) type.
+This example demonstrates how the default configuration can be set using the [ManagementClientConfiguration](/model/contensisclientconfiguration.md) type.
 
 ```cs
 using Zengenti.Contensis.Management;
 
 var defaultConfiguration = new ManagementClientConfiguration(
-    rootUrl: "http://cms.contensis.com",
+    rootUrl: "https://cms.cloud.contensis.com",
     clientId: "651465e0-2fb8-4b0f-aa2f-1ab34cfe0513",
     sharedSecret: "2327d623-d44e-41ef-a837-717a626f4b75-098348eb-b0a6-4023-a64a-805536024dfb-1a558c9c-49dc-4709-9e8b-c203f60fda80"
 );
