@@ -1,5 +1,5 @@
 (function(){
-    var urlRoot = "/contensis/api/delivery/dotnet/"
+    var urlRoot = "/contensis/api/management/dotnet/"
     var version = 'beta'
 
     var renderVersionSelectorScript = function() {
