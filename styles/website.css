@@ -116,3 +116,7 @@ background-color: #e09d43;
   font-size: 14px;
   padding: 10px;
 }
+
+th:empty {
+  display: none;
+}
