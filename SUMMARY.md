@@ -17,7 +17,7 @@
 * [Create an entry](/key-concepts/entry-new.md)
 * [Get an entry](/key-concepts/entry-get.md)
 * [Listing entries](/key-concepts/entry-list.md)
-* [Assets & images] (/key-concepts/assets-images.md)
+* [Assets & images](/key-concepts/assets-images.md)
 
 ## Model
 
