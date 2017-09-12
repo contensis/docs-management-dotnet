@@ -1,6 +1,6 @@
 (function(){
-    var urlRoot = "/contensis/api/delivery/dotnet/"
-    var version = 'beta'
+    var urlRoot = "/contensis/api/management/dotnet/"
+    var version = '10.0'
 
     var renderVersionSelectorScript = function() {
         var element = document.createElement("script");
@@ -12,11 +12,8 @@
         document.body.appendChild(element);
     };
 
-    //var init = function() {
-        renderVersionSelectorScript();
-    //};
+    renderVersionSelectorScript();
 
-    //gitbook.events.bind("page.change", init);
 })();
 
 ES6Promise.polyfill();
