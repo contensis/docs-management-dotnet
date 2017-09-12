@@ -17,17 +17,17 @@
 * [Create an entry](/key-concepts/entry-new.md)
 * [Get an entry](/key-concepts/entry-get.md)
 * [Listing entries](/key-concepts/entry-list.md)
+* [Assets & images] (/key-concepts/assets-images.md)
 
 ## Model
 
 * [Project](/model/project.md)
 * [Entry](/model/entry.md)
     * [Entry methods](/model/entry-methods.md)
-* [Asset](/model/asset.md)
+<!--* [Asset](/model/asset.md)-->
 * [ManagementClientConfiguration](/model/managementclientconfiguration.md)
----
-* [ComposedField](/model/composed.md)
-* [DateRange](/model/daterange.md)
-* [Image](/model/image.md)
-* [Location](/model/location.md)
-* [Quote](/model/quote.md)
+<!--* [ComposedField](/model/composed.md)-->
+<!--* [DateRange](/model/daterange.md)-->
+<!--* [Image](/model/image.md)-->
+<!--* [Location](/model/location.md)-->
+<!--* [Quote](/model/quote.md)-->
