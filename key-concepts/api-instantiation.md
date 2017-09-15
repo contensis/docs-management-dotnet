@@ -25,7 +25,7 @@ var client = ManagementClient.Create("https://cms.cloud.contensis.com", "{client
 
 The default configuration needs to be set only once. For a Contensis published website this is automatically invoked on application start-up to reflect the context of the publishing server, ensuring that the correct service root url and security parameters are set.
 
-The default configuration becomes effective for all ContensisClient instantiations, negating the need to provide configuration values each and every time the API is used.
+The default configuration becomes effective for all ManagementClient instantiations, negating the need to provide configuration values each and every time the API is used.
 
 ## Non-Contensis published websites
 

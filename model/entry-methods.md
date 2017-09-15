@@ -10,6 +10,7 @@
 * [PublishAsync()](#publishasync)
 * [Delete()](#delete)
 * [DeleteAsync()](#deleteasync)
+* [NewVariation(string language)](#newvariation)
 
 ## Get
 
@@ -419,6 +420,47 @@ catch(Exception ex)
 {
     // Handle anything else, e.g. network error
 }
+```
+
+---
+
+## NewVariation
+
+Creates a new variation of the entry for the specified language.
+
+### Syntax
+
+```cs
+public Entry NewVariation(string language)
+{
+}
+```
+
+### Parameters
+
+*language*
+> Type: string  
+> The variation language to create
+
+### Return value
+> Type: [Entry](/model/entry.md)  
+> The newly created (unsaved) entry language variation
+
+### Remarks
+
+On a successful delete, the entry data is set to null.
+
+### Example
+
+```cs
+// Create a new french variation
+var frenchVariation = entry.NewVariation("fr-FR");
+
+// Set some data for the variation
+frenchVariation.Set("title", "Belle de Jour");
+
+// Save the new variation
+frenchVariation.Save();
 ```
 
 ---

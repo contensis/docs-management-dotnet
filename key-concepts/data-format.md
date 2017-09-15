@@ -11,7 +11,7 @@ The following list contains the data formats that are understood by Contensis:
 | Data format | Data type | Description |
 | :---------- | :-------- | :---------- |
 | [entry](/model/entry.md) | object | An entry format for storing content |
-| [asset](/model/asset.md) | object | An asset format that represents a file resource |
+| asset | object | An asset format that represents a file resource |
 | [location](/model/location.md) | object | Represents a point on the surface of the Earth |
 | [quote](/model/quote.md) | object | A quote with text and a source |
 | [dateRange](/model/date-range.md) | object | Represents a document heading |
