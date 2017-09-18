@@ -104,11 +104,23 @@ public void Set(string fieldName, object value)
 
 The type and value for the field will be validated when the entry is saved.
 
-### Example
+### Examples
 
 ```cs
-// Set the title field value
+// Set a title string field value
 entry.Set("title", "Star Trek - Into Darkness");
+
+// Set a location object field value
+entry.Set("filmingLocation", new Location(34.0943145, -118.3316929));
+
+// Set an anonymous component field value
+entry.Set("director", 
+    new 
+    {
+        Role = "Director",
+        Persion = new Link("80c8e272-076e-41e0-84f4-753fc092a120")
+    }
+);
 ```
 
 ---

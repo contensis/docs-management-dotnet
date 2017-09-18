@@ -1,6 +1,6 @@
 # Components
 
-Components are structures that are defined in the Component editor as custom types. They can be added as field types to Content Types as entry-level fields or as [ComposedField](/model/composedfield.md) items. Components themselves can contain any field types except other components and [ComposedField](/model/composedfield.md) types.
+Components are structures that are defined in the Component editor as custom types. They can be added as field types to Content Types as entry-level fields or as [ComposedField](/model/composedfield.md) items. Components themselves can contain any field types except other components or [ComposedField](/model/composedfield.md) types.
 
 ## Getting component data
 

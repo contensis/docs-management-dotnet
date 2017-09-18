@@ -1,1 +1,1 @@
-# Assets & Images
+# Linking content
