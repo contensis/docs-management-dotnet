@@ -9,7 +9,7 @@ Entries can be linked to other entries or assets through a [Link](/model/link.md
 var trailerLink = movieEntry.Get<Link>("trailer");
 
 // Get a list of link values
-var reviews = movieEntry.Get<List<Link>>("reviews")
+var reviews = movieEntry.Get<List<Link>>("reviews");
 ```
 
 ## Getting an image link

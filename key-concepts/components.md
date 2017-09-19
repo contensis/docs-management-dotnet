@@ -25,7 +25,7 @@ Accessing the Component from an Entry is done in the same way any other field da
 // Access the director field data using the generic type
 MovieRole directorRole = movieEntry.Get<MovieRole>("director");
 
-// The Person entry is fully resolved
+// The Person entry link can be accessed
 Link director = directorRole.Person;
 ```
 ```cs

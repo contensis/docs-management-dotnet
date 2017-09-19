@@ -38,7 +38,7 @@ Returns *null* if the field is not found or if the field value is null.
 
 ```cs
 // Get the title field as dynamic
-dynamic title = entry.Get("title")
+dynamic title = entry.Get("title");
 ```
 
 ---
@@ -72,7 +72,7 @@ If the API cannot successfully cast or convert the field value then it will retu
 
 ```cs
 // Get the title field as defined type
-string title = entry.Get<string>("title")
+string title = entry.Get<string>("title");
 ```
 
 ---
@@ -118,7 +118,7 @@ entry.Set("director",
     new 
     {
         Role = "Director",
-        Persion = new Link("80c8e272-076e-41e0-84f4-753fc092a120")
+        Person = new Link("80c8e272-076e-41e0-84f4-753fc092a120")
     }
 );
 ```
@@ -154,7 +154,7 @@ public bool HasValue(string fieldName)
 
 ### Remarks
 
-If the *fieldName* is not defined in the content type that the entry is based on then it will return null.
+If the *fieldName* is not defined in the content type that the entry is based on then it will return false.
 
 ### Example
 
@@ -162,7 +162,7 @@ If the *fieldName* is not defined in the content type that the entry is based on
 if (entry.HasValue("title"))
 {
     // Get the location field as type
-    Location title = entry.Get<Location>("filmingLocation")
+    Location title = entry.Get<Location>("filmingLocation");
 }
 ```
 
@@ -277,7 +277,7 @@ public void Publish()
 
 ### Remarks
 
-On a successful publish, the entry instance is updated with the new version details controlled from the service. An WorkflowException will be thrown if there is any issue with the publish workflow state change. Other exception types could be thrown if there are any data validation issues, unexpected issue in the service or a local exception.
+On a successful publish, the entry instance is updated with the new version details controlled from the service. A WorkflowException will be thrown if there is any issue with the publish workflow state change. Other exception types could be thrown if there are any data validation issues, unexpected issue in the service or a local exception.
 
 ### Example
 
@@ -323,7 +323,7 @@ public async Task PublishAsync()
 
 ### Remarks
 
-On a successful publish, the entry instance is updated with the new version details controlled from the service. An WorkflowException will be thrown if there is any issue with the publish workflow state change. Other exception types could be thrown if there are any data validation issues, unexpected issue in the service or a local exception.
+On a successful publish, the entry instance is updated with the new version details controlled from the service. A WorkflowException will be thrown if there is any issue with the publish workflow state change. Other exception types could be thrown if there are any data validation issues, unexpected issue in the service or a local exception.
 
 ### Example
 

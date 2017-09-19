@@ -35,7 +35,7 @@ public Entry Get(Guid id, string language = null, string version = null)
 
 ### Remarks
 
-Returns *null* if an entry with an id matching the specified id does not exist.
+Returns *null* if no entry matches the specified id and language.
 
 ### Examples
 
@@ -83,7 +83,7 @@ public Entry Get(string id, string language = null, string version = null)
 
 ### Remarks
 
-Returns *null* if an entry with an id matching the specified id does not exist. If the id string is not a valid `Guid` format then an ArgumentException will be thrown.
+Returns *null* if no entry matches the specified id and language. If the id string is not a valid `Guid` format then an ArgumentException will be thrown.
 
 ### Examples
 
@@ -133,7 +133,7 @@ public async Task<Entry> GetAsync(Guid id, string language = null, string versio
 
 ### Remarks
 
-Returns *null* if an entry with an id matching the specified id does not exist.
+Returns *null* if no entry matches the specified id and language.
 
 ### Examples
 
@@ -145,6 +145,9 @@ var client = ManagementClient.Create();
 
 // Retrieve the relevant project
 var movieDbProject = client.Projects.Get("moviedb");
+
+// Mimic a guid id value
+var movieGuid = Guid.Parse("2c95e478-289d-4d28-8159-02a3f8de5fb4");
 
 // Get the french variation of the movie entry asynchronously
 Entry movie = await movieDbProject.Entries.GetAsync(movieGuid, "fr-fr");
@@ -181,7 +184,7 @@ public async Task<Entry> GetAsync(string id, string language = null, string vers
 
 ### Remarks
 
-Returns *null* if an entry with an id matching the specified id does not exist. If the id string is not a valid `Guid` format then an exception will be thrown.
+Returns *null* if no entry matches the specified id and language. If the id string is not a valid `Guid` format then an exception will be thrown.
 
 ### Examples
 
@@ -193,6 +196,9 @@ var client = ManagementClient.Create();
 
 // Retrieve the relevant project
 var movieDbProject = client.Projects.Get("moviedb");
+
+// Mimic a guid id value
+var movieGuid = Guid.Parse("2c95e478-289d-4d28-8159-02a3f8de5fb4");
 
 // Get the french variation of the movie entry asynchronously
 Entry movie = await movieDbProject.Entries.GetAsync("456e5f2a-a1cf-4520-a46c-e5f22ed299e8", "fr-fr");

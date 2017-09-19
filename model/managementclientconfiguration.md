@@ -23,7 +23,7 @@ public ManagementClientConfiguration(string rootUrl, string clientId = null, str
 
 *sharedSecret*
 > Type: `string`  
-> The client id value obtained from [API key management](https://zenhub.zengenti.com/Contensis/10.0/kb/content-types-and-entries/api-keys/api-key-overview.aspx)
+> The shared secret value obtained from [API key management](https://zenhub.zengenti.com/Contensis/10.0/kb/content-types-and-entries/api-keys/api-key-overview.aspx)
 
 ## Properties
 

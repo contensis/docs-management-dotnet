@@ -69,7 +69,7 @@ public Entry New(string contentTypeId, string language)
 
 *language*
 > Type: `string`  
-> The id of content type.
+> The language variation of the entry to create.
 
 ### Remarks
 
@@ -111,11 +111,11 @@ public Entry New(string contentTypeId, string language)
 
 *contentTypeId*
 > Type: `string`  
-> The id of content type.
+> The id of the content type.
 
 *language*
 > Type: `string`  
-> The id of content type.
+> The language variation of the entry to create.
 
 *entryId*
 > Type: `string`  
@@ -162,11 +162,11 @@ public Entry New(string contentTypeId, string language)
 
 *contentTypeId*
 > Type: `string`  
-> The id of content type.
+> The id of the content type.
 
 *language*
 > Type: `string`  
-> The id of content type.
+> The language variation of the entry to create.
 
 *entryId*
 > Type: `Guid`  
