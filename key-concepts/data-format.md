@@ -16,7 +16,7 @@ The following list contains the data formats that are understood by Contensis:
 | [quote](/model/quote.md) | object | A quote with text and a source |
 | [dateRange](/model/daterange.md) | object | Represents a document heading |
 | [image](/model/image.md) | object | Wraps an Asset with an additional Caption property |
-| [component](/key-concepts/components).* | object | Represents a component type. The format is the component id with a 'component.' prefix |
+| [component](/key-concepts/components.md).* | object | Represents a component type. The format is the component id with a 'component.' prefix |
 | field | objectArray | Represents a [ComposedField](/model/composedfield.md) type, defined as an `objectArray` Data Type |
 | heading | string | Represents a document heading |
 | html | string | A string of HTML markup |
