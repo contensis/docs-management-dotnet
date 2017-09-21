@@ -48,6 +48,9 @@ var client = ManagementClient.Create();
 // Retrieve the relevant project
 var movieDbProject = client.Projects.Get("moviedb");
 
+// Mimic a guid id value
+var movieGuid = Guid.Parse("2c95e478-289d-4d28-8159-02a3f8de5fb4");
+
 // Get the french variation of the movie entry
 Entry movie = movieDbProject.Entries.Get(movieGuid, "fr-fr");
 ```
@@ -196,9 +199,6 @@ var client = ManagementClient.Create();
 
 // Retrieve the relevant project
 var movieDbProject = client.Projects.Get("moviedb");
-
-// Mimic a guid id value
-var movieGuid = Guid.Parse("2c95e478-289d-4d28-8159-02a3f8de5fb4");
 
 // Get the french variation of the movie entry asynchronously
 Entry movie = await movieDbProject.Entries.GetAsync("456e5f2a-a1cf-4520-a46c-e5f22ed299e8", "fr-fr");
