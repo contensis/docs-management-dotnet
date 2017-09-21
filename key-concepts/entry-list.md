@@ -58,7 +58,7 @@ var movies = movieDbProject.Entries.List("movie");
 var movies = movieDbProject.Entries.List("movie", "fr-FR");
 
 // Get movies with paging options
-var movies = movieDbProject.Entries.List("movie", pageOptions: new PageOptions(0,10) });
+var movies = movieDbProject.Entries.List("movie", pageOptions: new PageOptions(0,10));
 
 // Get actors with default paging options and a specified order
 var movies = movieDbProject.Entries.List("actor", order: new [] { "name", "-dateOfBirth"});
@@ -118,7 +118,7 @@ var movies = await movieDbProject.Entries.ListAsync("movie");
 var movies = await movieDbProject.Entries.ListAsync("movie", "fr-FR");
 
 // Get movies with paging options
-var movies = await movieDbProject.Entries.ListAsync("movie", pageOptions: new PageOptions(0,10) });
+var movies = await movieDbProject.Entries.ListAsync("movie", pageOptions: new PageOptions(0,10));
 
 // Get actors with default paging options and a specified order
 var movies = await movieDbProject.Entries.ListAsync("actor", order: new [] { "name", "-dateOfBirth" });

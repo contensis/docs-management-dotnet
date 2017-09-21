@@ -66,7 +66,7 @@ Returns *null* if a project with an id matching the specified id does not exist.
 
 ## Examples
 
-#### This example shows how a project instance can be accessed asynchrously.
+#### This example shows how a project instance can be accessed asynchronously.
 
 ```cs
 using Zengenti.Contensis.Management;
