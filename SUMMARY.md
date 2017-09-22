@@ -27,6 +27,7 @@
 * [Project](/model/project.md)
 * [Entry](/model/entry.md)
     * [Entry methods](/model/entry-methods.md)
+* [Version Info](/model/versioninfo.md)
 * [Link](/model/link.md)
 * [ComposedField](/model/composedfield.md)
 * [ComposedFieldItem](/model/composedfielditem.md)
