@@ -1,4 +1,4 @@
-# Location
+# Link
 
 The Link class represents a link to other content such an Entry, Asset or Image. The Link class can target a specific language variation of the linked content. If a language is not specified when creating a link, then the project default is used. The DataFormat property does not need to be specified when a Link is created as it will be determined and set by the API service.
 
