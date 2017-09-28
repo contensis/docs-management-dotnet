@@ -10,6 +10,7 @@
 * [PublishAsync()](#publishasync)
 * [Delete()](#delete)
 * [DeleteAsync()](#deleteasync)
+* [NewVariation(string language)](#newvariation)
 
 ## Get
 
@@ -37,7 +38,7 @@ Returns *null* if the field is not found or if the field value is null.
 
 ```cs
 // Get the title field as dynamic
-dynamic title = entry.Get("title")
+dynamic title = entry.Get("title");
 ```
 
 ---
@@ -71,7 +72,7 @@ If the API cannot successfully cast or convert the field value then it will retu
 
 ```cs
 // Get the title field as defined type
-string title = entry.Get<string>("title")
+string title = entry.Get<string>("title");
 ```
 
 ---
@@ -103,11 +104,23 @@ public void Set(string fieldName, object value)
 
 The type and value for the field will be validated when the entry is saved.
 
-### Example
+### Examples
 
 ```cs
-// Set the title field value
+// Set a title string field value
 entry.Set("title", "Star Trek - Into Darkness");
+
+// Set a location object field value
+entry.Set("filmingLocation", new Location(34.0943145, -118.3316929));
+
+// Set an anonymous component field value
+entry.Set("director", 
+    new 
+    {
+        Role = "Director",
+        Person = new Link("80c8e272-076e-41e0-84f4-753fc092a120")
+    }
+);
 ```
 
 ---
@@ -141,7 +154,7 @@ public bool HasValue(string fieldName)
 
 ### Remarks
 
-If the *fieldName* is not defined in the content type that the entry is based on then it will return null.
+If the *fieldName* is not defined in the content type that the entry is based on then it will return false.
 
 ### Example
 
@@ -149,7 +162,7 @@ If the *fieldName* is not defined in the content type that the entry is based on
 if (entry.HasValue("title"))
 {
     // Get the location field as type
-    Location title = entry.Get<Location>("filmingLocation")
+    Location title = entry.Get<Location>("filmingLocation");
 }
 ```
 
@@ -264,7 +277,7 @@ public void Publish()
 
 ### Remarks
 
-On a successful publish, the entry instance is updated with the new version details controlled from the service. An WorkflowException will be thrown if there is any issue with the publish workflow state change. Other exception types could be thrown if there are any data validation issues, unexpected issue in the service or a local exception.
+On a successful publish, the entry instance is updated with the new version details controlled from the service. A WorkflowException will be thrown if there is any issue with the publish workflow state change. Other exception types could be thrown if there are any data validation issues, unexpected issue in the service or a local exception.
 
 ### Example
 
@@ -310,7 +323,7 @@ public async Task PublishAsync()
 
 ### Remarks
 
-On a successful publish, the entry instance is updated with the new version details controlled from the service. An WorkflowException will be thrown if there is any issue with the publish workflow state change. Other exception types could be thrown if there are any data validation issues, unexpected issue in the service or a local exception.
+On a successful publish, the entry instance is updated with the new version details controlled from the service. A WorkflowException will be thrown if there is any issue with the publish workflow state change. Other exception types could be thrown if there are any data validation issues, unexpected issue in the service or a local exception.
 
 ### Example
 
@@ -419,6 +432,47 @@ catch(Exception ex)
 {
     // Handle anything else, e.g. network error
 }
+```
+
+---
+
+## NewVariation
+
+Creates a new variation of the entry for the specified language.
+
+### Syntax
+
+```cs
+public Entry NewVariation(string language)
+{
+}
+```
+
+### Parameters
+
+*language*
+> Type: string  
+> The variation language to create
+
+### Return value
+> Type: [Entry](/model/entry.md)  
+> The newly created (unsaved) entry language variation
+
+### Remarks
+
+On a successful delete, the entry data is set to null.
+
+### Example
+
+```cs
+// Create a new french variation
+var frenchVariation = entry.NewVariation("fr-FR");
+
+// Set some data for the variation
+frenchVariation.Set("title", "Belle de Jour");
+
+// Save the new variation
+frenchVariation.Save();
 ```
 
 ---

@@ -2,6 +2,26 @@
 
 The Quote type represents a section of referenced text from an external source.
 
+## Constructor
+
+### Syntax
+
+```cs
+public Quote(string text, string source)
+{
+}
+```
+
+### Parameters
+
+*text*
+> Type: `string`
+> The quote text
+
+*source*
+> Type: `string`
+> The source of the quote
+
 ## Properties
 
 | Name | Type | Description |
@@ -11,24 +31,23 @@ The Quote type represents a section of referenced text from an external source.
 
 ## Examples
 
-##### Get a Source field object
+### Get a Quote object
 
 ```cs
-@using Zengenti.Contensis.Delivery;
+// Get the field value as a Quote instance.
+Quote movieQuote = movieEntry.Get<Quote>("memorableQuote");
 
-@{
-    // Create an API client
-    var client = ContensisClient.Create();
+// Get the field value as a dynamic (ExpandoObject) instance.
+dynamic movieQuote = movieEntry.Get("memorableQuote");
+```
 
-    // Retrieve a movie by it's ID.
-    var movie = client.Entries.Get("3bb72e32-1fc7-4289-bf65-60a5b8ce1f78");
+### Set a Quote object
 
-    // Get the field value as a DateRange instance.
-    var filmQuote = movie.Get<Quote>("memorableQuote");
-}
+```cs
+// Create a Quote object
+var memorableQuote = new Quote("There’s a snake in my boots.", "Woody, Toy Story");
 
-<blockquote cite="@filmQuote.Source">
-    @filmQuote.Text
-</blockquote>
+// Set the field value
+dynamic movieQuote = movieEntry.Set("memorableQuote", memorableQuote);
 ```
 

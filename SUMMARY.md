@@ -10,6 +10,7 @@
 ## Key concepts
 
 * [API instantiation](/key-concepts/api-instantiation.md)
+* [Handling errors](/key-concepts/errors.md)
 * [DataTypes](/key-concepts/data-types.md)
 * [DataFormat](/key-concepts/data-format.md)
 * [Localization](/key-concepts/localization.md)
@@ -17,17 +18,20 @@
 * [Create an entry](/key-concepts/entry-new.md)
 * [Get an entry](/key-concepts/entry-get.md)
 * [Listing entries](/key-concepts/entry-list.md)
-* [Assets & images](/key-concepts/assets-images.md)
+* [Linking content](/key-concepts/linking-content.md)
+* [Components](/key-concepts/components.md)
 
 ## Model
 
+* [ManagementClientConfiguration](/model/managementclientconfiguration.md)
 * [Project](/model/project.md)
 * [Entry](/model/entry.md)
     * [Entry methods](/model/entry-methods.md)
-<!--* [Asset](/model/asset.md)-->
-* [ManagementClientConfiguration](/model/managementclientconfiguration.md)
-<!--* [ComposedField](/model/composed.md)-->
-<!--* [DateRange](/model/daterange.md)-->
-<!--* [Image](/model/image.md)-->
-<!--* [Location](/model/location.md)-->
-<!--* [Quote](/model/quote.md)-->
+* [Version Info](/model/versioninfo.md)
+* [Link](/model/link.md)
+* [ComposedField](/model/composedfield.md)
+* [ComposedFieldItem](/model/composedfielditem.md)
+* [DateRange](/model/daterange.md)
+* [Image](/model/image.md)
+* [Location](/model/location.md)
+* [Quote](/model/quote.md)

@@ -1,7 +1,26 @@
 # Location
 
-
 The Location class represents a geographic coordinate that specifies the position of a point on the Earth's surface.
+
+## Constructor
+
+### Syntax
+
+```cs
+public Location(double lat, double lon)
+{
+}
+```
+
+### Parameters
+
+*lat*
+> Type: `double`
+> The latitude
+
+*lon*
+> Type: `double`
+> The longitude
 
 ## Properties
 
@@ -10,31 +29,24 @@ The Location class represents a geographic coordinate that specifies the positio
 | Lat | double | The north-south position |
 | Lon | double | The east-west position |
 
-## Example
+## Examples
 
 ### Get a Location field object
 
 ```cs
-@using Zengenti.Contensis.Delivery;
+// Get the field value as a Location instance
+Location filmingLocation = movieEntry.Get<Location>("filmingLocation");
 
-@{
-    // Create an API client
-    var client = ContensisClient.Create();
+// Get the field value as a dynamic (ExpandoObject) instance
+dynamic filmingLocation = movieEntry.Get("filmingLocation");
+```
 
-    // Retrieve a film by it's ID.
-    var movie = client.Entries.Get("0aabad4e-a083-4a88-bd75-b2674e2f8298");
+### Set a Location field object
 
-    // Get the field value as a Location instance.
-    var filmingLocation = movie.Get<Location>("filmingLocation");
+```cs
+// Create a Location object
+var filmingLocation = new Location(52.415936, -2.6417701);
 
-    // Combine lat/lng into a string.
-    var latLng = $"{filmingLocation.Lat},{filmingLocation.Lng}";
-
-    // Use Google map API to generate a map image.
-    var imgUrl = "https://maps.googleapis.com/maps/api/staticmap?center="+latLng+"&zoom=14&size=400x300&sensor=false";
-}
-
-<div id="map">
-    <img src="@imgUrl" />
-</div>
+// Set the film value
+movieEntry.Set("filmingLocation", filmingLocation);
 ```

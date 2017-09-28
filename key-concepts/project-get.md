@@ -32,7 +32,6 @@ Returns *null* if a project with an id matching the specified id does not exist.
 #### This example shows how a project instance can be accessed.
 
 ```cs
-using System.Globalization;
 using Zengenti.Contensis.Management;
 
 var client = ManagementClient.Create();
@@ -67,10 +66,9 @@ Returns *null* if a project with an id matching the specified id does not exist.
 
 ## Examples
 
-#### This example shows how a project instance can be accessed asynchrously.
+#### This example shows how a project instance can be accessed asynchronously.
 
 ```cs
-using System.Globalization;
 using Zengenti.Contensis.Management;
 
 var client = ManagementClient.Create();

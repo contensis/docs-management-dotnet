@@ -9,8 +9,21 @@ The `ManagementClientConfiguration` is a container for the options that are requ
 public ManagementClientConfiguration(string rootUrl, string clientId = null, string sharedSecret = null)
 {
 }
-
 ```
+
+### Parameters
+
+*rootUrl*
+> Type: `string`  
+> The url to the root of the Management API services
+
+*clientId*
+> Type: `string`  
+> The client id value obtained from [API key management](https://zenhub.zengenti.com/Contensis/10.0/kb/content-types-and-entries/api-keys/api-key-overview.aspx)
+
+*sharedSecret*
+> Type: `string`  
+> The shared secret value obtained from [API key management](https://zenhub.zengenti.com/Contensis/10.0/kb/content-types-and-entries/api-keys/api-key-overview.aspx)
 
 ## Properties
 
