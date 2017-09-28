@@ -25,7 +25,7 @@ We want to be able to categorize movies by their genre, the easiest way to have 
 
 For each of the genres you have added, select them in the tree and make a note of the *Node Key* value, it will be in the format of 0/X/X, we will need these for the import later.
 
-In the case of this guide our genres have the following keys
+In the case of this guide our genres nodes have the following keys, your keys will likely have different values.
 
 | Genre | Key |
 | ---------- | ------ |
@@ -35,7 +35,6 @@ In the case of this guide our genres have the following keys
 | Drama | 0/5/4 |
 | Romance | 0/5/5 |
 | Western | 0/5/6 |
-
 
 ## Create a movie content type
 
@@ -50,27 +49,31 @@ You can [create a new content type](https://zenhub.zengenti.com/Contensis/10.0/k
 | Genres | genres | Taxonomy | The genre of the movie. |
 | Revenue | revenue | number | The revenue the movie generated. |
 
-
 ## Import some movies
 
 Now it's time to import some movies!
 
-Open the sample application in Visual Studio.
+The example import solution can be found on GitHub at <https://github.com/contensis/dotnet-movie-import> and a local copy can be obtained using the `git clone` command:
 
+``` bash
+git clone https://github.com/contensis/dotnet-movie-import
+```
 
-You will see there is a movie class, this is a simple class describing a movie. 
+Open the MovieImport.sln solution in Visual Studio.
+
+You will see there is a simple class describing a movie.
 
 ```cs
 using System;
 
-namespace CSV_Movie_Import
+namespace MovieImport
 {
     public class Movie
     {
         public string Title { get; set; }
         public string Overview { get; set; }
         public int Runtime { get; set; }
-        public string Genres { get; set; }
+        public string[] Genres { get; set; }
         public DateTime ReleaseDate { get; set; }
         public long Revenue { get; set; }
     }
@@ -79,14 +82,12 @@ namespace CSV_Movie_Import
 
 Open the program class, make sure you replace the following values
 
-
 | Value | Description |
-| ---------- | ------ |
-| <Contensis URL> | This is the URL of your Contensis instance. e.g. https://cms.cloud.contensis.com |
-| <Client ID> | Copy your Client ID from your API Key. [Create an API Key](https://zenhub.zengenti.com/Contensis/10.0/kb/content-types-and-entries/api-keys/create-an-api-key.aspx) |
-| <Shared Secret> | Copy your Shared Secret from your API Key. [Create an API Key](https://zenhub.zengenti.com/Contensis/10.0/kb/content-types-and-entries/api-keys/create-an-api-key.aspx) |
-| <Project Id> | In the management console, select the *Project Overview* option and you will see your project API name |
-
+| ----- | ----------- |
+| &lt;Contensis URL&gt; | This is the URL of your Contensis instance. e.g. `https://cms.cloud.contensis.com` |
+| &lt;Client ID&gt; | Copy your Client ID from your API Key. [Create an API Key](https://zenhub.zengenti.com/Contensis/10.0/kb/content-types-and-entries/api-keys/create-an-api-key.aspx) |
+| &lt;Shared Secret&gt; | Copy your Shared Secret from your API Key. [Create an API Key](https://zenhub.zengenti.com/Contensis/10.0/kb/content-types-and-entries/api-keys/create-an-api-key.aspx) |
+| &lt;Project Id&gt; | In the management console, select the *Project Overview* option and you will see your project API name |
 
 ```cs
 using System;
@@ -96,7 +97,7 @@ using System.Linq;
 using CsvHelper;
 using Zengenti.Contensis.Management;
 
-namespace CSV_Movie_Import
+namespace MovieImport
 {
     class Program
     {
@@ -138,7 +139,7 @@ namespace CSV_Movie_Import
         {
             // Set-up a new movie entry
             var movieEntry = project.Entries.New("movie");
-            
+
             // Set each field value
             movieEntry.Set("title", movie.Title);
             movieEntry.Set("overview", movie.Overview);
@@ -164,6 +165,6 @@ namespace CSV_Movie_Import
 
 Finally make sure the example CSV file is in the root of your app and run the application.
 
-
 ## Summary
+
 We hope this demonstrates how simple it is to import basic entries using the .NET Management API.

@@ -1,6 +1,6 @@
 # Data format
 
-The Data Format property is used as an extension of a [DataType](/key-concepts/data-types) to describe or identify the structure and intent of the data. For example, a [Location](/model/location.md) has a DataType of *object*, and a DataFormat of *location*. Another example is a HTML block, which has a DataType of *string* and a DataFormat of *html*.  
+The Data Format property is used as an extension of a [DataType](/key-concepts/data-types.md) to describe or identify the structure and intent of the data. For example, a [Location](/model/location.md) has a DataType of *object*, and a DataFormat of *location*. Another example is a HTML block, which has a DataType of *string* and a DataFormat of *html*.
 
 The DataFormat is a string value and is designed to allow custom types to be added.
 
