@@ -8,27 +8,28 @@ All assets have the following standard entry fields:
 
 | Name | Type | Description |
 | :--- | :--- | :---------- |
-| Title | string | The title of the asset |
-| Description | string | The description for the asset |
-| Properties | [PropertiesDictionary](#PropertiesDictionary) | A readonly collection of asset specific fields |
+| Title | string | The title of the asset. |
+| Description | string | The description for the asset. |
+| Properties | [PropertiesDictionary](#PropertiesDictionary) | A read-only collection of asset specific fields. |
 
 ### Image
+
 In addition to the standard data fields, images have the following.
 
 | Name | Description |
 | ---- | ----------- |
-| altText | The default alt text defined for the image resource |
+| altText | The default alt text defined for the image resource. |
 
 ## PropertiesDictionary
 
 | Name | Type | Description |
 | :--- | :--- | :---------- |
-| Filename | string | The name of the actual file, with extension included |
-| FileSize | long | The file size in bytes |
-| Extension | string | The file extension |
-| FieldId | string | The GUID identifier of the file resource |
-| Uri | string | The URI path to the file, excluding the domain |
-| [fieldName] | object | An indexed accessor to extended properties which are not exposed as typed properties |
+| Filename | string | The name of the actual file, with extension included. |
+| FileSize | long | The file size in bytes. |
+| Extension | string | The file extension. |
+| FieldId | string | The Guid identifier of the file resource. |
+| Uri | string | The URI path to the file, excluding the domain. |
+| [fieldName] | object | An indexed accessor to extended properties which are not exposed as typed properties. |
 
 ## Extended properties
 
@@ -38,5 +39,5 @@ These are properties that are specific to an asset type. Currently this is limit
 
 | Name | Description |
 | :--- | :---------- |
-| Width | The width of the image |
-| Height | The height of the image |
+| Width | The width of the image. |
+| Height | The height of the image. |

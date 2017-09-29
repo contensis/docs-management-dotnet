@@ -4,7 +4,7 @@ The Link class represents a link to other content such an Entry, Asset or Image.
 
 ## Constructors
 
-#### Create Link with Guid id
+### Create Link with Guid id
 
 #### Syntax
 
@@ -18,15 +18,18 @@ public Link(Guid id, string language = null)
 
 *id*
 > Type: `Guid`  
-> The id of the entry or asset
+> The id of the entry or asset.
 
 *language*
 > Type: `string` [[LanguageCode](/key-concepts/localization.md)]  
-> [Optional] The language variation of the asset to target
+> [Optional] The language variation of the asset to target.
 
 ---
 
-#### Create Link with string id
+
+
+
+### Create Link with string id
 
 #### Syntax
 
@@ -40,48 +43,48 @@ public Link(string id, string language = null)
 
 *id*
 > Type: `string`  
-> The id of the image asset
+> The id of the image asset.
 
 *language*
 > Type: `string` [[LanguageCode](/key-concepts/localization.md)]  
-> [Optional] The language variation of the asset to target
+> [Optional] The language variation of the asset to target.
 
-## Properties
+#### Properties
 
 | Name | Type | Description |
 | :--- | :--- | :---------- |
-| Id | `Guid` | The id of the entry or asset |
-| Language | string [[LanguageCode](/key-concepts/localization.md)] | The east-west position |
-| DataFormat | string | An indicator of the link type - "entry" or "asset" |
+| Id | `Guid` | The id of the entry or asset. |
+| Language | string [[LanguageCode](/key-concepts/localization.md)] | The language of the link instance. |
+| DataFormat | string | An indicator of the link type - "entry" or "asset". |
 
 ## Examples
 
 ### Get a Link field object
 
 ```cs
-// Get the field value as a Location instance
+// Get the field value as a Location instance.
 Link actor = movieEntry.Get<Link>("leadActor");
 
-// Get the field value as a dynamic (ExpandoObject) instance
+// Get the field value as a dynamic (ExpandoObject) instance.
 dynamic actor = movieEntry.Get("leadActor");
 ```
 
 ### Get a list of Link field objects
 
 ```cs
-// Get the field value as a Link list
+// Get the field value as a Link list.
 List<Link> actors = movieEntry.Get<List<Link>>("actors");
 
-// Alternatively get the field value as a Link array
+// Alternatively get the field value as a Link array.
 Link[] actors = movieEntry.Get<Link[]>("actors");
 ```
 
 ### Set a Link field object
 
 ```cs
-// Create a Link object targeting the default project language
+// Create a Link object targeting the default project language.
 Link actor = new Link("27293124-999a-4895-afec-f060dca33508");
 
-// Set the link value
+// Set the link value.
 movieEntry.Set("leadActor", actor);
 ```

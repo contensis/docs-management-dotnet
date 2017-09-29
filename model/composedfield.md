@@ -6,8 +6,6 @@ An *allowed field type* is essentially any standard field (such as Image, Headin
 
 For example, an *allowed field* could be defined with a type of *Heading* and given a type name of "mainHeading" or with a type of [Image](/model/image.md) and given a type name of "bannerImage". There can be multiple *allowed fields* based on the same type, but a `ComposedField` cannot contain other `ComposedField` fields.
 
-# Methods
-
 ## Adding field items
 
 ### Add overload
@@ -16,7 +14,7 @@ The ComposedField type inherits from `List<ComposedFieldItem>` with an additiona
 
 ```cs
 public void Add(string type, object value)
-{ 
+{
 }
 ```
 
@@ -37,9 +35,9 @@ composed.Add("heading", "A long time ago in a galaxy far, far away...");
 composed.Add("hq", new Location(52.415936, -2.6417701));
 ```
 
-### List methods
+## List methods
 
-#### Examples
+### Examples
 
 ```cs
 // Get the ComposedField instance
@@ -54,8 +52,3 @@ composed.Add(4, new ComposedFieldItem("featureQuote", new Quote("I find your lac
 // Remove an item at a specific index
 composed.RemoveAt(3);
 ```
-
------
-
-
-
