@@ -2,10 +2,10 @@
 
 Creating a new [entry](/model/entry.md) can be achieved by using one of the `New` method overloads.
 
-- [New(string contentTypeId)](#new-with-content-type)
-- [New(string contentTypeId, string language)](#new-with-content-type-and-language)
-- [New(string contentTypeId, string language, string entryId)](#new-with-content-type-language-and-string-id)
-- [New(string contentTypeId, string language, Guid entryId)](#new-with-content-type-language-and-guid-id)
+* [New(string contentTypeId)](#new-with-content-type)
+* [New(string contentTypeId, string language)](#new-with-content-type-and-language)
+* [New(string contentTypeId, string language, string entryId)](#new-with-content-type-language-and-string-id)
+* [New(string contentTypeId, string language, Guid entryId)](#new-with-content-type-language-and-guid-id)
 
 ## New with content type
 
@@ -43,8 +43,8 @@ var movieDbProject = client.Projects.Get("moviedb");
 // Create a new Movie entry
 var movie = movieDbProject.Entries.New("movie");
 ```
----
 
+---
 
 
 
@@ -89,14 +89,14 @@ var movieDbProject = client.Projects.Get("moviedb");
 // Create a new Movie entry for french
 var movie = movieDbProject.Entries.New("movie", "fr-FR");
 ```
+
 ---
 
 
 
 
-
-
 ## New with content type, language and string id
+
 Creates a new entry based on a content type id, language and by providing the id for the entry.
 
 ### Syntax
@@ -140,14 +140,14 @@ var movieDbProject = client.Projects.Get("moviedb");
 // Create a new Movie entry for french
 var movie = movieDbProject.Entries.New("movie", "fr-FR", "ff1c8adf-2bd7-4ebe-88b2-37ce280d89f8");
 ```
+
 ---
 
 
 
 
+## New with content type, language and Guid
 
-
-## New with content type, language and Guid id
 Creates a new entry based on a content type id, language and by providing the id for the entry.
 
 ### Syntax
@@ -194,4 +194,3 @@ var movieDbProject = client.Projects.Get("moviedb");
 // Create a new Movie entry for french
 var movie = movieDbProject.Entries.New("movie", "fr-FR", entryId);
 ```
----

@@ -4,8 +4,8 @@ This guide will take you through creating a content type and importing entries u
 
 ## Assumptions
 
-- You have an understanding of managing and creating content in the project explorer.
-- You have downloaded the example application
+* You have an understanding of managing and creating content in the project explorer.
+* You have downloaded the example application.
 
 ## Create a new project (optional)
 
@@ -15,13 +15,13 @@ Projects are the home for all your content in Contensis. Either use an existing 
 
 We want to be able to categorize movies by their genre, the easiest way to have a centrally managed list of categories is to use the taxonomy manager. To create a genres taxonomy follow these steps:
 
-1. Click the *Management Console* icon at the bottom of the sidebar
-2. Select the *Taxonomy Manager* link in the menu
-3. Select the *Root* node of the taxonomy tree
-4. Enter *Genre* into the Child Name textbox and press *Add Child*
-5. Genre will now be shown in the tree, select the Genre Node
-6. Enter *Action* into the Child Name textbox and press *Add Child*
-7. Repeat this for Comedy, Crime, Drama, Romance and Western
+1. Click the *Management Console* icon at the bottom of the sidebar.
+2. Select the *Taxonomy Manager* link in the menu.
+3. Select the *Root* node of the taxonomy tree.
+4. Enter *Genre* into the Child Name text box and press *Add Child*.
+5. Genre will now be shown in the tree, select the Genre Node.
+6. Enter *Action* into the Child Name text box and press *Add Child*.
+7. Repeat this for Comedy, Crime, Drama, Romance and Western.
 
 For each of the genres you have added, select them in the tree and make a note of the *Node Key* value, it will be in the format of 0/X/X, we will need these for the import later.
 
@@ -44,7 +44,7 @@ You can [create a new content type](https://zenhub.zengenti.com/Contensis/10.0/k
 | ---------- | ------ | ---- | ----------- |
 | Title | title | Text | The title of the movie. |
 | Overview | overview | Text | An overview of what the movie is about. |
-| Release Date | releaseDate | Date | The date the movie was released. |
+| Release date | releaseDate | Date | The date the movie was released. |
 | Runtime | runtime | number (integer) | The runtime in minutes. |
 | Genres | genres | Taxonomy | The genre of the movie. |
 | Revenue | revenue | number | The revenue the movie generated. |
@@ -53,13 +53,13 @@ You can [create a new content type](https://zenhub.zengenti.com/Contensis/10.0/k
 
 Now it's time to import some movies!
 
-The example import solution can be found on GitHub at <https://github.com/contensis/dotnet-movie-import> and a local copy can be obtained using the `git clone` command:
+The example import solution can be found on [GitHub](https://github.com/contensis/dotnet-movie-import) and a local copy can be obtained using the `git clone` command:
 
 ``` bash
 git clone https://github.com/contensis/dotnet-movie-import
 ```
 
-Open the MovieImport.sln solution in Visual Studio.
+Open the `MovieImport.sln` solution in Visual Studio.
 
 You will see there is a simple class describing a movie.
 
@@ -85,9 +85,9 @@ Open the program class, make sure you replace the following values
 | Value | Description |
 | ----- | ----------- |
 | &lt;Contensis URL&gt; | This is the URL of your Contensis instance. e.g. `https://cms.cloud.contensis.com` |
-| &lt;Client ID&gt; | Copy your Client ID from your API Key. [Create an API Key](https://zenhub.zengenti.com/Contensis/10.0/kb/content-types-and-entries/api-keys/create-an-api-key.aspx) |
-| &lt;Shared Secret&gt; | Copy your Shared Secret from your API Key. [Create an API Key](https://zenhub.zengenti.com/Contensis/10.0/kb/content-types-and-entries/api-keys/create-an-api-key.aspx) |
-| &lt;Project Id&gt; | In the management console, select the *Project Overview* option and you will see your project API name |
+| &lt;Client ID&gt; | Copy your client ID from your API Key. [Create an API Key](https://zenhub.zengenti.com/Contensis/10.0/kb/content-types-and-entries/api-keys/create-an-api-key.aspx) |
+| &lt;Shared Secret&gt; | Copy your shared secret from your API Key. [Create an API Key](https://zenhub.zengenti.com/Contensis/10.0/kb/content-types-and-entries/api-keys/create-an-api-key.aspx) |
+| &lt;Project Id&gt; | From the management console, select the *Project Overview* and you will see your project API name. |
 
 ```cs
 using System;

@@ -2,10 +2,10 @@
 
 Requesting an individual [entry](/model/entry.md) can be achieved by using one of the `Get` method overloads.
 
-- [Get(Guid id, string language, string version)](#get-by-guid-id)
-- [Get(string id, string language, string version)](#get-by-string-id)
-- [GetAsync(Guid id, string language, string version)](#get-by-guid-id-async)
-- [GetAsync(string id, string language, string version)](#get-by-string-id-async)
+* [Get(Guid id, string language, string version)](#get-by-guid-id)
+* [Get(string id, string language, string version)](#get-by-string-id)
+* [GetAsync(Guid id, string language, string version)](#get-by-guid-id-async)
+* [GetAsync(string id, string language, string version)](#get-by-string-id-async)
 
 ## Get by Guid id
 
@@ -56,6 +56,8 @@ Entry movie = movieDbProject.Entries.Get(movieGuid, "fr-fr");
 ```
 
 ---
+
+
 
 
 ## Get by string id
@@ -155,7 +157,9 @@ var movieGuid = Guid.Parse("2c95e478-289d-4d28-8159-02a3f8de5fb4");
 // Get the french variation of the movie entry asynchronously
 Entry movie = await movieDbProject.Entries.GetAsync(movieGuid, "fr-fr");
 ```
+
 ---
+
 
 
 
@@ -203,4 +207,3 @@ var movieDbProject = client.Projects.Get("moviedb");
 // Get the french variation of the movie entry asynchronously
 Entry movie = await movieDbProject.Entries.GetAsync("456e5f2a-a1cf-4520-a46c-e5f22ed299e8", "fr-fr");
 ```
----
