@@ -2,8 +2,8 @@
 
 Listing Entries can be achieved by using one of the `List` method overloads.
 
-- [List(string contentTypeId, string language, PageOptions pageOptions, IList<string> order)](#list)
-- [ListAsync(string contentTypeId, string language, PageOptions pageOptions, IList<string> order)](#list-async)
+* [List(string contentTypeId, string language, PageOptions pageOptions, IList<string> order)](#list)
+* [ListAsync(string contentTypeId, string language, PageOptions pageOptions, IList<string> order)](#list-async)
 
 ## List
 
@@ -33,7 +33,7 @@ public PagedList<Entry> List(string contentTypeId = null, string language = null
 
 *order*
 > Type: `IList<string>`  
-> A list of fieldnames specifiying the order in which to return the entries.
+> A list of field names specifying the order in which to return the entries.
 
 ### Remarks
 
@@ -63,7 +63,11 @@ var movies = movieDbProject.Entries.List("movie", pageOptions: new PageOptions(0
 // Get actors with default paging options and a specified order
 var movies = movieDbProject.Entries.List("actor", order: new [] { "name", "-dateOfBirth"});
 ```
+
 ---
+
+
+
 
 ## List async
 
@@ -93,7 +97,7 @@ public async Task<PagedList<Entry>> List(string contentTypeId = null, string lan
 
 *order*
 > Type: `IList<string>`  
-> A list of fieldnames specifiying the order in which to return the entries.
+> A list of field names specifying the order in which to return the entries.
 
 ### Remarks
 
@@ -123,4 +127,3 @@ var movies = await movieDbProject.Entries.ListAsync("movie", pageOptions: new Pa
 // Get actors with default paging options and a specified order
 var movies = await movieDbProject.Entries.ListAsync("actor", order: new [] { "name", "-dateOfBirth" });
 ```
----

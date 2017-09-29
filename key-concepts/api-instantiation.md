@@ -13,9 +13,9 @@ This is how the majority of clients are created within Contensis razor views.
 var client = ManagementClient.Create();
 ```
 
-### Connecting from a non-Contensis website.
+### Connecting from a non Contensis website
 
-Creating a client from outside a Contensis website
+Creating a client from outside a Contensis website, or developing locally in Visual Studio.
 
 ```cs
 var client = ManagementClient.Create("https://cms.cloud.contensis.com", "{client_id}", "{shared_secret}");
@@ -27,14 +27,14 @@ The default configuration needs to be set only once. For a Contensis published w
 
 The default configuration becomes effective for all ManagementClient instantiations, negating the need to provide configuration values each and every time the API is used.
 
-## Non-Contensis published websites
+## Non contensis published websites
 
 This is a useful feature for websites that are created using a .NET based framework such as NancyFx or Asp.net MVC.
 
 The client ID and shared secret are obtained from [API key management](https://zenhub.zengenti.com/Contensis/10.0/kb/content-types-and-entries/api-keys/api-key-overview.aspx). They can then be used to call the security service to obtain a claims-based bearer token, and to validate that the user can access resources from the service.
 
 
-### API initialisation example
+### API initialization example
 
 This example demonstrates how the default configuration can be set using the [ManagementClientConfiguration](/model/managementclientconfiguration.md) type.
 

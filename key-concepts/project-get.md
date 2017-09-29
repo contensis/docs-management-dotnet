@@ -2,8 +2,8 @@
 
 Requesting an individual project can be achieved by using one of the *Get* operations.
 
-- [Get(string projectId)](#get-by-id)
-- [GetAsync(string projectId)](#get-by-id-async)
+* [Get(string projectId)](#get-by-id)
+* [GetAsync(string projectId)](#get-by-id-async)
 
 ## Get by id
 
@@ -27,9 +27,9 @@ public Project Get(string projectId)
 
 Returns *null* if a project with an id matching the specified id does not exist.
 
-## Examples
+## Example
 
-#### This example shows how a project instance can be accessed.
+This example shows how a project instance can be accessed.
 
 ```cs
 using Zengenti.Contensis.Management;
@@ -41,6 +41,9 @@ var movieProject = client.Projects.Get("movieDb");
 ```
 
 ---
+
+
+
 
 ## Get by id async
 
@@ -64,9 +67,9 @@ public async Task<Project> GetAsync(string projectId)
 
 Returns *null* if a project with an id matching the specified id does not exist.
 
-## Examples
+## Example
 
-#### This example shows how a project instance can be accessed asynchronously.
+This example shows how a project instance can be accessed asynchronously.
 
 ```cs
 using Zengenti.Contensis.Management;
