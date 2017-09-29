@@ -4,7 +4,9 @@
 * [Getting started](/getting-started.md)
 
 ## Security
+
 * [Authentication](/security/authentication.md)
+
 <!--* [Scopes](/security/scopes.md)-->
 
 ## Key concepts
@@ -26,7 +28,7 @@
 * [ManagementClientConfiguration](/model/managementclientconfiguration.md)
 * [Project](/model/project.md)
 * [Entry](/model/entry.md)
-    * [Entry methods](/model/entry-methods.md)
+  * [Entry methods](/model/entry-methods.md)
 * [Version Info](/model/versioninfo.md)
 * [Link](/model/link.md)
 * [ComposedField](/model/composedfield.md)
