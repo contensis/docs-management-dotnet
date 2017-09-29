@@ -16,37 +16,37 @@ public Location(double lat, double lon)
 
 *lat*
 > Type: `double`
-> The latitude
+> The latitude.
 
 *lon*
 > Type: `double`
-> The longitude
+> The longitude.
 
 ## Properties
 
 | Name | Type | Description |
 | :--- | :--- | :---------- |
-| Lat | double | The north-south position |
-| Lon | double | The east-west position |
+| Lat | double | The north-south position. |
+| Lon | double | The east-west position. |
 
 ## Examples
 
 ### Get a Location field object
 
 ```cs
-// Get the field value as a Location instance
+// Get the field value as a Location instance.
 Location filmingLocation = movieEntry.Get<Location>("filmingLocation");
 
-// Get the field value as a dynamic (ExpandoObject) instance
+// Get the field value as a dynamic (ExpandoObject) instance.
 dynamic filmingLocation = movieEntry.Get("filmingLocation");
 ```
 
 ### Set a Location field object
 
 ```cs
-// Create a Location object
+// Create a Location object.
 var filmingLocation = new Location(52.415936, -2.6417701);
 
-// Set the film value
+// Set the film value.
 movieEntry.Set("filmingLocation", filmingLocation);
 ```

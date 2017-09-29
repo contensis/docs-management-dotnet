@@ -16,18 +16,18 @@ public Quote(string text, string source)
 
 *text*
 > Type: `string`
-> The quote text
+> The quote text.
 
 *source*
 > Type: `string`
-> The source of the quote
+> The source of the quote.
 
 ## Properties
 
 | Name | Type | Description |
 | :--- | :--- | :---------- |
-| Text | string | The quote text |
-| Source | string | The source of the quote |
+| Text | string | The quote text. |
+| Source | string | The source of the quote. |
 
 ## Examples
 
@@ -44,10 +44,9 @@ dynamic movieQuote = movieEntry.Get("memorableQuote");
 ### Set a Quote object
 
 ```cs
-// Create a Quote object
+// Create a Quote object.
 var memorableQuote = new Quote("There’s a snake in my boots.", "Woody, Toy Story");
 
-// Set the field value
+// Set the field value.
 dynamic movieQuote = movieEntry.Set("memorableQuote", memorableQuote);
 ```
-
