@@ -12,8 +12,8 @@ This documentation is mainly example-driven with API references to the types.
 
 ## Key concepts
 
-* [Get started with the .NET Management API quickstart](/key-concepts/api-instantiations.md)
-* [API instantiation](/key-concepts/api-instantiations.md)
-* [Getting an Entry](/key-concepts/entry-get.md)
-* [Creating an Entry](/key-concepts/entry-new.md)
-* [Linking content](/key-concepts/linking-content.md)
+* [Get started with the .NET Management API quickstart](getting-started.md)
+* [API instantiation](key-concepts/api-instantiation.md)
+* [Getting an Entry](key-concepts/entry-get.md)
+* [Creating an Entry](key-concepts/entry-new.md)
+* [Linking content](key-concepts/linking-content.md)
