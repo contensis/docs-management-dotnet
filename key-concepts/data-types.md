@@ -21,6 +21,5 @@ public enum DataType
 | StringArray | An array of Strings. | `string[]`, `IList<string>` |
 | IntegerArray | An array of Integers. | `int[]`, `IList<int>` |
 | DecimalArray | An array of Decimals. | `int[]`, `IList<int>` |
-| BooleanArray | An array of Booleans. | `bool[]`, `IList<bool>` |
 | DateTimeArray | An array of DateTimes. | `DateTime[]`, `IList<DateTime>` |
 | ObjectArray | An array of Objects. | `object[]`, `IList<object>` |
