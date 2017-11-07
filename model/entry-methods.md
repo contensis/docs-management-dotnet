@@ -14,7 +14,7 @@
 
 ## Get
 
-Gets a field from an entry by *fieldName* and returns a dynamic object instance. 
+Gets a field from an entry by *fieldName* and returns a dynamic object instance.
 
 ### Syntax
 
@@ -28,7 +28,7 @@ public dynamic Get(string fieldName)
 
 *fieldName*
 > Type: string  
-> The name of the requested field
+> The name of the requested field.
 
 ### Remarks
 
@@ -37,7 +37,7 @@ Returns *null* if the field is not found or if the field value is null.
 ### Example
 
 ```cs
-// Get the title field as dynamic
+// Get the title field as dynamic.
 dynamic title = entry.Get("title");
 ```
 
@@ -94,11 +94,11 @@ public void Set(string fieldName, object value)
 
 *fieldName*
 > Type: string  
-> The name of the requested field
+> The name of the requested field.
 
 *value*
 > Type: object  
-> The value for the field
+> The value for the field.
 
 ### Remarks
 
@@ -114,8 +114,8 @@ entry.Set("title", "Star Trek - Into Darkness");
 entry.Set("filmingLocation", new Location(34.0943145, -118.3316929));
 
 // Set an anonymous component field value
-entry.Set("director", 
-    new 
+entry.Set("director",
+    new
     {
         Role = "Director",
         Person = new Link("80c8e272-076e-41e0-84f4-753fc092a120")
@@ -124,7 +124,6 @@ entry.Set("director",
 ```
 
 ---
-
 
 
 
@@ -148,6 +147,7 @@ public bool HasValue(string fieldName)
 > The name of the field to check
 
 ### Return value
+
 > Type: boolean  
 > __true__ if the field exists and is not null, otherwise __false__
 
@@ -181,6 +181,7 @@ public void Save()
 ```
 
 ### Return value
+
 > Type: void
 
 ### Remarks
@@ -190,25 +191,25 @@ On a successful save, the entry instance is updated with the new version details
 ### Example
 
 ```cs
-// Make a change to an entry
+// Make a change to an entry.
 entry.Set("title", "Forrest Gump");
 
 try
 {
-    // Save the changes
+    // Save the changes.
     entry.Save();
 }
 catch(RestRequestException restEx)
 {
-    // Handle service error
+    // Handle service error.
 }
 catch(ValidationException valEx)
 {
-    // Handle data validation errors
+    // Handle data validation errors.
 }
 catch(Exception ex)
 {
-    // Handle anything else, e.g. network error
+    // Handle anything else, e.g. network error.
 }
 ```
 
@@ -227,6 +228,7 @@ public async Task SaveAsync()
 ```
 
 ### Return value
+
 > Type: Task
 
 ### Remarks
@@ -241,20 +243,20 @@ entry.Set("title", "Forrest Gump");
 
 try
 {
-    // Save the changes asynchronously
+    // Save the changes asynchronously.
     entry.SaveAsnyc();
 }
 catch(RestRequestException restEx)
 {
-    // Handle service error
+    // Handle service error.
 }
 catch(ValidationException valEx)
 {
-    // Handle data validation errors
+    // Handle data validation errors.
 }
 catch(Exception ex)
 {
-    // Handle anything else, e.g. network error
+    // Handle anything else, e.g. network error.
 }
 ```
 
@@ -273,6 +275,7 @@ public void Publish()
 ```
 
 ### Return value
+
 > Type: void
 
 ### Remarks
@@ -283,24 +286,24 @@ On a successful publish, the entry instance is updated with the new version deta
 
 ```cs
 {
-    // Publish the version of the entry
+    // Publish the version of the entry.
     entry.Publish();
 }
 catch(WorkflowException wfEx)
 {
-    // Handle workflow state change error
+    // Handle workflow state change error.
 }
 catch(RestRequestException restEx)
 {
-    // Handle service error
+    // Handle service error.
 }
 catch(ValidationException valEx)
 {
-    // Handle data validation errors
+    // Handle data validation errors.
 }
 catch(Exception ex)
 {
-    // Handle anything else, e.g. network error
+    // Handle anything else, e.g. network error.
 }
 ```
 
@@ -319,6 +322,7 @@ public async Task PublishAsync()
 ```
 
 ### Return value
+
 > Type: Task
 
 ### Remarks
@@ -329,24 +333,24 @@ On a successful publish, the entry instance is updated with the new version deta
 
 ```cs
 {
-    // Publish the version of the entry
+    // Publish the version of the entry.
     await entry.PublishAsync();
 }
 catch(WorkflowException wfEx)
 {
-    // Handle workflow state change error
+    // Handle workflow state change error.
 }
 catch(RestRequestException restEx)
 {
-    // Handle service error
+    // Handle service error.
 }
 catch(ValidationException valEx)
 {
-    // Handle data validation errors
+    // Handle data validation errors.
 }
 catch(Exception ex)
 {
-    // Handle anything else, e.g. network error
+    // Handle anything else, e.g. network error.
 }
 ```
 
@@ -365,6 +369,7 @@ public void Delete()
 ```
 
 ### Return value
+
 > Type: void
 
 ### Remarks
@@ -375,20 +380,20 @@ On a successful delete, the entry data is set to null.
 
 ```cs
 {
-    // Delete the entry variation
+    // Delete the entry variation.
     entry.Delete();
 }
 catch(RestRequestException restEx)
 {
-    // Handle service error
+    // Handle service error.
 }
 catch(ValidationException valEx)
 {
-    // Handle data validation errors
+    // Handle data validation errors.
 }
 catch(Exception ex)
 {
-    // Handle anything else, e.g. network error
+    // Handle anything else, e.g. network error.
 }
 ```
 
@@ -407,6 +412,7 @@ public async Task DeleteAsync()
 ```
 
 ### Return value
+
 > Type: Task
 
 ### Remarks
@@ -417,20 +423,20 @@ On a successful delete, the entry data is set to null.
 
 ```cs
 {
-    // Delete the entry variation
+    // Delete the entry variation.
     await entry.DeleteAsync();
 }
 catch(RestRequestException restEx)
 {
-    // Handle service error
+    // Handle service error.
 }
 catch(ValidationException valEx)
 {
-    // Handle data validation errors
+    // Handle data validation errors.
 }
 catch(Exception ex)
 {
-    // Handle anything else, e.g. network error
+    // Handle anything else, e.g. network error.
 }
 ```
 
@@ -455,6 +461,7 @@ public Entry NewVariation(string language)
 > The variation language to create
 
 ### Return value
+
 > Type: [Entry](/model/entry.md)  
 > The newly created (unsaved) entry language variation
 
@@ -474,5 +481,3 @@ frenchVariation.Set("title", "Belle de Jour");
 // Save the new variation
 frenchVariation.Save();
 ```
-
----

@@ -1,10 +1,10 @@
 # Image
 
-The Image type represents a link to an image asset with an instance specific caption, if required. 
+The Image type represents a link to an image asset with an instance specific caption, if required.
 
 ## Constructors
 
-### Create with `Guid` asset id.
+### Create with `Guid` asset id
 
 #### Syntax
 
@@ -30,7 +30,7 @@ public Image(Guid assetId, string caption = null, string language = null)
 
 ---
 
-### Create with `string` asset id.
+### Create with `string` asset id
 
 #### Syntax
 
@@ -39,6 +39,7 @@ public Image(Guid assetId, string caption = null, string language = null)
 {
 }
 ```
+
 #### Parameters
 
 *assetId*

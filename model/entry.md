@@ -23,14 +23,14 @@ These are the standard properties that all entries have. An entry can have multi
 
 | Method | Returns | Description |
 | :----- | :------ | :-----------|
-| [Get(string fieldName)](./entry-methods.html#get) | dynamic | Gets a field item by name and returns a dynamic object |
-| [Get&lt;Type&gt;(string fieldName)](./entry-methods.html#get-t) | &lt;Type&gt; | Gets a field item by name and attempts to cast to the specified generic type |
-| [HasValue(string fieldName)](./entry-methods.html#hasvalue) | bool | A helper function to determine whether a field exists and has a value |
-| [Save()](./entry-methods.html#save) | void | Saves changes made to the entry instance |
-| [SaveAsync()](./entry-methods.html#save) | Task | Saves changes made to the entry instance |
-| [Publish()](./entry-methods.html#publish) | void | Publishes the lastest version of the entry instance |
-| [PublishAsync()](./entry-methods.html#publishasync) | Task | Publishes the lastest version of the entry instance asynchronously |
-| [Delete()](./entry-methods.html#delete) | void | Deletes entry variation instance |
-| [DeleteAsync()](./entry-methods.html#deleteasync) | Task | Deletes entry variation instance asynchronously |
+| [Get(string fieldName)](./entry-methods.html#get) | dynamic | Gets a field item by name and returns a dynamic object. |
+| [Get&lt;Type&gt;(string fieldName)](./entry-methods.html#get-t) | &lt;Type&gt; | Gets a field item by name and attempts to cast to the specified generic type. |
+| [HasValue(string fieldName)](./entry-methods.html#hasvalue) | bool | A helper function to determine whether a field exists and has a value. |
+| [Save()](./entry-methods.html#save) | void | Saves changes made to the entry instance. |
+| [SaveAsync()](./entry-methods.html#save) | Task | Saves changes made to the entry instance asynchronously. |
+| [Publish()](./entry-methods.html#publish) | void | Publishes the latest version of the entry instance. |
+| [PublishAsync()](./entry-methods.html#publishasync) | Task | Publishes the latest version of the entry instance asynchronously. |
+| [Delete()](./entry-methods.html#delete) | void | Deletes entry variation instance. |
+| [DeleteAsync()](./entry-methods.html#deleteasync) | Task | Deletes entry variation instance asynchronously. |
 
 
