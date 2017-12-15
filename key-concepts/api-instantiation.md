@@ -1,3 +1,7 @@
+---
+description: All operations for the API hang off the *ManagementClient* type, which is created using the static method `ManagementClient.Create()`.
+---
+
 # API instantiation
 
 ## Client creation
