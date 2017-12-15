@@ -1,3 +1,7 @@
+---
+description: In the .NET Delivery API client, the DataType is represented as a DataType `enum` type.
+---
+
 # DataTypes
 
 The DataType is the storage type for a field and determines how the field data is validated and indexed for search. In the .NET Delivery API client, the DataType is represented as a DataType `enum` type.
