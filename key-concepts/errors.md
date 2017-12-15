@@ -1,3 +1,6 @@
+---
+description: All non-success HTTP responses are treated as errors and are wrapped up in the client API to allow them to be handled.
+---
 # Errors
 
 Things go wrong, either because the client is asking for something that does not exist, a network failure occurred or a bug is in the code. All non-success HTTP responses are treated as errors and are wrapped up in the client API to allow them to be handled.
