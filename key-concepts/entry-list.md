@@ -1,3 +1,6 @@
+---
+description: Listing Entries can be achieved by using one of the List method overloads.
+---
 # Listing Entries
 
 Listing Entries can be achieved by using one of the `List` method overloads.
