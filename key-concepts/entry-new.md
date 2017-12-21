@@ -1,3 +1,6 @@
+---
+description: Creating a new entry can be achieved by using one of the New method overloads.
+---
 # Creating a new Entry
 
 Creating a new [entry](/model/entry.md) can be achieved by using one of the `New` method overloads.
