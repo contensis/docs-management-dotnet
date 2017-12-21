@@ -1,3 +1,6 @@
+---
+description: Requesting an individual project can be achieved by using one of the Get operations.
+---
 # Get a project
 
 Requesting an individual project can be achieved by using one of the *Get* operations.
