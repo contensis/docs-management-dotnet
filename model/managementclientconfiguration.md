@@ -1,3 +1,6 @@
+---
+description: The ManagementClientConfiguration is a container for the options that are required for setting the default settings.
+---
 # ManagementClientConfiguration
 
 The `ManagementClientConfiguration` is a container for the options that are required for setting the default settings.
