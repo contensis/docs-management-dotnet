@@ -1,3 +1,6 @@
+---
+description: Requesting an individual entry can be achieved by using one of the Get method overloads.
+---
 # Getting an entry
 
 Requesting an individual [entry](/model/entry.md) can be achieved by using one of the `Get` method overloads.
