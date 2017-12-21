@@ -1,3 +1,6 @@
+---
+description: A project object can be used to understand the languages that the project supports and which language is the primary language. 
+---
 # Project
 
 A project object can be used to understand the languages that the project supports and which language is the primary language. The project instance is also where entry operations are located.
