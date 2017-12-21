@@ -1,3 +1,6 @@
+---
+description: This type contains all the information relating to the versioning information for an entry or an asset.
+---
 # VersionInfo
 
 ## Overview
