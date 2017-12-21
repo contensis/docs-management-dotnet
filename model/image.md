@@ -1,3 +1,6 @@
+---
+description: The Image type represents a link to an image asset with an instance specific caption, if required.
+---
 # Image
 
 The Image type represents a link to an image asset with an instance specific caption, if required.
