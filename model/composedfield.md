@@ -1,3 +1,6 @@
+---
+description: The ComposedField type contains the data that the Composer editor defines. 
+---
 # ComposedField
 
 The `ComposedField` type contains the data that the [Composer editor](https://zenhub.zengenti.com/Contensis/10.0/kb/content-types-and-entries/field-editors/Composer.aspx) defines. It contains a list of [ComposedFieldItem](/model/composedfielditem.md) instances, which expose *Type* and *Value* properties. The *Value* property allows data for the field to be retrieved or set. The *Type* property is a name given to an *allowed field type validation* defined in the content type that the entry is based on.
