@@ -1,3 +1,6 @@
+---
+description: The DateRange type represents a start and end point in time.
+---
 # DateRange
 
 The DateRange type represents a start and end point in time.
