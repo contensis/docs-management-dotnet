@@ -1,3 +1,6 @@
+---
+description: TThe DataFormat property is used as an extension of a DataType to describe or identify the structure and intent of the data. 
+---
 # DataFormat
 
 The DataFormat property is used as an extension of a [DataType](/key-concepts/data-types.md) to describe or identify the structure and intent of the data. For example, a [Location](/model/location.md) has a DataType of *object*, and a DataFormat of *location*. Another example is a HTML block, which has a DataType of *string* and a DataFormat of *html*.
