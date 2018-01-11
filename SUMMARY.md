@@ -37,3 +37,5 @@
 * [Image](/model/image.md)
 * [Location](/model/location.md)
 * [Quote](/model/quote.md)
+* [PagedList](/model/pagedList.md)
+* [PageOptions](/model/pageoptions.md)
