@@ -1,4 +1,6 @@
----description: This guide will take you through creating a content type and importing entries using the .NET Management API.---
+---
+description: This guide will take you through creating a content type and importing entries using the .NET Management API.
+---
 # Getting started
 
 This guide will take you through creating a content type and importing entries using the .NET Management API. Throughout the documentation we use examples based on movies.
