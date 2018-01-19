@@ -1,3 +1,6 @@
+---
+description: To access any resource from the Management API, a client needs to be authenticated with the Zengenti OAuth2 Identity provider. 
+---
 # Authentication
 
 ## Overview
