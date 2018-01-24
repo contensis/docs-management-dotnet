@@ -1,16 +1,43 @@
 # Entry methods
 
+## Core
+
 * [Get(string fieldName)](#get)
 * [Get&lt;T&gt;(string fieldName)](#get-t)
 * [Set(string fieldName, object value)](#set)
 * [HasValue(string fieldName)](#hasvalue)
 * [Save()](#save)
 * [SaveAsync()](#saveasync)
-* [Publish()](#publish)
-* [PublishAsync()](#publishasync)
 * [Delete()](#delete)
 * [DeleteAsync()](#deleteasync)
 * [NewVariation(string language)](#newvariation)
+
+## Workflow
+
+* [InvokeWorkflow(Dictionary<string, object> data)](#invokeworkflow-with-dictionary)
+* [InvokeWorkflowAsync(Dictionary<string, object> data)](#invokeworkflowasync-with-dictionary)
+* [InvokeWorkflow(object data)](#invokeworkflow-with-anonymous-object)
+* [InvokeWorkflowAsync(object data)](#invokeworkflowasync-with-anonymous-object)
+
+### Entry basic workflow
+
+* [Publish()](#publish)
+* [PublishAsync()](#publishasync)
+
+### Entry approval workflow
+
+* [Submit(string message = null)](#submit)
+* [SubmitAsync(string message = null)](#submitasync)
+* [Approve()](#approve)
+* [ApproveAsync()](#approveasync)
+* [Decline(string message = null)](#decline)
+* [DeclineAsync(string message = null)](#declineasync)
+* [Revoke()](#revoke)
+* [RevokeAsync()](#revokeasync)
+
+### Entry
+
+---
 
 ## Get
 
@@ -262,100 +289,6 @@ catch(Exception ex)
 
 ---
 
-## Publish
-
-Publishes an entry instance.
-
-### Syntax
-
-```cs
-public void Publish()
-{
-}
-```
-
-### Return value
-
-> Type: void
-
-### Remarks
-
-On a successful publish, the entry instance is updated with the new version details controlled from the service. A WorkflowException will be thrown if there is any issue with the publish workflow state change. Other exception types could be thrown if there are any data validation issues, unexpected issue in the service or a local exception.
-
-### Example
-
-```cs
-{
-    // Publish the version of the entry.
-    entry.Publish();
-}
-catch(WorkflowException wfEx)
-{
-    // Handle workflow state change error.
-}
-catch(RestRequestException restEx)
-{
-    // Handle service error.
-}
-catch(ValidationException valEx)
-{
-    // Handle data validation errors.
-}
-catch(Exception ex)
-{
-    // Handle anything else, e.g. network error.
-}
-```
-
----
-
-## PublishAsync
-
-Publishes an entry instance asynchronously.
-
-### Syntax
-
-```cs
-public async Task PublishAsync()
-{
-}
-```
-
-### Return value
-
-> Type: Task
-
-### Remarks
-
-On a successful publish, the entry instance is updated with the new version details controlled from the service. A WorkflowException will be thrown if there is any issue with the publish workflow state change. Other exception types could be thrown if there are any data validation issues, unexpected issue in the service or a local exception.
-
-### Example
-
-```cs
-{
-    // Publish the version of the entry.
-    await entry.PublishAsync();
-}
-catch(WorkflowException wfEx)
-{
-    // Handle workflow state change error.
-}
-catch(RestRequestException restEx)
-{
-    // Handle service error.
-}
-catch(ValidationException valEx)
-{
-    // Handle data validation errors.
-}
-catch(Exception ex)
-{
-    // Handle anything else, e.g. network error.
-}
-```
-
----
-
 ## Delete
 
 Delete an entry instance.
@@ -480,4 +413,464 @@ frenchVariation.Set("title", "Belle de Jour");
 
 // Save the new variation
 frenchVariation.Save();
+```
+
+---
+
+## InvokeWorkflow with Dictionary
+
+Invokes a named workflow event with an optional `Dictionary<string, object>` data parameter.
+
+### Syntax
+
+```cs
+public void InvokeWorkflow(string event, Dictionary<string, object> data)
+{
+}
+```
+
+### Parameters
+
+*event*
+> Type: string  
+> The id of the workflow event to invoked, e.g. submit
+
+*data*
+> Type: Dictionary&lt;string, object&gt;
+> A dictionary of named data items to include as part of the event invocation
+
+### Return value
+
+> Type: void
+
+### Remarks
+
+The values in the data can only be simple types, i.e. string, int, decimal, datetime, bool. If a complex object type is passed then an `ArgumentException` will be thrown.
+
+### Example
+
+```cs
+// Submit the entry for approval.
+entry.InvokeWorkflow("submit", new Dictionary<string, object>
+{
+    { "message", "Added additional photos to the intro" }
+});
+```
+
+---
+
+## InvokeWorkflowAsync with Dictionary
+
+Invokes a named workflow event asynchronously with an optional `Dictionary<string, object>` data parameter.
+
+### Syntax
+
+```cs
+public async Task InvokeWorkflowAsync(string message)
+{
+}
+```
+
+### Parameters
+
+*event*
+> Type: string  
+> The id of the workflow event to invoked, e.g. submit
+
+*data*
+> Type: Dictionary&lt;string, object&gt;
+> A dictionary of named data items to include as part of the event invocation
+
+### Return value
+
+> Type: Task
+
+### Remarks
+
+The values in the data can only be simple types, i.e. string, int, decimal, datetime, bool. If a complex object type is passed then an `ArgumentException` will be thrown.
+
+### Example
+
+```cs
+// Submit the entry for approval.
+await entry.InvokeWorkflowAsync("submit", 
+    new Dictionary<string, object>
+    {
+        { "message", "Added additional photos to the intro" }
+    }
+);
+```
+
+---
+
+## InvokeWorkflow with anonymous object
+
+Invokes a named workflow event with an optional anonymous object data parameter.
+
+### Syntax
+
+```cs
+public void InvokeWorkflow(string event, object data)
+{
+}
+```
+
+### Parameters
+
+*event*
+> Type: string  
+> The id of the workflow event to invoked, e.g. submit
+
+*data*
+> Type: object
+> An anonynous object to include as part of the event invocation
+
+### Return value
+
+> Type: void
+
+### Remarks
+
+The values in the data can only be simple types, i.e. string, int, decimal, datetime, bool. If a complex object type is passed then an `ArgumentException` will be thrown.
+
+### Example
+
+```cs
+// Submit the entry for approval.
+entry.InvokeWorkflow("submit", 
+    new 
+    {
+        Message = "Added additional photos to the intro"
+    };
+);
+```
+
+---
+
+## InvokeWorkflowAsync with anonymous object
+
+Invokes a named workflow event asynchronously with an optional anonymous object data parameter.
+
+### Syntax
+
+```cs
+public async Task InvokeWorkflowAsync(string message)
+{
+}
+```
+
+### Parameters
+
+*event*
+> Type: string  
+> The id of the workflow event to invoked, e.g. submit
+
+*data*
+> Type: Dictionary&lt;string, object&gt;
+> An object to include as part of the event invocation
+
+### Return value
+
+> Type: Task
+
+### Remarks
+
+The values in the data can only be simple types, i.e. string, int, decimal, datetime, bool. If a complex object type is passed then an `ArgumentException` will be thrown.
+
+### Example
+
+```cs
+// Submit the entry for approval.
+await entry.InvokeWorkflowAsync("submit", 
+    new 
+    {
+        Message = "Added additional photos to the intro"
+    };
+);
+```
+
+---
+
+## Publish
+
+Publishes an entry instance for entries in the Contensis basic workflow.
+
+### Syntax
+
+```cs
+public void Publish()
+{
+}
+```
+
+### Return value
+
+> Type: void
+
+### Remarks
+
+On a successful publish, the entry instance is updated with the new version details controlled from the service. A WorkflowException will be thrown if there is any issue with the publish workflow state change. Other exception types could be thrown if there are any data validation issues, unexpected issue in the service or a local exception.
+
+### Example
+
+```cs
+// Publish the version of the entry.
+entry.Publish();
+```
+
+---
+
+## PublishAsync
+
+Publishes an entry instance asynchronously for entries in the Contensis basic workflow.
+
+### Syntax
+
+```cs
+public async Task PublishAsync()
+{
+}
+```
+
+### Return value
+
+> Type: Task
+
+### Remarks
+
+On a successful publish, the entry instance is updated with the new version details controlled from the service. A WorkflowException will be thrown if there is any issue with the publish workflow state change. Other exception types could be thrown if there are any data validation issues, unexpected issue in the service or a local exception.
+
+### Example
+
+```cs
+// Publish the version of the entry.
+await entry.PublishAsync();
+```
+
+---
+
+## Submit
+
+Submits an entry instance to the awaiting approval state for entries in the Contensis approval workflow.
+
+### Syntax
+
+```cs
+public void Submit(string message = null)
+{
+}
+```
+
+### Parameters
+
+*message*
+> Type: string  
+> An optional message that can be included with the entry submission
+
+### Return value
+
+> Type: void
+
+
+### Example
+
+```cs
+// Submit the entry for approval.
+entry.Submit("I've updated the 2nd paragraph to make it clearer");
+```
+
+---
+
+## SubmitAsync
+
+Submits an entry instance to the awaiting approval state asynchronously for entries in the Contensis approval workflow.
+
+### Syntax
+
+```cs
+public async Task SubmitAsync(string message)
+{
+}
+```
+
+### Parameters
+
+*message*
+> Type: string  
+> An optional message that can be included with the entry submission
+
+### Return value
+
+> Type: Task
+
+### Example
+
+```cs
+// Submit the entry for approval asynchronously.
+await entry.SubmitAsync("I've updated the 2nd paragraph to make it clearer");
+```
+
+---
+
+## Approve
+
+Approves an entry for publishing for entries in the Contensis approval workflow.
+
+### Syntax
+
+```cs
+public void Approve()
+{
+}
+```
+
+### Return value
+
+> Type: void
+
+
+### Example
+
+```cs
+// Approve the entry for publishing.
+entry.Approve();
+```
+
+---
+
+## ApproveAsync
+
+Approves an entry for publishing asynchronously for entries in the Contensis approval workflow.
+
+### Syntax
+
+```cs
+public async Task ApproveAsync()
+{
+}
+```
+
+### Return value
+
+> Type: Task
+
+### Example
+
+```cs
+// Approve the entry instance asynchronously.
+await entry.ApproveAsync();
+```
+
+---
+
+## Decline
+
+Declines an entry submission for entries in the Contensis approval workflow.
+
+### Syntax
+
+```cs
+public void Decline(string message = null)
+{
+}
+```
+
+### Parameters
+
+*message*
+> Type: string  
+> An optional message that can be included to detail the decline reason
+
+### Return value
+
+> Type: void
+
+
+### Example
+
+```cs
+// Decline the entry submission
+entry.Decline("There are multiple spelling mistakes in the opening paragraph");
+```
+
+---
+
+## DeclineAsync
+
+Declines an entry submission for entries in the Contensis approval workflow.
+
+### Syntax
+
+```cs
+public async Task DeclineAsync(string message)
+{
+}
+```
+
+### Parameters
+
+*message*
+> Type: string  
+> An optional message that can be included to detail the decline reason
+
+### Return value
+
+> Type: Task
+
+### Example
+
+```cs
+// Decline the entry submission asynchronously.
+await entry.DeclineAsync("I've updated the 2nd paragraph to make it clearer");
+```
+
+---
+
+## Revoke
+
+Revokes an entry submission for entries in the Contensis approval workflow.
+
+### Syntax
+
+```cs
+public void Revoke()
+{
+}
+```
+
+### Return value
+
+> Type: void
+
+
+### Example
+
+```cs
+// Revoke the entry submission
+entry.Revoke();
+```
+
+---
+
+## RevokeAsync
+
+Revokes an entry submission for entries asynchronously in the Contensis approval workflow.
+
+### Syntax
+
+```cs
+public async Task RevokeAsync()
+{
+}
+```
+
+### Return value
+
+> Type: Task
+
+### Example
+
+```cs
+// Revoke the entry submission asynchronously.
+await entry.RevokeAsync();
 ```

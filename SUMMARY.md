@@ -22,6 +22,7 @@
 * [Listing entries](/key-concepts/entry-list.md)
 * [Linking content](/key-concepts/linking-content.md)
 * [Components](/key-concepts/components.md)
+* [Workflow](/key-concepts/workflow.md)
 
 ## Model
 
