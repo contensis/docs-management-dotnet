@@ -21,4 +21,4 @@ The Workflow object is readonly and contains information about the current workf
 | InvokedBy | string | The username of the user who invoked the last event |
 | From | string | The id of the previous workflow state |
 | Event | string | The id of the event that was invoked |
-| Data | `IDictionary<string, object>` | Data included with the previous workflow invocation |
+| Data | IDictionary&lt;string, object&gt; | Data included with the previous workflow invocation |
