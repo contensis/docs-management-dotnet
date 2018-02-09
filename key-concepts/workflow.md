@@ -6,14 +6,14 @@ An entry's life-cycle is controlled by the workflow assigned to the content type
 
 Contensis supports two standard workflows:
 
-- **Basic** - allows content to be authored and then published instantly
-- **Approval** - allows content to be submitted for approval so that it is controlled by an authorised approver before it is made live
+- **Basic** - allows content to be authored and then published instantly.
+- **Approval** - allows content to be submitted for approval so that it is controlled by an authorised approver before it is made live.
 
-Entries are by default controlled by the *Contensis Entry basic workflow*, but this can be changed by specifying a different workflow type in the content type editing screen.
+Entries are by default controlled by the *basic* workflow, but this can be changed by specifying a different workflow type in the content type editing screen.
 
 ## Invoking events
 
-Workflow events can be invoked using the generic `Invoke` method on the Workflow property.
+Workflow events can be invoked using the `Invoke` or `InvokeAsync` methods on the Workflow object.
 
 ```cs
 using Zengenti.Contensis.Management;
@@ -30,10 +30,10 @@ var entry = website.Entries.Get("d69ad539-0e3a-4d7f-9c9d-1fad1b39faad");
 // Invoke a workflow event
 try
 {
-    entries.Workflow.Invoke("decline", 
-        new 
-        { 
-            message = "Need to work on the last part as it doesn't read very well..." 
+    entries.Workflow.Invoke("awaitingApproval.decline",
+        new
+        {
+            message = "Need to work on the last part as it doesn't read very well..."
         }
     );
 
@@ -57,25 +57,21 @@ catch(Exception)
 
 ```
 
-### Supported methods
+The eventName parameter passed to the Invoke method follows the structure:
 
-The .NET Management client has [specific entry methods](/model/entry-methods.md) which are essentially shortcuts to the main Workflow.Invoke method.
+`{workflowStateId}.{workflowEventId}`
 
-#### Basic workflow
+*Examples*
 
-- Publish()
-- PublishAsync();
+- authoring.submit
+- awaitingApproval.approve
+- awaitingApproval.decline
 
-#### Approval workflow
+It is possible to only specify the `workflowEventId` i.e. 'approve' or 'submit' and the Management client will automatically prefix the current state of the entry, but this is less explicit and open to invalid event innvocations.
 
-- Submit(string message)
-- SubmitAsync(string message)
-- Approve()
-- ApproveAsync()
-- Decline(string message)
-- DeclineAsync(string message)
-- Revoke()
-- RevokeAsync()
+### Specific workflow methods
+
+The .NET Management client has [specific workflow extension methods](/model/entry-methods.md) which are essentially shortcuts to the main Workflow.Invoke method.
 
 ## Event permissioning
 
