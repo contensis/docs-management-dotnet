@@ -41,3 +41,5 @@
 * [PagedList](/model/pagedList.md)
 * [PageOptions](/model/pageoptions.md)
 * [Workflow](/model/workflow.md)
+* [WorkflowTransition](/model/workflowTransition.md)
+* [WorkflowExtensions](/model/workflowExtensions.md)

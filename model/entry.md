@@ -19,6 +19,7 @@ These are the standard properties that all entries have. An entry can have multi
 | DataFormat | string | Either 'entry' or 'asset' |
 | Language | string | The language of the entry instance |
 | Version | [VersionInfo](/model/versioninfo.md) | Version information for the entry |
+| IsPublished | bool | Returns whether the entry is published |
 | Metadata | Metadata | Metadata associated with the entry instance |
 | Owner | string | The id of the entry owner |
 | Workflow | [Workflow](/model/workflow.md) | the current workflow details for the entry |
@@ -32,9 +33,5 @@ These are the standard properties that all entries have. An entry can have multi
 | [HasValue(string fieldName)](./entry-methods.html#hasvalue) | bool | A helper function to determine whether a field exists and has a value. |
 | [Save()](./entry-methods.html#save) | void | Saves changes made to the entry instance. |
 | [SaveAsync()](./entry-methods.html#save) | Task | Saves changes made to the entry instance asynchronously. |
-| [Publish()](./entry-methods.html#publish) | void | Publishes the latest version of the entry instance. |
-| [PublishAsync()](./entry-methods.html#publishasync) | Task | Publishes the latest version of the entry instance asynchronously. |
 | [Delete()](./entry-methods.html#delete) | void | Deletes entry variation instance. |
 | [DeleteAsync()](./entry-methods.html#deleteasync) | Task | Deletes entry variation instance asynchronously. |
-
-

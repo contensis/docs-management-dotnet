@@ -13,7 +13,7 @@ Entries are by default controlled by the *Contensis Entry basic workflow*, but t
 
 ## Invoking events
 
-Workflow events can be invoked using the generic `InvokeWorkflow` method.
+Workflow events can be invoked using the generic `Invoke` method on the Workflow property.
 
 ```cs
 using Zengenti.Contensis.Management;
@@ -30,7 +30,7 @@ var entry = website.Entries.Get("d69ad539-0e3a-4d7f-9c9d-1fad1b39faad");
 // Invoke a workflow event
 try
 {
-    entries.InvokeWorkflow("decline", 
+    entries.Workflow.Invoke("decline", 
         new 
         { 
             message = "Need to work on the last part as it doesn't read very well..." 
@@ -59,7 +59,7 @@ catch(Exception)
 
 ### Supported methods
 
-The .NET Management client has [specific entry methods](/model/entry-methods.md) which are essentially shortcuts to the main InvokeWorkflow method.
+The .NET Management client has [specific entry methods](/model/entry-methods.md) which are essentially shortcuts to the main Workflow.Invoke method.
 
 #### Basic workflow
 
