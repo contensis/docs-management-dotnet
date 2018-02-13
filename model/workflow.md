@@ -205,7 +205,7 @@ public void Invoke(string event, object data)
 
 *data*
 > Type: object
-> An anonynous object to include as part of the event invocation
+> An anonymous object to include as part of the event invocation
 
 ### Return value
 

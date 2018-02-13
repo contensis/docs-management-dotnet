@@ -57,7 +57,7 @@ catch(Exception)
 
 ```
 
-The eventName parameter passed to the Invoke method follows the structure:
+The eventName parameter passed to the `Invoke` methods follows the structure:
 
 `{workflowStateId}.{workflowEventId}`
 
@@ -75,14 +75,14 @@ These are the available events for the supported workflows
 - awaitingApproval.revoke
 - declined.submit
 
-It is possible to only specify the `workflowEventId` i.e. 'approve' or 'submit' and the Management client will automatically prefix the current state of the entry, but this is less explicit and open to invalid event innvocations.
+It is possible to only specify the `workflowEventId` i.e. 'approve' or 'submit' and the Management API client will automatically prefix the current state of the entry, but this is less explicit and open to invalid event invocations.
 
 It is important to note certain states have 'sysUpdate' and 'sysDelete' events, which can't be invoked directly through a workflow event invocation, but can be invoked using the Save and Delete methods on the entry. When an entry is in the Published state, calling save (which in-turn invokes sysUpdate) will automatically move the state back to Authoring.
 
 ### Specific workflow methods
 
-The .NET Management client has [specific workflow extension methods](/model/entry-methods.md) which are essentially shortcuts to the main Workflow.Invoke method.
+The .NET Management client has [specific workflow extension methods](/model/workflowExtensions.md) which are essentially shortcuts to the main Workflow.Invoke / Workflow.InvokeAsync methods.
 
-## Event permissioning
+## Event permissions
 
 The invocation of workflow events is controlled by the roles & permissions security API, which can be configured within the Contensis Roles screens. Individual events can be permissioned so that granular control is possible, ensuring each step of a workflow is only invocable by an authorized user. If authorization is denied when invoking a workflow event then a `SecurityException` is raised, detailing the unauthorized access.
