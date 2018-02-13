@@ -61,13 +61,23 @@ The eventName parameter passed to the Invoke method follows the structure:
 
 `{workflowStateId}.{workflowEventId}`
 
-*Examples*
+These are the available events for the supported workflows
+
+### Basic workflow
+
+- authoring.publish
+
+### Approval workflow
 
 - authoring.submit
 - awaitingApproval.approve
 - awaitingApproval.decline
+- awaitingApproval.revoke
+- declined.submit
 
 It is possible to only specify the `workflowEventId` i.e. 'approve' or 'submit' and the Management client will automatically prefix the current state of the entry, but this is less explicit and open to invalid event innvocations.
+
+It is important to note certain states have 'sysUpdate' and 'sysDelete' events, which can't be invoked directly through a workflow event invocation, but can be invoked using the Save and Delete methods on the entry. When an entry is in the Published state, calling save (which in-turn invokes sysUpdate) will automatically move the state back to Authoring.
 
 ### Specific workflow methods
 
