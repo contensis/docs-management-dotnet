@@ -2,18 +2,29 @@
 
 ## Overview
 
-An entry's life-cycle is controlled by the workflow assigned to the content type that the entry is based on.
+An entry's life-cycle is controlled by the workflow assigned to the content type that the entry is based on. Contensis supports two standard built-in workflows types.
 
-Contensis supports two standard workflows:
+### Basic workflow
 
-- **Basic** - allows content to be authored and then published instantly.
-- **Approval** - allows content to be submitted for approval so that it is controlled by an authorised approver before it is made live.
+Allows content to be authored and then published instantly.
+
+![Basic workflow](/images/basic-workflow.png "Basic workflow")
+
+### Approval workflow
+
+Allows content to be submitted for approval so that it is controlled by an authorised approver before it is made live.
+
+![Approval workflow](/images/approval-workflow.png "Approval workflow")
 
 Entries are by default controlled by the *basic* workflow, but this can be changed by specifying a different workflow type in the content type editing screen.
 
-## Invoking events
+## Workflow specific methods
 
-Workflow events can be invoked using the `Invoke` or `InvokeAsync` methods on the Workflow object.
+The .NET Management client has [specific workflow extension methods](/model/workflowExtensions.md) which are essentially shortcuts to the following Workflow.Invoke / Workflow.InvokeAsync methods. We recommend using these methods for ease of use.
+
+## Invoking events generically
+
+Workflow events can be invoked using the generic `Invoke` or `InvokeAsync` methods on the Workflow object.
 
 ```cs
 using Zengenti.Contensis.Management;
@@ -65,11 +76,11 @@ These are the available events for the supported workflows
 
 ### Basic workflow
 
-- authoring.publish
+- draft.publish
 
 ### Approval workflow
 
-- authoring.submit
+- draft.submit
 - awaitingApproval.approve
 - awaitingApproval.decline
 - awaitingApproval.revoke
@@ -81,10 +92,6 @@ It is possible to only specify the `workflowEventId` i.e. 'approve' or 'submit' 
 
 It is important to note certain states have 'sysUpdate' and 'sysDelete' events, which can't be invoked directly through a workflow event invocation, but can be invoked using the Save and Delete methods on the entry. When an entry is in the Published state, calling save (which in-turn invokes sysUpdate) will automatically move the state back to Authoring.
 
-### Specific workflow methods
-
-The .NET Management client has [specific workflow extension methods](/model/workflowExtensions.md) which are essentially shortcuts to the main Workflow.Invoke / Workflow.InvokeAsync methods.
-
 ## Event permissions
 
-The invocation of workflow events is controlled by the roles & permissions security API, which can be configured within the Contensis Roles screens. Individual events can be permissioned so that granular control is possible, ensuring each step of a workflow is only invocable by an authorized user. If authorization is denied when invoking a workflow event then a `SecurityException` is raised, detailing the unauthorized access.
+The invocation of workflow events is controlled by the roles & permissions security API, which can be configured within the Contensis Roles screens. Individual events can be permissioned so that granular control is possible, ensuring each step of a workflow is only invocable by an authorized user. If authorization is denied when invoking a workflow event then a `AuthorizationException` is raised, detailing the unauthorized access.

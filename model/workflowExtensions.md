@@ -18,9 +18,13 @@ Event methods specific to the standard Contensis workflows can be included to ma
 - [Revoke(this Workflow workflow)](#revoke)
 - [RevokeAsync(this Workflow workflow)](#revokeasync)
 
+<!--
+// Commented out until we have 1st class custom workflows in the UI
+
 **Custom workflow**
 
 - [Creating custom extensions](#creating-custom-extensions)
+-->
 
 # Basic workflow
 
@@ -321,6 +325,9 @@ await entry.Workflow.RevokeAsync();
 
 ---
 
+<!--
+// Commented out until we have 1st class custom workflows in the UI
+
 ## Creating custom extensions
 
 It may be useful to create specific event invocation methods for your own custom workflow to reduce potential mistakes and simplify the use of the API, especially if the code is going to be used in multiple scenarios.
@@ -400,3 +407,4 @@ namespace MovieDb.Importer;
     }
 }
 ```
+-->

@@ -20,22 +20,6 @@ The Workflow object is readonly and contains information about the current workf
 * [Invoke(string eventName, object data)](#invoke-with-anonymous-object)
 * [InvokeAsync(string eventName, object data)](#invokeasync-with-anonymous-object)
 
-### Entry basic workflow
-
-* [Publish()](#publish)
-* [PublishAsync()](#publishasync)
-
-### Entry approval workflow
-
-* [Submit(string message = null)](#submit)
-* [SubmitAsync(string message = null)](#submitasync)
-* [Approve()](#approve)
-* [ApproveAsync()](#approveasync)
-* [Decline(string message = null)](#decline)
-* [DeclineAsync(string message = null)](#declineasync)
-* [Revoke()](#revoke)
-* [RevokeAsync()](#revokeasync)
-
 ## Invoke
 
 Invokes a named workflow event.
