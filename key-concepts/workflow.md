@@ -20,7 +20,7 @@ Entries are by default controlled by the *basic* workflow, but this can be chang
 
 ## Workflow specific methods
 
-The .NET Management client has [specific workflow extension methods](/model/workflowExtensions.md) which are essentially shortcuts to the following Workflow.Invoke / Workflow.InvokeAsync methods. We recommend using these methods for ease of use.
+We have created some [useful workflow extension methods](/model/workflowExtensions.md) which offer shortcuts for events in our standard workflows. Alternatively you can use the more generic Workflow.Invoke / Workflow.InvokeAsync methods.
 
 ## Invoking events generically
 
@@ -52,10 +52,6 @@ try
 catch(WorkflowException ex)
 {
     // Something went wrong invoking the workflow
-}
-catch(SecurityException secEx)
-{
-    // The workflow event invoke was not allowed
 }
 catch(RestException restEx)
 {
@@ -90,7 +86,7 @@ It is possible to only specify the `workflowEventId` i.e. 'approve' or 'submit' 
 
 **If a workflow event is invoked that is not valid for the current state, then a `WorkflowException` will be raised detailing the invalid action.**
 
-It is important to note certain states have 'sysUpdate' and 'sysDelete' events, which can't be invoked directly through a workflow event invocation, but can be invoked using the Save and Delete methods on the entry. When an entry is in the Published state, calling save (which in-turn invokes sysUpdate) will automatically move the state back to Authoring.
+It is important to note certain states have 'sysUpdate' and 'sysDelete' events, which can't be invoked directly through a workflow event invocation, but can be invoked using the Save and Delete methods on the entry. When an entry is in the Published state, calling save (which in-turn invokes sysUpdate) will automatically move the state back to Draft.
 
 ## Event permissions
 
