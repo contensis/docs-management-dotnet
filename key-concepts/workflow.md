@@ -1,3 +1,6 @@
+---
+description: An entry's life-cycle is controlled by the workflow assigned to the content type that the entry is based on.
+---
 # Workflow
 
 ## Overview
