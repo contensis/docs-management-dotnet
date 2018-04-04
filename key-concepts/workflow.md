@@ -67,7 +67,7 @@ catch(Exception)
 
 ```
 
-The eventName parameter passed to the `Invoke` methods follows the structure:
+The eventName parameter passed to the `Invoke` methods follows the structure, except for `sysUnpublish`:
 
 `{workflowStateId}.{workflowEventId}`
 
@@ -76,6 +76,7 @@ These are the available events for the supported workflows
 ### Basic workflow
 
 - draft.publish
+- sysUnpublish
 
 ### Approval workflow
 
@@ -84,6 +85,7 @@ These are the available events for the supported workflows
 - awaitingApproval.decline
 - awaitingApproval.revoke
 - declined.submit
+- sysUnpublish
 
 It is possible to only specify the `workflowEventId` i.e. 'approve' or 'submit' and the Management API client will automatically prefix the current state of the entry, but this is less explicit and open to invalid event invocations.
 

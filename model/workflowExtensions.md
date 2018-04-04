@@ -6,6 +6,8 @@ Event methods specific to the standard Contensis workflows can be included to ma
 
 - [Publish(this Workflow workflow)](#publish)
 - [PublishAsync(this Workflow workflow)](#publishasync)
+- [Unpublish(this Workflow workflow, bool unpublishAll = false)](#unpublish)
+- [UnpublishAsync(this Workflow workflow, bool unpublishAll = false)](#unpublishasync)
 
 **Approval workflow**
 
@@ -17,6 +19,8 @@ Event methods specific to the standard Contensis workflows can be included to ma
 - [DeclineAsync(this Workflow workflow, string message)](#declineasync)
 - [Revoke(this Workflow workflow)](#revoke)
 - [RevokeAsync(this Workflow workflow)](#revokeasync)
+- [Unpublish(this Workflow workflow, bool unpublishAll = false)](#unpublish)
+- [UnpublishAsync(this Workflow workflow, bool unpublishAll = false)](#unpublishasync)
 
 <!--
 // Commented out until we have 1st class custom workflows in the UI
@@ -324,6 +328,80 @@ await entry.Workflow.RevokeAsync();
 ```
 
 ---
+
+# All workflows
+
+Adding either one of the following namespace declarations will add the Unpublish methods.
+
+```cs
+using Zengenti.Contensis.Management.Workflow.Approval;
+using Zengenti.Contensis.Management.Workflow.Basic;
+```
+
+## Unpublish
+
+Unpublishes an entry
+
+### Syntax
+
+```cs
+public void Unpublish(this Workflow workflow, bool unpublishAll = false)
+{
+}
+```
+
+### Parameters
+
+*unpublishAll*
+> Type: boolean  
+> An optional boolean specifying whether all language variations of the entry should be unpublished too.
+
+### Return value
+
+> Type: void
+
+### Example
+
+```cs
+// Unpublish the current entry
+entry.Workflow.Unpublish();
+
+// Unpublish all of the language variations for this entry
+entry.Workflow.Unpublish(true);
+```
+
+---
+
+## UnpublishAsync
+
+Unpublishes an entry asynchronously
+
+### Syntax
+
+```cs
+public async Task UnpublishAsync(this Workflow workflow, bool unpublishAll = false)
+{
+}
+```
+### Parameters
+
+*unpublishAll*
+> Type: boolean  
+> An optional boolean specifying whether all language variations of the entry should be unpublished too.
+
+### Return value
+
+> Type: Task
+
+### Example
+
+```cs
+// Unpublish the current entry
+await entry.Workflow.UnpublishAsync();
+
+// Unpublish all of the language variations for this entry
+await entry.Workflow.UnpublishAsync(true);
+```
 
 <!--
 // Commented out until we have 1st class custom workflows in the UI
