@@ -15,7 +15,7 @@ These are the standard properties that all entries have. An entry can have multi
 | :------- | :--- | :---------- |
 | Id | int | The entry identifier |
 | ContentTypeId | string  | The API identifier of the content type that the entry is based on |
-| ProjectId | string | The API identifer of the project the entry belongs to |
+| ProjectId | string | The project identifier, e.g. "movieDb". Found in the project overview screen of the management console |
 | DataFormat | string | Either 'entry' or 'asset' |
 | Language | string | The language of the entry instance |
 | Version | [VersionInfo](/model/versioninfo.md) | Version information for the entry |

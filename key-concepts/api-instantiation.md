@@ -22,7 +22,7 @@ var client = ManagementClient.Create();
 Creating a client from outside a Contensis website, or developing locally in Visual Studio.
 
 ```cs
-var client = ManagementClient.Create("https://cms.cloud.contensis.com", "{client_id}", "{shared_secret}");
+var client = ManagementClient.Create("https://cms.cloud.contensis.com", "PUT_CLIENT_ID_HERE", "PUT_SHARED_SECRET_HERE");
 ```
 
 ## Default configuration
