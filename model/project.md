@@ -9,7 +9,7 @@ A project object can be used to understand the languages that the project suppor
 
 | Name | Type | Description |
 | :--- | :--- | :---------- |
-| Id | `string` | A unique project identifier. |
+| Id | `string` | The project identifier, e.g. "movieDb". Found in the project overview screen of the management console. |
 | Name | `string` | The friendly name given to the project. |
 | Description | `string` | The description text given to a project. |
 | SupportedLanguages | `IList<string>` | An array of all the languages supported by the project. |
