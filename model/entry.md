@@ -22,7 +22,8 @@ These are the standard properties that all entries have. An entry can have multi
 | IsPublished | bool | Returns whether the entry is published |
 | Metadata | Metadata | Metadata associated with the entry instance |
 | Owner | string | The id of the entry owner |
-| Workflow | [Workflow](/model/workflow.md) | the current workflow details for the entry |
+| Workflow | [Workflow](/model/workflow.md) | The current workflow details for the entry |
+| Slug | string | The entry slug token |
 
 ## Methods
 
