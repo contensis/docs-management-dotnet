@@ -1,9 +1,9 @@
 ---
-description: The Image type represents a link to an image asset with an instance specific caption, if required.
+description: The Image type represents a link to an image asset with an instance specific caption and alt text, if required.
 ---
 # Image
 
-The Image type represents a link to an image asset with an instance specific caption, if required.
+The Image type represents a link to an image asset with an instance specific caption and alt text, if required.
 
 ## Constructors
 
@@ -61,10 +61,11 @@ public Image(Guid assetId, string caption = null, string language = null)
 
 ## Properties
 
-| Name | Type | Description |
-| :--- | :--- | :---------- |
-| Caption | string | The image caption, defined in the entry |
-| Asset | [Link](/model/link.md) | The asset that is linked to from the entry |
+| Name    | Type                   | Description                                |
+|:--------|:-----------------------|:-------------------------------------------|
+| AltText | string                 | The image alt text, defined in the entry   |
+| Caption | string                 | The image caption, defined in the entry    |
+| Asset   | [Link](/model/link.md) | The asset that is linked to from the entry |
 
 ## Examples
 
@@ -83,6 +84,7 @@ dynamic bannerImage = movieEntry.Get("bannerImage");
 ```cs
 // Create a new Image instance
 Image bannerImage = new Image("b54d1099-a9c5-4848-a16e-d24805fa0825", "Iron man main banner image");
+bannerImage.AltText = "Iron Man image";
 
 // Set the Image field value
 movieEntry.set("bannerImage", bannerImage);
