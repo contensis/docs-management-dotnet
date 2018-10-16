@@ -36,6 +36,7 @@
 * [ComposedFieldItem](/model/composedfielditem.md)
 * [DateRange](/model/daterange.md)
 * [Image](/model/image.md)
+* [ImageTransformations](/model/image-transformations.md)
 * [Location](/model/location.md)
 * [Quote](/model/quote.md)
 * [PagedList](/model/pagedList.md)
