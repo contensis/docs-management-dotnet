@@ -1,7 +1,7 @@
 ---
 description: The ImageTransformations class represents transformations that will be applied to images in the Delivery API and within the Image Editor in the Contensis Entry UI. 
 ---
-# Image Transformations
+# Image transformations
 
 The ImageTransformations class represents transformations that will be applied to images in the Delivery API and within the Image Editor in the Contensis Entry UI.
 All properties within the ImageTransformation type are optional.
@@ -10,18 +10,18 @@ All properties within the ImageTransformation type are optional.
 
 | Name | Type | Description |
 | :--- | :--- | :---------- |
-| Crop | `ImageCropTransformation` | The crop properties including Height, Width, X and Y. |
+| Crop | `ImageCrop` | The crop properties including Height, Width, X and Y. |
 | Quality | `int?` | The image quality in percentage. |
 | Rotate | `int?` | The image rotation in degrees. |
-| Size | `ImageSizeTransformation` | The image resize properties including Height and Width. |
+| Size | `ImageSize` | The image resize properties including Height and Width. |
 | Flip | `string` | The image flip orientation. |
 
-### Setting the Image Transformations
+### Setting the image transformations
 
 ```cs
 ImageTransformations transformations = new ImageTransformations
 {
-    Crop = new ImageCropTransformation
+    Crop = new ImageCrop
     {
         Height = 1080,
         Width = 1920,
@@ -30,11 +30,11 @@ ImageTransformations transformations = new ImageTransformations
     },
     Quality = 100,
     Rotate = 90,
-    Size = new ImageSizeTransformation
+    Size = new ImageSize
     {
         Height = 1080,
         Width = 1920
     },
-    Flip = "v"
+    Flip = ImageFlip.Vertical
 };
 ```

@@ -101,7 +101,7 @@ bannerImage.AltText = "Iron Man image";
 // Set the transformation properties, all of which are optional.
 ImageTransformations transformations = new ImageTransformations
 {
-    Crop = new ImageCropTransformation
+    Crop = new ImageCrop
     {
         Height = 1080,
         Width = 1920,
@@ -110,12 +110,12 @@ ImageTransformations transformations = new ImageTransformations
     },
     Quality = 100,
     Rotate = 90,
-    Size = new ImageSizeTransformation
+    Size = new ImageSize
     {
         Height = 1080,
         Width = 1920
     },
-    Flip = "v"
+    Flip = ImageFlip.Vertical
 };
 
 bannerImage.Transformations = transformations;
