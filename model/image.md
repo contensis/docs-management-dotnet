@@ -12,7 +12,7 @@ The Image type represents a link to an image asset with an instance specific cap
 #### Syntax
 
 ```cs
-public Image(Guid assetId, string caption = null, string language = null)
+public Image(Guid assetId, string caption = null, string language = null, string altText = null, ImageTransformations transformations = null)
 {
 }
 ```
@@ -31,6 +31,14 @@ public Image(Guid assetId, string caption = null, string language = null)
 > Type: `string`  
 > The language variation to link to
 
+*AltText*
+> Type: `string`  
+> The alt text for the image
+
+*Transformations*
+> Type: `ImageTransformations`  
+> The transformations to be applied to the image.
+
 ---
 
 ### Create with `string` asset id
@@ -38,7 +46,7 @@ public Image(Guid assetId, string caption = null, string language = null)
 #### Syntax
 
 ```cs
-public Image(Guid assetId, string caption = null, string language = null)
+public Image(Guid assetId, string caption = null, string language = null, string altText = null, ImageTransformations transformations = null)
 {
 }
 ```
@@ -57,7 +65,13 @@ public Image(Guid assetId, string caption = null, string language = null)
 > Type: `string`
 > The specific language variation to link to
 
+*AltText*
+> Type: `string`  
+> The alt text for the image
 
+*Transformations*
+> Type: `ImageTransformations`  
+> The transformations to be applied to the image
 
 ## Properties
 
