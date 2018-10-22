@@ -3,13 +3,17 @@
 * [Get(string fieldName)](#get)
 * [Get&lt;T&gt;(string fieldName)](#get-t)
 * [Set(string fieldName, object value)](#set)
+* [SetFile(string localFilePath, string filename = null)](#setfile-local-file)
+* [SetFile(Stream fileStream, string filename = null)](#setfile-stream)
+* [SetFile(byte[] bytes, string filename = null)](#setfile-byte-array)
 * [HasValue(string fieldName)](#hasvalue)
 * [Save()](#save)
 * [SaveAsync()](#saveasync)
 * [Delete()](#delete)
 * [DeleteAsync()](#deleteasync)
 * [NewVariation(string language)](#newvariation)
-
+* [Clone](#clone)
+* [CloneAsync](#cloneasync)
 
 ## Get
 
@@ -76,10 +80,9 @@ string title = entry.Get<string>("title");
 
 ---
 
-
 ## Set
 
-
+Sets data for a specified field.
 
 ### Syntax
 
@@ -124,7 +127,129 @@ entry.Set("director",
 
 ---
 
+## SetFile (local file)
 
+Sets the file data for an asset instance by specifying a local file path.
+
+### Syntax
+
+```cs
+public void SetFile(string localFilePath, string filename = null)
+{
+}
+```
+
+### Parameters
+
+*localFilePath*
+> Type: `string`  
+> The absolute path to the file.
+
+*filename*
+> Type: `string`  
+> An optional parameter that allows the filename of the asset to be specified, overriding the name of the local file.
+
+### Remarks
+
+Throws an *FileNotFoundException* if the specified local file does not exist.
+
+### Examples
+
+```cs
+// Set new file for the asset with a filename override
+entry.SetFile("c:\images\movies\batman.jpg", "Batman-returns.jpg");
+
+```
+
+---
+
+## SetFile (Stream)
+
+Sets the file data for an asset instance by specifying a Stream.
+
+### Syntax
+
+```cs
+public void SetFile(Stream fileStream, string filename = null)
+{
+}
+```
+
+### Parameters
+
+*fileStream*
+> Type: `Stream`  
+> The stream containing the file bytes.
+
+*filename*
+> Type: `string`  
+> The filename of the asset including the file extension.
+
+### Remarks
+
+Throws an *ArgumentException* if the stream is null or empty.
+
+Throws an *ArgumentException* if the parentNodePath is not specified.
+
+Throws an *ArgumentException* if the filename is null, empty or does not include a file extension.
+
+### Examples
+
+```cs
+// Get a file stream by downloading an image from a URL
+var stream = new HttpClient()
+    .GetStreamAsync("https://en.wikipedia.org/wiki/Batman_Returns#/media/File:Batman_returns_poster2.jpg");
+
+// Set new file for the asset with a filename override
+entry.SetFile(stream, "Batman-returns.jpg");
+
+```
+
+---
+
+## SetFile (byte array)
+
+Sets the file data for an asset instance by specifying a byte array.
+
+### Syntax
+
+```cs
+public void SetFile(byte[] bytes, string filename = null)
+{
+}
+```
+
+### Parameters
+
+*bytes*
+> Type: `byte[]`  
+> The file bytes.
+
+*filename*
+> Type: `string`  
+> The filename of the asset including the file extension.
+
+### Remarks
+
+Throws an *ArgumentException* if the stream is null or empty.
+
+Throws an *ArgumentException* if the parentNodePath is not specified.
+
+Throws an *ArgumentException* if the filename is null, empty or does not include a file extension.
+
+### Examples
+
+```cs
+// Get a file stream by downloading an image from a URL
+var stream = new HttpClient()
+    .GetStreamAsync("https://en.wikipedia.org/wiki/Batman_Returns#/media/File:Batman_returns_poster2.jpg");
+
+// Set new file for the asset with a filename override
+entry.SetFile(stream, "Batman-returns.jpg");
+
+```
+
+---
 
 
 ## HasValue
@@ -386,3 +511,57 @@ frenchVariation.Set("title", "Belle de Jour");
 // Save the new variation
 frenchVariation.Save();
 ```
+
+---
+
+## Clone
+
+Clones an entry with all it's variations and returns the variation language matching the entry variation it was cloned from.
+
+### Syntax
+
+```cs
+public Entry Clone()
+{
+}
+```
+
+### Return value
+
+> Type: [Entry](/model/entry.md)  
+> The newly cloned entry with the language matching the entry variation that was cloned
+
+### Example
+
+```cs
+// Clones an existing entry variation.
+var clonedEntry = existingEntry.Clone();
+```
+
+---
+
+## CloneAsync
+
+Clones an entry with all it's variations asynchronously and returns the variation language matching the entry variation it was cloned from.
+
+### Syntax
+
+```cs
+public Task<Entry> CloneAsync()
+{
+}
+```
+
+### Return value
+
+> Type: [Entry](/model/entry.md)  
+> The newly cloned entry with the language matching the entry variation that was cloned
+
+### Example
+
+```cs
+// Clones an existing entry variation asynchronously.
+var clonedEntry = await existingEntry.CloneAsync();
+```
+
+---

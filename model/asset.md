@@ -27,7 +27,7 @@ In addition to the standard data fields, images have the following.
 | Filename | string | The name of the actual file, with extension included. |
 | FileSize | long | The file size in bytes. |
 | Extension | string | The file extension. |
-| FieldId | string | The Guid identifier of the file resource. |
+| FileId | string | The Guid identifier of the file resource. |
 | Uri | string | The URI path to the file, excluding the domain. |
 | [fieldName] | object | An indexed accessor to extended properties which are not exposed as typed properties. |
 
