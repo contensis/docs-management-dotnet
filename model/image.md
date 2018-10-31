@@ -98,8 +98,7 @@ dynamic bannerImage = movieEntry.Get("bannerImage");
 
 ```cs
 // Create a new Image instance
-Image bannerImage = new Image("b54d1099-a9c5-4848-a16e-d24805fa0825", "Iron man main banner image");
-bannerImage.AltText = "Iron Man image";
+Image bannerImage = new Image("b54d1099-a9c5-4848-a16e-d24805fa0825", "Iron man main banner image", "Iron Man banner");
 
 // Set the Image field value
 movieEntry.set("bannerImage", bannerImage);
@@ -108,10 +107,6 @@ movieEntry.set("bannerImage", bannerImage);
 ### Set transformations on an Image
 
 ```cs
-// Create a new Image instance
-Image bannerImage = new Image("b54d1099-a9c5-4848-a16e-d24805fa0825", "Iron man main banner image");
-bannerImage.AltText = "Iron Man image";
-
 // Set the transformation properties, all of which are optional.
 ImageTransformations transformations = new ImageTransformations
 {
@@ -132,7 +127,8 @@ ImageTransformations transformations = new ImageTransformations
     Flip = ImageFlip.Vertical
 };
 
-bannerImage.Transformations = transformations;
+// Create a new Image instance
+Image bannerImage = new Image("b54d1099-a9c5-4848-a16e-d24805fa0825", "Iron man main banner image", "Iron Man banner", transformations);
 
 // Set the Image field value
 movieEntry.set("bannerImage", bannerImage);
