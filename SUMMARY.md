@@ -18,12 +18,13 @@
 * [Localization](/key-concepts/localization.md)
 * [Get a project](/key-concepts/project-get.md)
 * [Create an entry](/key-concepts/entry-new.md)
-* [Create an asset](/key-concepts/asset-new.md)
 * [Get an entry](/key-concepts/entry-get.md)
 * [Listing entries](/key-concepts/entry-list.md)
 * [Linking content](/key-concepts/linking-content.md)
 * [Components](/key-concepts/components.md)
 * [Workflow](/key-concepts/workflow.md)
+
+<!-- * [Create an asset](/key-concepts/asset-new.md-->
 
 ## Model
 

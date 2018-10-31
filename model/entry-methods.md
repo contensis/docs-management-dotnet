@@ -3,9 +3,6 @@
 * [Get(string fieldName)](#get)
 * [Get&lt;T&gt;(string fieldName)](#get-t)
 * [Set(string fieldName, object value)](#set)
-* [SetFile(string localFilePath, string filename = null)](#setfile-local-file)
-* [SetFile(Stream fileStream, string filename = null)](#setfile-stream)
-* [SetFile(byte[] bytes, string filename = null)](#setfile-byte-array)
 * [HasValue(string fieldName)](#hasvalue)
 * [Save()](#save)
 * [SaveAsync()](#saveasync)
@@ -14,6 +11,10 @@
 * [NewVariation(string language)](#newvariation)
 * [Clone](#clone)
 * [CloneAsync](#cloneasync)
+
+<!-- * [SetFile(string localFilePath, string filename = null)](#setfile-local-file)
+* [SetFile(Stream fileStream, string filename = null)](#setfile-stream)
+* [SetFile(byte[] bytes, string filename = null)](#setfile-byte-array) -->
 
 ## Get
 
@@ -127,7 +128,7 @@ entry.Set("director",
 
 ---
 
-## SetFile (local file)
+<!-- ## SetFile (local file)
 
 Sets the file data for an asset instance by specifying a local file path.
 
@@ -249,7 +250,7 @@ entry.SetFile(stream, "Batman-returns.jpg");
 
 ```
 
----
+--- -->
 
 
 ## HasValue
