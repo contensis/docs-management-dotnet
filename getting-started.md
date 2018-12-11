@@ -12,7 +12,7 @@ This guide will take you through creating a content type and importing entries u
 
 ## Create a new project (optional)
 
-Projects are the home for all your content in Contensis. Either use an existing project or create a [new project](https://zenhub.zengenti.com/Contensis/10.0/kb/setup-and-configuration/Administration/Create-a-project.aspx) called MovieDB. You can use the default values for assets and languages. If you're creating a new project you'll need to setup a publishing server, [follow our guide](https://zenhub.zengenti.com/Contensis/10.0/kb/setup-and-configuration/Configuration/Setup-and-configure-a-publishing-server.aspx) to get one up and running.
+Projects are the home for all your content in Contensis. Either use an existing project or create a [new project](https://zenhub.zengenti.com/Contensis/11.3/kb/setup-and-configuration/Administration/Create-a-project.aspx) called MovieDB. You can use the default values for assets and languages. If you're creating a new project you'll need to setup a publishing server, [follow our guide](https://zenhub.zengenti.com/Contensis/11.3/kb/setup-and-configuration/Configuration/Setup-and-configure-a-publishing-server.aspx) to get one up and running.
 
 ## Create a genre taxonomy node
 
@@ -41,7 +41,7 @@ In the case of this guide our genres nodes have the following keys, your keys wi
 
 ## Create a movie content type
 
-You can [create a new content type](https://zenhub.zengenti.com/Contensis/10.0/kb/content-types-and-entries/content-types/create-a-content-type.aspx) using the content type builder. Create a new content type called *Movie* with the following fields.
+You can [create a new content type](https://zenhub.zengenti.com/Contensis/11.3/kb/content-types-and-entries/content-types/create-a-content-type.aspx) using the content type builder. Create a new content type called *Movie* with the following fields.
 
 | Field name | API id | Type | Description |
 | ---------- | ------ | ---- | ----------- |
@@ -88,8 +88,8 @@ Open the program class, make sure you replace the following values
 | Value | Description |
 | ----- | ----------- |
 | &lt;Contensis URL&gt; | This is the URL of your Contensis instance. e.g. `https://cms.cloud.contensis.com` |
-| &lt;Client ID&gt; | Copy your client ID from your API Key. [Create an API Key](https://zenhub.zengenti.com/Contensis/10.0/kb/content-types-and-entries/api-keys/create-an-api-key.aspx) |
-| &lt;Shared Secret&gt; | Copy your shared secret from your API Key. [Create an API Key](https://zenhub.zengenti.com/Contensis/10.0/kb/content-types-and-entries/api-keys/create-an-api-key.aspx) |
+| &lt;Client ID&gt; | Copy your client ID from your API Key. [Create an API Key](https://zenhub.zengenti.com/Contensis/11.3/kb/content-types-and-entries/api-keys/create-an-api-key.aspx) |
+| &lt;Shared Secret&gt; | Copy your shared secret from your API Key. [Create an API Key](https://zenhub.zengenti.com/Contensis/11.3/kb/content-types-and-entries/api-keys/create-an-api-key.aspx) |
 | &lt;Project Id&gt; | From the management console, select the *Project Overview* and you will see your project API name. |
 
 ```cs
