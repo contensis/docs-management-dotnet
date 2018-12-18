@@ -50,6 +50,7 @@ Throws an *ArgumentException* if the parentNodePath is not specified.
 
 ```cs
 using Zengenti.Contensis.Management;
+using Zengenti.Contensis.Management.Workflow.Basic;
 
 // Create a client
 var client = ManagementClient.Create();
@@ -58,15 +59,15 @@ var client = ManagementClient.Create();
 var movieDbProject = client.Projects.Get("moviedb");
 
 // Create a new image asset
-var movie = movieDbProject.Entries.NewAsset("c:\images\movies\batman.jpg",
-    "\uploads\movie-posters", "Batman-returns.jpg", "en-GB");
+var movieImage = movieDbProject.Entries.NewAsset(@"c:\images\movies\batman.jpg",
+    @"\uploads\movie-posters", "Batman-returns.jpg", "en-GB");
 
 // Set field data
-movie.Set("title", "Batman Returns");
+movieImage.Set("title", "Batman Returns");
 
 // Make the content live
-movie.Save();
-movie.Publish();
+movieImage.Save();
+movieImage.Workflow.Publish();
 ```
 
 ---
@@ -114,6 +115,7 @@ Throws an *ArgumentException* if the filename is null, empty or does not include
 ```cs
 using System.Net.Http;
 using Zengenti.Contensis.Management;
+using Zengenti.Contensis.Management.Workflow.Basic;
 
 // Create a client
 var client = ManagementClient.Create();
@@ -126,15 +128,15 @@ var stream = new HttpClient()
     .GetStreamAsync("https://en.wikipedia.org/wiki/Batman_Returns#/media/File:Batman_returns_poster2.jpg");
 
 // Create a new image asset
-var movie = movieDbProject.Entries.NewAsset(stream,
-    "\uploads\movie-posters", "Batman-returns.jpg", "en-GB");
+var movieImage = movieDbProject.Entries.NewAsset(stream,
+    @"\uploads\movie-posters", "Batman-returns.jpg", "en-GB");
 
 // Set field data
-movie.Set("title", "Batman Returns");
+movieImage.Set("title", "Batman Returns");
 
 // Make the content live
-movie.Save();
-movie.Publish();
+movieImage.Save();
+movieImage.Workflow.Publish();
 ```
 
 ---
@@ -182,6 +184,7 @@ Throws an *ArgumentException* if the filename is null, empty or does not include
 ```cs
 using System.Net.Http;
 using Zengenti.Contensis.Management;
+using Zengenti.Contensis.Management.Workflow.Basic;
 
 // Create a client
 var client = ManagementClient.Create();
@@ -193,15 +196,15 @@ var movieDbProject = client.Projects.Get("moviedb");
 var bytes = new Repository().GetImageAsBytes(54321);
 
 // Create a new image asset
-var movie = movieDbProject.Entries.NewAsset(bytes,
-    "\uploads\movie-posters", "Batman-returns.jpg", "en-GB");
+var movieImage = movieDbProject.Entries.NewAsset(bytes,
+    @"\uploads\movie-posters", "Batman-returns.jpg", "en-GB");
 
 // Set field data
-movie.Set("title", "Batman Returns");
+movieImage.Set("title", "Batman Returns");
 
 // Make the content live
-movie.Save();
-movie.Publish();
+movieImage.Save();
+movieImage.Workflow.Publish();
 ```
 
 ---
