@@ -124,7 +124,7 @@ var client = ManagementClient.Create();
 var movieDbProject = client.Projects.Get("moviedb");
 
 // Get a file stream by downloading an image from a URL
-var stream = new HttpClient()
+var stream = await new HttpClient()
     .GetStreamAsync("https://en.wikipedia.org/wiki/Batman_Returns#/media/File:Batman_returns_poster2.jpg");
 
 // Create a new image asset
