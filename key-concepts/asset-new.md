@@ -6,6 +6,9 @@ description: Creating a new asset can be achieved by using one of the New method
 
 Creating a new [asset](/model/asset.md) can be achieved by using one of the `NewAsset` method overloads. Updating an asset's file can be acheived using one the of the SetFile methods overloads of an [entry](/model/entry-methods.md).
 
+> NOTE  
+> The language of the asset will be determined by the language of the target folder in Contensis.
+
 * [NewAsset(string localFilePath, string parentNodePath, string filename = null, string language = null)](#new-with-local-file-path)
 * [NewAsset(Stream fileStream, string parentNodePath, string filename, string language = null)](#new-with-stream)
 * [NewAsset(byte[] bytes, string parentNodePath, string filename, string language = null)](#new-with-byte-array)
@@ -17,7 +20,7 @@ Creates a new asset from a file on the local file system.
 ### Syntax
 
 ```cs
-public Entry NewAsset(string localFilePath, string parentNodePath, string filename = null, string language = null
+public Entry NewAsset(string localFilePath, string parentNodePath, string filename = null)
 {
 }
 ```
@@ -35,10 +38,6 @@ public Entry NewAsset(string localFilePath, string parentNodePath, string filena
 *filename*
 > Type: `string`  
 > An optional parameter that allows the filename of the asset to be specified, overriding the name of the local file.
-
-*language*
-> Type: `string`  
-> Optionally allows the target language to specified. Defaults to the project default language if not specified.
 
 ### Remarks
 
@@ -60,7 +59,7 @@ var movieDbProject = client.Projects.Get("moviedb");
 
 // Create a new image asset
 var movieImage = movieDbProject.Entries.NewAsset(@"c:\images\movies\batman.jpg",
-    @"\uploads\movie-posters", "Batman-returns.jpg", "en-GB");
+    @"\uploads\movie-posters", "Batman-returns.jpg");
 
 // Set field data
 movieImage.Set("title", "Batman Returns");
@@ -79,7 +78,7 @@ Creates a new asset from a stream. Requires a valid filename with extension to b
 ### Syntax
 
 ```cs
-public Entry NewAsset(Stream fileStream, string parentNodePath, string filename, string language = null
+public Entry NewAsset(Stream fileStream, string parentNodePath, string filename)
 {
 }
 ```
@@ -97,10 +96,6 @@ public Entry NewAsset(Stream fileStream, string parentNodePath, string filename,
 *filename*
 > Type: `string`  
 > The filename of the asset including the file extension.
-
-*language*
-> Type: `string`  
-> Optionally allows the target language to specified. Defaults to the project default language if not specified.
 
 ### Remarks
 
@@ -129,7 +124,7 @@ var stream = await new HttpClient()
 
 // Create a new image asset
 var movieImage = movieDbProject.Entries.NewAsset(stream,
-    @"\uploads\movie-posters", "Batman-returns.jpg", "en-GB");
+    @"\uploads\movie-posters", "Batman-returns.jpg");
 
 // Set field data
 movieImage.Set("title", "Batman Returns");
@@ -148,7 +143,7 @@ Creates a new asset from a byte array. Requires a valid filename with extension 
 ### Syntax
 
 ```cs
-public Entry NewAsset(Stream bytes, string parentNodePath, string filename, string language = null
+public Entry NewAsset(Stream bytes, string parentNodePath, string filename)
 {
 }
 ```
@@ -166,10 +161,6 @@ public Entry NewAsset(Stream bytes, string parentNodePath, string filename, stri
 *filename*
 > Type: `string`  
 > The filename of the asset including the file extension.
-
-*language*
-> Type: `string`  
-> Optionally allows the target language to specified. Defaults to the project default language if not specified.
 
 ### Remarks
 
@@ -197,7 +188,7 @@ var bytes = new Repository().GetImageAsBytes(54321);
 
 // Create a new image asset
 var movieImage = movieDbProject.Entries.NewAsset(bytes,
-    @"\uploads\movie-posters", "Batman-returns.jpg", "en-GB");
+    @"\uploads\movie-posters", "Batman-returns.jpg");
 
 // Set field data
 movieImage.Set("title", "Batman Returns");
