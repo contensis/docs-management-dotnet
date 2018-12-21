@@ -1,5 +1,5 @@
 ---
-description: Creating a new asset can be achieved by using one of the New method overloads.
+description: Creating a new asset can be achieved by using one of the NewAsset method overloads.
 ---
 
 # Creating assets
@@ -9,11 +9,11 @@ Creating a new [asset](/model/asset.md) can be achieved by using one of the `New
 > NOTE  
 > The language of the asset will be determined by the language of the target folder in Contensis.
 
-* [NewAsset(string localFilePath, string parentNodePath, string filename = null, string language = null)](#new-with-local-file-path)
-* [NewAsset(Stream fileStream, string parentNodePath, string filename, string language = null)](#new-with-stream)
-* [NewAsset(byte[] bytes, string parentNodePath, string filename, string language = null)](#new-with-byte-array)
+* [NewAsset(string localFilePath, string parentNodePath, string filename = null)](#newasset-with-local-file-path)
+* [NewAsset(Stream fileStream, string parentNodePath, string filename)](#newasset-with-stream)
+* [NewAsset(byte[] bytes, string parentNodePath, string filename)](#newasset-with-byte-array)
 
-## New with local file path
+## NewAsset with local file path
 
 Creates a new asset from a file on the local file system.
 
@@ -40,6 +40,8 @@ public Entry NewAsset(string localFilePath, string parentNodePath, string filena
 > An optional parameter that allows the filename of the asset to be specified, overriding the name of the local file.
 
 ### Remarks
+
+If no filename parameter is specified, then the name of the local file is used.
 
 Throws an *FileNotFoundException* if the specified local file does not exist.
 
@@ -71,7 +73,7 @@ movieImage.Workflow.Publish();
 
 ---
 
-## New with stream
+## NewAsset with stream
 
 Creates a new asset from a stream. Requires a valid filename with extension to be able to identify the asset type.
 
@@ -136,7 +138,7 @@ movieImage.Workflow.Publish();
 
 ---
 
-## New with byte array
+## NewAsset with byte array
 
 Creates a new asset from a byte array. Requires a valid filename with extension to be able to identify the asset type.
 
