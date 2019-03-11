@@ -3,12 +3,15 @@ description: Requesting an individual node by it's identifier can be achieved by
 ---
 # Getting a node
 
-Requesting an individual [node](/model/node.md) by it's identifier can be achieved by using one of the `Get` method overloads.
+Requesting an individual [node](/model/node.md) can be achieved by using one of the following methods.
 
 * [Get(Guid id)](#get-by-guid-id)
 * [Get(string id)](#get-by-string-id)
 * [GetAsync(Guid id)](#get-by-guid-id-async)
 * [GetAsync(string id)](#get-by-string-id-async)
+* [GetRoot()](#get-root)
+* [GetRootAsync()](#get-root-async)
+
 
 ## Get by Guid id
 
@@ -32,7 +35,7 @@ public Node Get(Guid id)
 
 Returns *null* if no node matches the specified id.
 
-### Examples
+### Example
 
 ```cs
 using Zengenti.Contensis.Management;
@@ -74,7 +77,7 @@ public Node Get(string id)
 
 Returns *null* if no node matches the specified id.
 
-### Examples
+### Example
 
 ```cs
 using Zengenti.Contensis.Management;
@@ -98,7 +101,7 @@ Gets a node by its `Guid` identifier asynchronously.
 ### Syntax
 
 ```cs
-public Task<Node> GetAsync(Guid id)
+public async Task<Node> GetAsync(Guid id)
 {
 }
 ```
@@ -113,7 +116,7 @@ public Task<Node> GetAsync(Guid id)
 
 Returns *null* if no node matches the specified id.
 
-### Examples
+### Example
 
 ```cs
 using Zengenti.Contensis.Management;
@@ -140,7 +143,7 @@ Gets a node by its `string` identifier asynchronously.
 ### Syntax
 
 ```cs
-public Task<Node> GetAsync(string id)
+public async Task<Node> GetAsync(string id)
 {
 }
 ```
@@ -155,7 +158,7 @@ public Task<Node> GetAsync(string id)
 
 Returns *null* if no node matches the specified id.
 
-### Examples
+### Example
 
 ```cs
 using Zengenti.Contensis.Management;
@@ -169,3 +172,58 @@ var movieDbProject = client.Projects.Get("moviedb");
 // Get a specific node with matching id
 Node moviesNode = await movieDbProject.Nodes.GetAsync("2c95e478-289d-4d28-8159-02a3f8de5fb4");
 ```
+
+---
+
+## Get root
+
+Gets the root node for the project
+
+### Syntax
+
+```cs
+public Node GetRoot()
+{
+}
+```
+
+### Example
+
+```cs
+using Zengenti.Contensis.Management;
+
+// Create a client
+var client = ManagementClient.Create();
+
+// Retrieve the relevant project
+var movieDbProject = client.Projects.Get("moviedb");
+
+// Get the root node for the prohect
+Node rootNode = movieDbProject.Nodes.GetRoot();
+```
+
+## Get root async
+
+Gets the root node for the project asynchronously
+
+### Syntax
+
+```cs
+public async Task<Node> GetRoot()
+{
+}
+```
+
+### Example
+
+```cs
+using Zengenti.Contensis.Management;
+
+// Create a client
+var client = ManagementClient.Create();
+
+// Retrieve the relevant project
+var movieDbProject = client.Projects.Get("moviedb");
+
+// Get the root node for the prohect
+Node rootNode = await movieDbProject.Nodes.GetRootAsync();
