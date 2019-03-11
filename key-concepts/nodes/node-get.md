@@ -1,7 +1,7 @@
 ---
-description: 
+description: Requesting an individual node by it's identifier can be achieved by using one of the `Get` method overloads.
 ---
-# Nodes
+# Getting a node
 
 Requesting an individual [node](/model/node.md) by it's identifier can be achieved by using one of the `Get` method overloads.
 

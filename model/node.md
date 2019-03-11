@@ -26,6 +26,3 @@ A node represents a location within the navigational structure of a website. The
 | [Delete()](./node-methods.html#delete) | void | Deletes the node instance. |
 | [DeleteAsync()](./node-methods.html#deleteasync) | Task | Deletes the node instance instance asynchronously. |
 | [NewChild(LocalizedString title)](./node-methods.html#newchild-with-title) | Node | Creates and returns a new child node by specifying the title.|
-| [NewChild(LocalizedString title, LocalizedString slug)](./node-methods.html#newchild-with-title-and-slug) | Node | Creates and returns a new child node by specifying the title and slug. |
-| [NewChild(LocalizedString title, LocalizedString slug, Guid entryId))](./node-methods.html#newchild-with-title-slug-and-guid-entryId) | Node | Creates and returns a new child node by specifying the title,slug and associated entry |
-| [NewChild(LocalizedString title, LocalizedString slug, string entryId))](./node-methods.html#newchild-with-title-slug-and-string-entryId) | Node | Creates and returns a new child node by specifying the title,slug and associated entry |
