@@ -24,6 +24,8 @@
 * [Linking content](/key-concepts/linking-content.md)
 * [Components](/key-concepts/components.md)
 * [Workflow](/key-concepts/workflow.md)
+* [Get a node](/key-concepts/nodes/node-get.md)
+* [Create a node](/key-concepts/nodes/node-create.md)
 
 ## Model
 
@@ -32,6 +34,8 @@
 * [Entry](/model/entry.md)
   * [Entry methods](/model/entry-methods.md)
 * [Asset](/model/asset.md)
+* [Node](/model/node.md)
+  * [Node methods](/model/node-methods.md)
 * [VersionInfo](/model/versioninfo.md)
 * [Link](/model/link.md)
 * [ComposedField](/model/composedfield.md)
