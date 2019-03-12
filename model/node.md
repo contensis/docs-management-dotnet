@@ -28,3 +28,5 @@ A node represents a location within the navigational structure of a website. The
 | [NewChild(LocalizedString title)](./node-methods.md#newchild-with-title) | Node | Creates and returns a new child node by specifying the title.|
 | [Children()](./node-methods.md#children) | List&lt;Node&gt; | Gets the child nodes for the current node. |
 | [ChildrenAsync()](./node-methods.md#childrenasync) | Task&lt;List&lt;Node&gt;&gt; | Gets the child nodes for the current node asynchronously. |
+| [Parent()](./node-methods.md#parent) | Node | Gets the parent node for the current node. |
+| [ParentAsync()](./node-methods.md#parentasync) | Node | Gets the parent node for the current node asynchronously. |

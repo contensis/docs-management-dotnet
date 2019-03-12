@@ -7,6 +7,8 @@
 * [NewChild(LocalizedString title)](#newchild)
 * [Children()](#children)
 * [ChildrenAsync()](#children)
+* [Parent()](#parent)
+* [ParentAsync()](#parentasync)
 
 ## Save
 
@@ -322,6 +324,85 @@ try
     {
         // perform actions on the child nodes.
     }
+}
+catch(RestRequestException restEx)
+{
+    // Handle service error.
+}
+catch(Exception ex)
+{
+    // Handle anything else, e.g. network error.
+}
+```
+
+---
+
+## Parent
+
+Gets the parent node for the current node.
+
+### Syntax
+
+```cs
+public Node Parent()
+{
+}
+```
+
+### Return value
+
+> Type: `Node`
+
+
+### Example
+
+```cs
+// Get a node
+var node = client.Nodes.Get("1abf0e7f-7507-4578-a3be-1280ed7486fe");
+
+try
+{
+    // Get the parent node for the node.
+    var parent = node.Parent();
+}
+catch(RestRequestException restEx)
+{
+    // Handle service error.
+}
+catch(Exception ex)
+{
+    // Handle anything else, e.g. network error.
+}
+```
+
+---
+
+## ParentAsync
+
+Gets the parent node for the current node asynchronously.
+
+### Syntax
+
+```cs
+public async Task<Node> ParentAsync()
+{
+}
+```
+
+### Return value
+
+> Type: `Task<Node>`
+
+### Example
+
+```cs
+// Get a node
+var node = client.Nodes.Get("1abf0e7f-7507-4578-a3be-1280ed7486fe");
+
+try
+{
+    // Get the parent node for the node.
+    var parent = await node.ParentAsync();
 }
 catch(RestRequestException restEx)
 {
