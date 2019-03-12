@@ -25,7 +25,9 @@
 * [Components](/key-concepts/components.md)
 * [Workflow](/key-concepts/workflow.md)
 * [Get a node](/key-concepts/nodes/node-get.md)
+* [Get nodes for an entry](/key-concepts/nodes/nodes-get-by-entry.md)
 * [Create a node](/key-concepts/nodes/node-create.md)
+
 
 ## Model
 

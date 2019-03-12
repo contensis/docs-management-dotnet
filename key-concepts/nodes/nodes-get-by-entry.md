@@ -7,7 +7,7 @@ Requesting [nodes](/model/node.md) that have an attached entry can be achieved b
 
 * [GetByEntryId(Guid entryId)](#get-by-entry-guid-id)
 * [GetByEntryIdAsync(Guid entryId)](#get-by-entry-guid-id-async)
-* [GetByEntryId(string entryId)](#get-by-entry-guid-id)
+* [GetByEntryId(string entryId)](#get-by-entry-string-id)
 * [GetByEntryIdAsync(string entryId)](#get-by-entry-string-id-async)
 
 ## Get by entry Guid id
