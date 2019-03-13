@@ -5,8 +5,8 @@
 * [Delete()](#delete)
 * [DeleteAsync()](#deleteasync)
 * [NewChild(LocalizedString title)](#newchild)
-* [Children()](#children)
-* [ChildrenAsync()](#children)
+* [Children(string languageOrder = null)](#children)
+* [ChildrenAsync(string languageOrder = null)](#children)
 * [Parent()](#parent)
 * [ParentAsync()](#parentasync)
 
@@ -255,15 +255,20 @@ Gets the child nodes for the current node.
 ### Syntax
 
 ```cs
-public List<Node> Children()
+public List<Node> Children(string languageOrder = null)
 {
 }
 ```
 
+### Parameters
+
+*languageOrder*
+> Type: `string`  
+> An optional parameter to specific which language order the nodes should be returned.
+
 ### Return value
 
 > Type: `List<Node>`
-
 
 ### Example
 
@@ -273,8 +278,8 @@ var node = client.Nodes.Get("1abf0e7f-7507-4578-a3be-1280ed7486fe");
 
 try
 {
-    // Get the child nodes for the node.
-    var childNodes = node.Children();
+    // Get the child nodes in the order specified for french.
+    var childNodes = node.Children("fr-FR");
 
     foreach(var child in childNodes)
     {
@@ -300,10 +305,16 @@ Gets the child nodes for the current node asynchronously.
 ### Syntax
 
 ```cs
-public async Task<List<Node>> ChildrenAsync()
+public async Task<List<Node>> ChildrenAsync(string languageOrder = null)
 {
 }
 ```
+
+### Parameters
+
+*languageOrder*
+> Type: `string`  
+> An optional parameter to specific which language order the nodes should be returned.
 
 ### Return value
 
