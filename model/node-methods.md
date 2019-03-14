@@ -13,6 +13,8 @@
 * [SetChildNodeOrderAsync(IEnumerable<Guid> childOrder, string language = null)](#setchildnodeorderasync-with-guid-ids)
 * [SetChildNodeOrder(IEnumerable<Node> childOrder, string language = null)](#setchildnodeorder-with-nodes)
 * [SetChildNodeOrderAsync(IEnumerable<Node> childOrder, string language = null)](#setchildnodeorderasync-with-nodes)
+* [DeleteChildNodeOrder(string language = null)](#deletechildnodeorder)
+* [DeleteChildNodeOrderAsync(string language = null)](#deletechildnodeorderasync)
 
 ## Save
 
@@ -493,7 +495,7 @@ Sets the child node order for the current node.
 ### Syntax
 
 ```cs
-public Task SetChildNodeOrderAsync(IEnumerable<Guid> childOrder, string language = null)
+public async Task SetChildNodeOrderAsync(IEnumerable<Guid> childOrder, string language = null)
 {
 }
 ```
@@ -538,8 +540,6 @@ catch(Exception ex)
     // Handle anything else, e.g. network error.
 }
 ```
-
-
 
 ---
 
@@ -605,7 +605,7 @@ Sets the child node order for the current node.
 ### Syntax
 
 ```cs
-public Task SetChildNodeOrderAsync(IEnumerable<Node> childOrder, string language = null)
+public async Task SetChildNodeOrderAsync(IEnumerable<Node> childOrder, string language = null)
 {
 }
 ```
@@ -640,6 +640,102 @@ try
 
     // Set the node order for French
     await nodes.SetChildNodeOrderAsync(orderedNode, "fr-FR");
+}
+catch(RestRequestException restEx)
+{
+    // Handle service error.
+}
+catch(Exception ex)
+{
+    // Handle anything else, e.g. network error.
+}
+```
+
+---
+
+## DeleteChildNodeOrder
+
+Deletes the child node order for the current node.
+
+### Syntax
+
+```cs
+public void DeleteChildNodeOrder(string language = null)
+{
+}
+```
+
+### Parameters
+
+*language*
+> Type: `string`  
+> An optional parameter to specify which language to delete the order for.
+
+### Return value
+
+> Type: void
+
+### Example
+
+```cs
+// Get a node
+var node = client.Nodes.Get("1abf0e7f-7507-4578-a3be-1280ed7486fe");
+
+try
+{
+    // Delete the default node order
+    nodes.DeleteChildNodeOrder();
+
+    // Delete the node order for German
+    nodes.DeleteChildNodeOrder("de-DE");
+}
+catch(RestRequestException restEx)
+{
+    // Handle service error.
+}
+catch(Exception ex)
+{
+    // Handle anything else, e.g. network error.
+}
+```
+
+---
+
+## DeleteChildNodeOrderAsync
+
+Deletes the child node order for the current node.
+
+### Syntax
+
+```cs
+public async Task DeleteChildNodeOrderAsync(string language = null)
+{
+}
+```
+
+### Parameters
+
+*language*
+> Type: `string`  
+> An optional parameter to specify which language to delete the order for.
+
+### Return value
+
+> Type: Task
+
+### Example
+
+```cs
+// Get a node
+var node = client.Nodes.Get("1abf0e7f-7507-4578-a3be-1280ed7486fe");
+
+try
+{
+    // Delete the default node order
+    await nodes.DeleteChildNodeOrderAsync();
+
+    // Delete the node order for German
+    await nodes.DeleteChildNodeOrderAsync("de-DE");
 }
 catch(RestRequestException restEx)
 {

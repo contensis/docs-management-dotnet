@@ -52,7 +52,7 @@ Gets a list of nodes asynchronously by specifiying an entry `Guid` identifier.
 ### Syntax
 
 ```cs
-public Task<List<Node>> GetByEntryIdAsync(Guid entryId)
+public async Task<List<Node>> GetByEntryIdAsync(Guid entryId)
 {
 }
 ```
@@ -122,7 +122,7 @@ Gets a list of nodes asynchronously by specifiying an entry `string` identifier.
 ### Syntax
 
 ```cs
-public Task<List<Node>> GetByEntryIdAsync(string entryId)
+public async Task<List<Node>> GetByEntryIdAsync(string entryId)
 {
 }
 ```

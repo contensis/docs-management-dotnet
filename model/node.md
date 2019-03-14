@@ -34,3 +34,5 @@ A node represents a location within the navigational structure of a website. The
 | [SetChildNodeOrderAsync()](./node-methods.md#setchildnodeorderasync-with-guid-ids) | Task | Sets the child node order for the current node asynchronously. |
 | [SetChildNodeOrder()](./node-methods.md#setchildnodeorder-with-nodes) | void | Sets the child node order for the current node. |
 | [SetChildNodeOrderAsync()](./node-methods.md#setchildnodeorderasync-with-nodes) | Task | Sets the child node order for the current node asynchronously. |
+| [DeleteChildNodeOrder()](./node-methods.md#deletechildnodeorder) | void | Deletes the child node order for the current node. |
+| [DeleteChildNodeOrderAsync()](./node-methods.md#deletechildnodeorderasync) | Task | Deletes the child node order for the current node asynchronously. |

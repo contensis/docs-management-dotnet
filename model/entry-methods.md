@@ -547,7 +547,7 @@ Clones an entry with all it's variations asynchronously and returns the variatio
 ### Syntax
 
 ```cs
-public Task<Entry> CloneAsync()
+public async Task<Entry> CloneAsync()
 {
 }
 ```
