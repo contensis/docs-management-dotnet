@@ -9,6 +9,10 @@
 * [ChildrenAsync(string languageOrder = null)](#children)
 * [Parent()](#parent)
 * [ParentAsync()](#parentasync)
+* [SetChildNodeOrder(IEnumerable<Guid> childOrder, string language = null)](#setchildnodeorder-with-guid-ids)
+* [SetChildNodeOrderAsync(IEnumerable<Guid> childOrder, string language = null)](#setchildnodeorderasync-with-guid-ids)
+* [SetChildNodeOrder(IEnumerable<Node> childOrder, string language = null)](#setchildnodeorder-with-nodes)
+* [SetChildNodeOrderAsync(IEnumerable<Node> childOrder, string language = null)](#setchildnodeorderasync-with-nodes)
 
 ## Save
 
@@ -414,6 +418,228 @@ try
 {
     // Get the parent node for the node.
     var parent = await node.ParentAsync();
+}
+catch(RestRequestException restEx)
+{
+    // Handle service error.
+}
+catch(Exception ex)
+{
+    // Handle anything else, e.g. network error.
+}
+```
+
+---
+
+## SetChildNodeOrder with Guid ids
+
+Sets the child node order for the current node.
+
+### Syntax
+
+```cs
+public void SetChildNodeOrder(IEnumerable<Guid> childOrder, string language = null)
+{
+}
+```
+
+### Parameters
+
+*childOrder*
+> Type: `IEnumerable<Guid>`  
+> An ordered list of nodes ids. 
+
+*language*
+> Type: `string`  
+> An optional parameter to specify which language the order is for.
+
+### Return value
+
+> Type: void
+
+### Example
+
+```cs
+// Get a node
+var node = client.Nodes.Get("1abf0e7f-7507-4578-a3be-1280ed7486fe");
+
+try
+{
+    // Get the child nodes for the node.
+    var childNodes = node.Children();
+
+    // Order the nodes by the French title in a descending order and select the ids
+    var orderedNodeIds = childNodes.OrderByDescending(c => c.Title["fr-FR"]).Select(c => c.Id.Value);
+
+    // Set the node order for French
+    nodes.SetChildNodeOrder(orderedNodeIds, "fr-FR");
+}
+catch(RestRequestException restEx)
+{
+    // Handle service error.
+}
+catch(Exception ex)
+{
+    // Handle anything else, e.g. network error.
+}
+```
+
+---
+
+## SetChildNodeOrderAsync with Guid ids
+
+Sets the child node order for the current node.
+
+### Syntax
+
+```cs
+public Task SetChildNodeOrderAsync(IEnumerable<Guid> childOrder, string language = null)
+{
+}
+```
+
+### Parameters
+
+*childOrder*
+> Type: `IEnumerable<Guid>`  
+> An ordered list of nodes ids. 
+
+*language*
+> Type: `string`  
+> An optional parameter to specify which language the order is for.
+
+### Return value
+
+> Type: Task
+
+### Example
+
+```cs
+// Get a node
+var node = client.Nodes.Get("1abf0e7f-7507-4578-a3be-1280ed7486fe");
+
+try
+{
+    // Get the child nodes for the node.
+    var childNodes = await node.ChildrenAsync();
+
+    // Order the nodes by the French title in a descending order and select the ids
+    var orderedNodeIds = childNodes.OrderByDescending(c => c.Title["fr-FR"]).Select(c => c.Id.Value);
+
+    // Set the node order for French
+    await nodes.SetChildNodeOrderAsync(orderedNodeIds, "fr-FR");
+}
+catch(RestRequestException restEx)
+{
+    // Handle service error.
+}
+catch(Exception ex)
+{
+    // Handle anything else, e.g. network error.
+}
+```
+
+
+
+---
+
+## SetChildNodeOrder with nodes
+
+Sets the child node order for the current node.
+
+### Syntax
+
+```cs
+public void SetChildNodeOrder(IEnumerable<Node> childOrder, string language = null)
+{
+}
+```
+
+### Parameters
+
+*childOrder*
+> Type: `IEnumerable<Node>`  
+> An ordered list of nodes.
+
+*language*
+> Type: `string`  
+> An optional parameter to specify which language the order is for.
+
+### Return value
+
+> Type: void
+
+### Example
+
+```cs
+// Get a node
+var node = client.Nodes.Get("1abf0e7f-7507-4578-a3be-1280ed7486fe");
+
+try
+{
+    // Get the child nodes for the node.
+    var childNodes = node.Children();
+
+    // Order the nodes by the French title in a descending order
+    var orderedNodes = childNodes.OrderByDescending(c => c.Title["fr-FR"]);
+
+    // Set the node order for French
+    nodes.SetChildNodeOrder(orderedNodes, "fr-FR");
+}
+catch(RestRequestException restEx)
+{
+    // Handle service error.
+}
+catch(Exception ex)
+{
+    // Handle anything else, e.g. network error.
+}
+```
+
+---
+
+## SetChildNodeOrderAsync with nodes
+
+Sets the child node order for the current node.
+
+### Syntax
+
+```cs
+public Task SetChildNodeOrderAsync(IEnumerable<Node> childOrder, string language = null)
+{
+}
+```
+
+### Parameters
+
+*childOrder*
+> Type: `IEnumerable<Node>`  
+> An ordered list of nodes.
+
+*language*
+> Type: `string`  
+> An optional parameter to specify which language the order is for.
+
+### Return value
+
+> Type: Task
+
+### Example
+
+```cs
+// Get a node
+var node = client.Nodes.Get("1abf0e7f-7507-4578-a3be-1280ed7486fe");
+
+try
+{
+    // Get the child nodes for the node.
+    var childNodes = await node.ChildrenAsync();
+
+    // Order the nodes by the French title in a descending order
+    var orderedNode = childNodes.OrderByDescending(c => c.Title["fr-FR"]);
+
+    // Set the node order for French
+    await nodes.SetChildNodeOrderAsync(orderedNode, "fr-FR");
 }
 catch(RestRequestException restEx)
 {

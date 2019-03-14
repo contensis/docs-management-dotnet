@@ -30,3 +30,7 @@ A node represents a location within the navigational structure of a website. The
 | [ChildrenAsync()](./node-methods.md#childrenasync) | Task&lt;List&lt;Node&gt;&gt; | Gets the child nodes for the current node asynchronously. |
 | [Parent()](./node-methods.md#parent) | Node | Gets the parent node for the current node. |
 | [ParentAsync()](./node-methods.md#parentasync) | Node | Gets the parent node for the current node asynchronously. |
+| [SetChildNodeOrder()](./node-methods.md#setchildnodeorder-with-guid-ids) | void | Sets the child node order for the current node. |
+| [SetChildNodeOrderAsync()](./node-methods.md#setchildnodeorderasync-with-guid-ids) | Task | Sets the child node order for the current node asynchronously. |
+| [SetChildNodeOrder()](./node-methods.md#setchildnodeorder-with-nodes) | void | Sets the child node order for the current node. |
+| [SetChildNodeOrderAsync()](./node-methods.md#setchildnodeorderasync-with-nodes) | Task | Sets the child node order for the current node asynchronously. |
