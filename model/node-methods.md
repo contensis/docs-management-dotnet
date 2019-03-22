@@ -5,6 +5,7 @@
 * [Delete()](#delete)
 * [DeleteAsync()](#deleteasync)
 * [NewChild(LocalizedString title)](#newchild)
+* [NewChild(LocalizedString title, Guid id)](#newchild-with-id)
 * [Children(string languageOrder = null)](#children)
 * [ChildrenAsync(string languageOrder = null)](#children)
 * [Parent()](#parent)
@@ -234,6 +235,66 @@ try
 {
     // Create a new node instance from an existing parent.
     var childNode = node.NewChild("Batman Returns");
+
+    // Set some additional properties
+    childNode.Slug = "batman-returns";
+    childNode.EntryId = Guid.Parse("f91e37bd-0cf4-4631-b22a-eb0b78841f23");
+
+    // Commit the newly created child node.
+    childNode.Save();
+}
+catch(RestRequestException restEx)
+{
+    // Handle service error.
+}
+catch(Exception ex)
+{
+    // Handle anything else, e.g. network error.
+}
+```
+
+---
+
+## NewChild with id
+
+Creates and returns a new child node with the current node set as the parent and the specified id.
+
+### Syntax
+
+```cs
+public Node NewChild(LocalizedString title, Guid id)
+{
+}
+```
+
+### Parameters
+
+*title*
+> Type: `string`  
+> The title of the node
+
+*id*
+> Type: `Guid`  
+> The id to be set for the new node
+
+### Return value
+
+> Type: [Node](/model/node.md)
+
+### Remarks
+
+An `InvalidOperationException` is thrown if the current node has not been committed.
+
+### Example
+
+```cs
+// Get a node
+var node = client.Nodes.Get("1abf0e7f-7507-4578-a3be-1280ed7486fe");
+
+try
+{
+    // Create a new node instance from an existing parent.
+    var childNode = node.NewChild("Batman Returns", nodeGuid);
 
     // Set some additional properties
     childNode.Slug = "batman-returns";
