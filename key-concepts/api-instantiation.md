@@ -4,6 +4,28 @@ description: All operations for the API hang off the *ManagementClient* type, wh
 
 # API instantiation
 
+## Installation
+
+The Contensis .NET Management API targets .NET Standard 2.0, which means it can be used in .NET Framework 4.6.2 projects and above for Windows only, and .NET Core 2.0 projects and above for Windows, Linux and MacOS.
+
+The Nuget package can be added to a project using the built-in Visual studio Nuget management screens or by using one of the following methods.
+
+- Open the Package Manager Console window within Visual Studio and run the following command:
+
+```bash
+PM> Install-Package Zengenti.Contensis.Management
+```
+
+- Open a command window and run the following .NET CLI command:
+
+```bash
+dotnet add package Zengenti.Contensis.Management
+```
+
+<br/>
+
+> NOTE: You may have to target a previous major version of the API to match your version of Contensis.
+
 ## Client creation
 
 All operations for the API hang off the *ManagementClient* type, which is created using the static method `ManagementClient.Create()`. The `Create()` method allows parts of the [default configuration](#default-configuration) to be partially or completely overridden for that instance.
