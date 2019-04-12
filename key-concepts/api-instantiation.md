@@ -70,7 +70,7 @@ using Zengenti.Contensis.Management;
 var defaultConfiguration = new ManagementClientConfiguration(
     rootUrl: "https://cms.cloud.contensis.com",
     clientId: "651465e0-2fb8-4b0f-aa2f-1ab34cfe0513",
-    sharedSecret: "2327d623-d44e-41ef-a837-717a626f4b75-098348eb-b0a6-4023-a64a-805536024dfb-1a558c9c-49dc-4709-9e8b-c203f60fda80"
+    sharedSecret: "2327d623d44e41efa837717a626f4b75098348ebb0a64023a64a805536024dfb1a558c9c49dc47099e8bc203f60fda80"
 );
 
 ManagementClient.Configure(defaultConfiguration);
