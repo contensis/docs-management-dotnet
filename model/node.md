@@ -12,7 +12,7 @@ A node represents a location within the navigational structure of a website. The
 | Id | Guid | The node identifier |
 | ProjectId | string | The project identifier |
 | ParentId | Guid? | The parent node id. The value will be null if the node is the root |
-| Title | LocalizedString | The localized node title |
+| DisplayName | LocalizedString | The localized node display name |
 | Slug | LocalizedString | The localized node slug |
 | EntryId | Guid? | (Optional) The associated entry identifier |
 | ChildCount | int | The count of child nodes |
