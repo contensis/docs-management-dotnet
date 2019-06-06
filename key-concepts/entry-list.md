@@ -69,9 +69,6 @@ var movies = movieDbProject.Entries.List("actor", order: new [] { "name", "-date
 
 ---
 
-
-
-
 ## List async
 
 Lists entries as a PagedList asynchronously.

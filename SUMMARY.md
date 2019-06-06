@@ -16,14 +16,28 @@
 * [DataTypes](/key-concepts/data-types.md)
 * [DataFormat](/key-concepts/data-format.md)
 * [Localization](/key-concepts/localization.md)
+
+---
+
+* [Create a project](/key-concepts/project-new.md)
 * [Get a project](/key-concepts/project-get.md)
+* [List projects](/key-concepts/project-list.md)
+
+---
+
 * [Create an entry](/key-concepts/entry-new.md)
 * [Create an asset](/key-concepts/asset-new.md)
 * [Get an entry](/key-concepts/entry-get.md)
 * [Listing entries](/key-concepts/entry-list.md)
 * [Linking content](/key-concepts/linking-content.md)
 * [Components](/key-concepts/components.md)
+
+---
+
 * [Workflow](/key-concepts/workflow.md)
+
+---
+
 * [Get a node](/key-concepts/nodes/node-get.md)
 * [Get nodes for an entry](/key-concepts/nodes/nodes-get-by-entry.md)
 
@@ -31,6 +45,7 @@
 
 * [ManagementClientConfiguration](/model/managementclientconfiguration.md)
 * [Project](/model/project.md)
+  * [Project methods](/model/project-methods.md)
 * [Entry](/model/entry.md)
   * [Entry methods](/model/entry-methods.md)
 * [Asset](/model/asset.md)
