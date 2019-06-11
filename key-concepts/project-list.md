@@ -28,11 +28,8 @@ using Zengenti.Contensis.Management;
 // Create a client
 var client = ManagementClient.Create();
 
-// Create a project
+// List projects
 var projects = client.Projects.List();
-
-// Save the new project
-movieDbProject.Save();
 ```
 
 ---
@@ -57,9 +54,6 @@ using Zengenti.Contensis.Management;
 // Create a client
 var client = ManagementClient.Create();
 
-// Create a project
+// List projects
 var projects = await client.Projects.ListAsync();
-
-// Save the new project
-await movieDbProject.SaveAsync();
 ```
