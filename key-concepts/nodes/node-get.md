@@ -225,5 +225,6 @@ var client = ManagementClient.Create();
 // Retrieve the relevant project
 var movieDbProject = client.Projects.Get("moviedb");
 
-// Get the root node for the prohect
+// Get the root node for the project
 Node rootNode = await movieDbProject.Nodes.GetRootAsync();
+```
