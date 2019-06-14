@@ -4,8 +4,8 @@
 * [SaveAsync()](#saveasync)
 * [Delete()](#delete)
 * [DeleteAsync()](#deleteasync)
-* [NewChild(LocalizedString title)](#newchild)
-* [NewChild(LocalizedString title, Guid id)](#newchild-with-id)
+* [NewChild(LocalizedString displayName)](#newchild)
+* [NewChild(LocalizedString displayName, Guid id)](#newchild-with-id)
 * [Children(string languageOrder = null)](#children)
 * [ChildrenAsync(string languageOrder = null)](#children)
 * [Parent()](#parent)
@@ -206,16 +206,16 @@ Creates and returns a new child node with the current node set as the parent.
 ### Syntax
 
 ```cs
-public Node NewChild(LocalizedString title)
+public Node NewChild(LocalizedString displayName)
 {
 }
 ```
 
 ### Parameters
 
-*title*
+*displayName*
 > Type: `string`  
-> The title of the node
+> The display name of the node
 
 ### Return value
 
@@ -262,16 +262,16 @@ Creates and returns a new child node with the current node set as the parent and
 ### Syntax
 
 ```cs
-public Node NewChild(LocalizedString title, Guid id)
+public Node NewChild(LocalizedString displayName, Guid id)
 {
 }
 ```
 
 ### Parameters
 
-*title*
+*displayName*
 > Type: `string`  
-> The title of the node
+> The display name of the node
 
 *id*
 > Type: `Guid`  

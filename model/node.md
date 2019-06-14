@@ -25,8 +25,8 @@ A node represents a location within the navigational structure of a website. The
 | [SaveAsync()](./node-methods.md#saveasync) | Task | Saves changes made to the node instance asynchronously. |
 | [Delete()](./node-methods.md#delete) | void | Deletes the node instance. |
 | [DeleteAsync()](./node-methods.md#deleteasync) | Task | Deletes the node instance instance asynchronously. |
-| [NewChild(LocalizedString title)](./node-methods.md#newchild) | Node | Creates and returns a new child node by specifying the title.|
-| [NewChild(LocalizedString title, Guid id)](./node-methods.md#newchild-with-id) | Node | Creates and returns a new child node by specifying the title and id.|
+| [NewChild(LocalizedString displayName)](./node-methods.md#newchild) | Node | Creates and returns a new child node by specifying the display name.|
+| [NewChild(LocalizedString displayName, Guid id)](./node-methods.md#newchild-with-id) | Node | Creates and returns a new child node by specifying the display name and id.|
 | [Children()](./node-methods.md#children) | List&lt;Node&gt; | Gets the child nodes for the current node. |
 | [ChildrenAsync()](./node-methods.md#childrenasync) | Task&lt;List&lt;Node&gt;&gt; | Gets the child nodes for the current node asynchronously. |
 | [Parent()](./node-methods.md#parent) | Node | Gets the parent node for the current node. |
