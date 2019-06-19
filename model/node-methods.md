@@ -531,8 +531,8 @@ try
     // Get the child nodes for the node.
     var childNodes = node.Children();
 
-    // Order the nodes by the French title in a descending order and select the ids
-    var orderedNodeIds = childNodes.OrderByDescending(c => c.Title["fr-FR"]).Select(c => c.Id.Value);
+    // Order the nodes by the French display name in a descending order and select the ids
+    var orderedNodeIds = childNodes.OrderByDescending(c => c.DisplayName["fr-FR"]).Select(c => c.Id.Value);
 
     // Set the node order for French
     nodes.SetChildNodeOrder(orderedNodeIds, "fr-FR");
@@ -586,8 +586,8 @@ try
     // Get the child nodes for the node.
     var childNodes = await node.ChildrenAsync();
 
-    // Order the nodes by the French title in a descending order and select the ids
-    var orderedNodeIds = childNodes.OrderByDescending(c => c.Title["fr-FR"]).Select(c => c.Id.Value);
+    // Order the nodes by the French display name in a descending order and select the ids
+    var orderedNodeIds = childNodes.OrderByDescending(c => c.DisplayName["fr-FR"]).Select(c => c.Id.Value);
 
     // Set the node order for French
     await nodes.SetChildNodeOrderAsync(orderedNodeIds, "fr-FR");
@@ -641,8 +641,8 @@ try
     // Get the child nodes for the node.
     var childNodes = node.Children();
 
-    // Order the nodes by the French title in a descending order
-    var orderedNodes = childNodes.OrderByDescending(c => c.Title["fr-FR"]);
+    // Order the nodes by the French display name in a descending order
+    var orderedNodes = childNodes.OrderByDescending(c => c.DisplayName["fr-FR"]);
 
     // Set the node order for French
     nodes.SetChildNodeOrder(orderedNodes, "fr-FR");
@@ -696,8 +696,8 @@ try
     // Get the child nodes for the node.
     var childNodes = await node.ChildrenAsync();
 
-    // Order the nodes by the French title in a descending order
-    var orderedNode = childNodes.OrderByDescending(c => c.Title["fr-FR"]);
+    // Order the nodes by the French display name in a descending order
+    var orderedNode = childNodes.OrderByDescending(c => c.DisplayName["fr-FR"]);
 
     // Set the node order for French
     await nodes.SetChildNodeOrderAsync(orderedNode, "fr-FR");
