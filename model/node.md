@@ -6,16 +6,17 @@ description: A node represents a location within the navigational structure of a
 A node represents a location within the navigational structure of a website. The linking of nodes as parent-child relationships forms the hierarchical structure of a website, with a node having a single parent and (optionally) multiple child nodes. A single entry can optionally be assigned to a node.
 
 ## Properties
-
-| Name | Type | Description |
-| :--- | :--- | :---------- |
-| Id | Guid | The node identifier |
-| ProjectId | string | The project identifier |
-| ParentId | Guid? | The parent node id. The value will be null if the node is the root |
-| DisplayName | LocalizedString | The localized node display name |
-| Slug | LocalizedString | The localized node slug |
-| EntryId | Guid? | (Optional) The associated entry identifier |
-| ChildCount | int | The count of child nodes |
+| Name          | Type            | Description                                                                              |
+|---------------|-----------------|------------------------------------------------------------------------------------------|
+| Id            | Guid            | The node identifier                                                                      |
+| ProjectId     | string          | The project identifier                                                                   |
+| ParentId      | Guid?           | The parent node id. The value will be null if the node is the root                       |
+| DisplayName   | LocalizedString | The localized node display name                                                          |
+| Slug          | LocalizedString | The localized node slug                                                                  |
+| EntryId       | Guid?           | (Optional) The associated entry identifier                                               |
+| ChildCount    | int             | The count of child nodes                                                                 |
+| IsCanonical   | boolean         | A flag to indicate whether the node represents the canonical path for the attached entry |
+| IncludeInMenu | boolean         | A flag to indicate whether the node is to be included in menus                           |
 
 ## Methods
 
