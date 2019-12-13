@@ -3,13 +3,9 @@
 * [Introduction](/README.md)
 * [Getting started](/getting-started.md)
 
-## Security
+---
 
-* [Authentication](/security/authentication.md)
-
-<!--* [Scopes](/security/scopes.md)-->
-
-## Key concepts
+* Key concepts
 
 * [API instantiation](/key-concepts/api-instantiation.md)
 * [Handling errors](/key-concepts/errors.md)
@@ -19,11 +15,21 @@
 
 ---
 
+* Security
+
+* [Authentication](/security/authentication.md)
+
+---
+
+* Projects
+
 * [Create a project](/key-concepts/project-new.md)
 * [Get a project](/key-concepts/project-get.md)
 * [List projects](/key-concepts/project-list.md)
 
 ---
+
+* Entries
 
 * [Create an entry](/key-concepts/entry-new.md)
 * [Create an asset](/key-concepts/asset-new.md)
@@ -34,14 +40,28 @@
 
 ---
 
+* Workflow
+
 * [Workflow](/key-concepts/workflow.md)
 
 ---
 
+* Nodes
+
 * [Get a node](/key-concepts/nodes/node-get.md)
 * [Get nodes for an entry](/key-concepts/nodes/nodes-get-by-entry.md)
 
-## Model
+---
+
+* Roles
+
+* [Create a role](/key-concepts/roles/role-new.md)
+* [Get a role](/key-concepts/roles/role-get.md)
+* [Listing roles](/key-concepts/roles/role-list.md)
+
+---
+
+* Models
 
 * [ManagementClientConfiguration](/model/managementclientconfiguration.md)
 * [Project](/model/project.md)
@@ -62,6 +82,8 @@
 * [Quote](/model/quote.md)
 * [PagedList](/model/pagedList.md)
 * [PageOptions](/model/pageoptions.md)
+* [Role](/model/role.md)
+  * [Role methods](/model/role-methods.md)
 * [Workflow](/model/workflow.md)
 * [WorkflowTransition](/model/workflowTransition.md)
 * [WorkflowExtensions](/model/workflowExtensions.md)
