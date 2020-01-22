@@ -19,7 +19,7 @@ public enum DataType
 | String | Used for text entries such as titles, content or markup. | `string` |
 | Integer | A whole number. | `short`, `int`, `long` |
 | Decimal | A number with a fractional part. | `decimal`, `double`, `float` |
-| Boolean | A value of 'true' or 'false'. | `bool` |
+| Boolean | A value of *true* or *false*. | `bool` |
 | DateTime | A point in time. | `DateTime` |
 | Object | Any arbitrary structure as JSON or a string. | `object` |
 | StringArray | An array of Strings. | `string[]`, `IList<string>` |
