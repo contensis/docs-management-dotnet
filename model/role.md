@@ -9,10 +9,10 @@ Role definitions in the Management API contain permissions associated with entri
 
 | Name        | Type                                | Description                                                                               |
 |-------------|-------------------------------------|-------------------------------------------------------------------------------------------|
-| Id          | Guid                                | The role identifier.                                                                      |
-| Name        | string                              | The role name.                                                                            |
-| Description | string                              | An optional description for the role to explain it's purpose.                             |
-| Enabled     | bool                                | A flag to enable and disable the effect of the role.                                      |
+| Id          | Guid                                | The role identifier                                                                      |
+| Name        | string                              | The role name                                                                           |
+| Description | string                              | An optional description for the role to explain it's purpose                             |
+| Enabled     | bool                                | A flag to enable and disable the effect of the role                                      |
 | Permissions | [RolePermissions](#rolepermissions) | The permissions assigned to the role to allow users and groups to perform certain actions |
 | Assignment  | [RoleAssignments](#roleassignments) | The users, groups and API keys assigned to the role                                       |
 

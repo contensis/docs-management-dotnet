@@ -9,8 +9,8 @@ The DateRange type represents a start and end point in time.
 
 | Name | Type | Description |
 | :--- | :--- | :---------- |
-| From | DateTime? | The date and time the range starts. |
-| To | DateTime? | The date and time the range ends. |
+| From | DateTime? | The date and time the range starts |
+| To | DateTime? | The date and time the range ends |
 
 ## Constructor
 

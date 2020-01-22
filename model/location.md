@@ -29,8 +29,8 @@ public Location(double lat, double lon)
 
 | Name | Type | Description |
 | :--- | :--- | :---------- |
-| Lat | double | The north-south position. |
-| Lon | double | The east-west position. |
+| Lat | double | The north-south position |
+| Lon | double | The east-west position |
 
 ## Examples
 

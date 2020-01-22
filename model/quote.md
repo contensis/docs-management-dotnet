@@ -29,8 +29,8 @@ public Quote(string text, string source)
 
 | Name | Type | Description |
 | :--- | :--- | :---------- |
-| Text | string | The quote text. |
-| Source | string | The source of the quote. |
+| Text | string | The quote text |
+| Source | string | The source of the quote |
 
 ## Examples
 

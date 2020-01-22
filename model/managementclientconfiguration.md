@@ -32,9 +32,9 @@ public ManagementClientConfiguration(string rootUrl, string clientId = null, str
 
 | Name | Type | Description |
 | :--- | :--- | :---------- |
-| RootUrl | string | The url to the root of the Management API services. |
-| ClientId | string | The client id value obtained from [API key management](https://zenhub.zengenti.com/Contensis/11.3/kb/content-types-and-entries/api-keys/api-key-overview.aspx). |
-| SharedSecret | string | The shared secret value obtained from [API key management](https://zenhub.zengenti.com/Contensis/11.3/kb/content-types-and-entries/api-keys/api-key-overview.aspx). |
+| RootUrl | string | The url to the root of the Management API services |
+| ClientId | string | The client id value obtained from [API key management](https://zenhub.zengenti.com/Contensis/11.3/kb/content-types-and-entries/api-keys/api-key-overview.aspx) |
+| SharedSecret | string | The shared secret value obtained from [API key management](https://zenhub.zengenti.com/Contensis/11.3/kb/content-types-and-entries/api-keys/api-key-overview.aspx) |
 
 ## Example
 
