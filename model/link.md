@@ -56,9 +56,9 @@ public Link(string id, string language = null)
 
 | Name | Type | Description |
 | :--- | :--- | :---------- |
-| Id | `Guid` | The id of the entry or asset. |
-| Language | string [[LanguageCode](/key-concepts/localization.md)] | The language of the link instance. |
-| DataFormat | string | An indicator of the link type - "entry" or "asset". |
+| Id | `Guid` | The id of the entry or asset |
+| Language | string [[LanguageCode](/key-concepts/localization.md)] | The language of the link instance |
+| DataFormat | string | An indicator of the link type - *entry* or *asset* |
 
 ## Examples
 

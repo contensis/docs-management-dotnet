@@ -15,4 +15,4 @@ The language code is in lowercase and if the country code is included, then it i
 
 ## Supported languages
 
-Contensis currently supports a subset of [language codes](https://zenhub.zengenti.com/Contensis/11.3/kb/content-types-and-entries/entries/multi-language-support.aspx) which can be set when creating a project, and enabled against a content type.
+Contensis currently supports a subset of [language codes](https://zenhub.zengenti.com/Contensis/12.0/kb/content-types-and-entries/entries/multi-language-support.aspx) which can be set when creating a project, and enabled against a content type.
