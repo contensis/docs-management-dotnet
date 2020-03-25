@@ -23,19 +23,19 @@ For example, if searching across movie ‘title’, ‘tagline’ and ‘overvie
 
 ```cs
 var query = new Query
-            (
-                Op.And
-                (
-                    Op.EqualTo("sys.versionStatus", "published"),
-                    Op.EqualTo("sys.contentTypeId", "movie")
-                ),
-                Op.Or
-                (
-                    Op.FreeText("title", "earth").Weight(10),
-                    Op.FreeText("tagline", "earth"),
-                    Op.FreeText("overview", "earth")
-                )
-            );
+(
+    Op.And
+    (
+        Op.EqualTo("sys.versionStatus", "published"),
+        Op.EqualTo("sys.contentTypeId", "movie")
+    ),
+    Op.Or
+    (
+        Op.FreeText("title", "earth").Weight(10),
+        Op.FreeText("tagline", "earth"),
+        Op.FreeText("overview", "earth")
+    )
+);
 ```
 
 As can be seen from the following results, this lends a higher relevance to titles with a higher ratio of the term ‘earth’:  
@@ -48,19 +48,19 @@ Applying the same weighting to the ‘tagline’ field:
 
 ```cs
 var query = new Query
-            (
-                Op.And
-                (
-                    Op.EqualTo("sys.versionStatus", "published"),
-                    Op.EqualTo("sys.contentTypeId", "movie")
-                ),
-                Op.Or
-                (
-                    Op.FreeText("title", "earth"),
-                    Op.FreeText("tagline", "earth").Weight(10),
-                    Op.FreeText("overview", "earth")
-                )
-            );
+(
+    Op.And
+    (
+        Op.EqualTo("sys.versionStatus", "published"),
+        Op.EqualTo("sys.contentTypeId", "movie")
+    ),
+    Op.Or
+    (
+        Op.FreeText("title", "earth"),
+        Op.FreeText("tagline", "earth").Weight(10),
+        Op.FreeText("overview", "earth")
+    )
+);
 ```
 
 Yields the following results:
@@ -71,19 +71,19 @@ Finally, weighting the ‘overview’ field:
 
 ```cs
 var query = new Query
-            (
-                Op.And
-                (
-                    Op.EqualTo("sys.versionStatus", "published"),
-                    Op.EqualTo("sys.contentTypeId", "movie")
-                ),
-                Op.Or
-                (
-                    Op.FreeText("title", "earth"),
-                    Op.FreeText("tagline", "earth"),
-                    Op.FreeText("overview", "earth").Weight(10)
-                )
-            );
+(
+    Op.And
+    (
+        Op.EqualTo("sys.versionStatus", "published"),
+        Op.EqualTo("sys.contentTypeId", "movie")
+    ),
+    Op.Or
+    (
+        Op.FreeText("title", "earth"),
+        Op.FreeText("tagline", "earth"),
+        Op.FreeText("overview", "earth").Weight(10)
+    )
+);
 ```
 
 Results in:
@@ -100,19 +100,19 @@ For example, if searching across movie overviews for ‘thrillers’ which are �
 
 ```cs
 var query = new Query
-            (
-                Op.And
-                (
-                    Op.EqualTo("sys.versionStatus", "published"),
-                    Op.EqualTo("sys.contentTypeId", "movie")
-                ),
-                Op.Or
-                (
-                    Op.FreeText("overview", "thriller"),
-                    Op.FreeText("overview", "exciting"),
-                    Op.FreeText("overview", "tense")
-                )
-            );
+(
+    Op.And
+    (
+        Op.EqualTo("sys.versionStatus", "published"),
+        Op.EqualTo("sys.contentTypeId", "movie")
+    ),
+    Op.Or
+    (
+        Op.FreeText("overview", "thriller"),
+        Op.FreeText("overview", "exciting"),
+        Op.FreeText("overview", "tense")
+    )
+);
 ```
 
 However, as can be seen from the results, this also retrieves movies which are not thrillers, but are apparently exciting and/or tense:  
@@ -123,19 +123,19 @@ We can favour ‘thrillers’ by adding weighting to the query as follows:
 
 ```cs
 var query = new Query
-            (
-                Op.And
-                (
-                    Op.EqualTo("sys.versionStatus", "published"),
-                    Op.EqualTo("sys.contentTypeId", "movie")
-                ),
-                Op.Or
-                (
-                    Op.FreeText("overview", "thriller").Weight(10),
-                    Op.FreeText("overview", "exciting"),
-                    Op.FreeText("overview", "tense")
-                )
-            );
+(
+    Op.And
+    (
+        Op.EqualTo("sys.versionStatus", "published"),
+        Op.EqualTo("sys.contentTypeId", "movie")
+    ),
+    Op.Or
+    (
+        Op.FreeText("overview", "thriller").Weight(10),
+        Op.FreeText("overview", "exciting"),
+        Op.FreeText("overview", "tense")
+    )
+);
 ```
 
 The query will now favour ‘thrillers’ over other movie results as can be seen in the following:
@@ -145,20 +145,20 @@ The query will now favour ‘thrillers’ over other movie results as can be see
 However, ‘exciting’ and ‘tense’ are still not favoured over other results. By also weighting these queries, we can push them to the top:
 
 ```cs
-            var query = new Query
-            (
-                Op.And
-                (
-                    Op.EqualTo("sys.versionStatus", "published"),
-                    Op.EqualTo("sys.contentTypeId", "movie")
-                ),
-                Op.Or
-                (
-                    Op.FreeText("overview", "thriller").Weight(10),
-                    Op.FreeText("overview", "exciting").Weight(5),
-                    Op.FreeText("overview", "tense").Weight(5)
-                )
-            );
+var query = new Query
+(
+    Op.And
+    (
+        Op.EqualTo("sys.versionStatus", "published"),
+        Op.EqualTo("sys.contentTypeId", "movie")
+    ),
+    Op.Or
+    (
+        Op.FreeText("overview", "thriller").Weight(10),
+        Op.FreeText("overview", "exciting").Weight(5),
+        Op.FreeText("overview", "tense").Weight(5)
+    )
+);
 
 ```
 
@@ -169,20 +169,20 @@ As can be seen from the results:
 Please note the different weights for ‘thriller’, ‘exciting’ and ‘tense’: this difference is required in order to prevent the weightings negating each other. For example:
 
 ```cs
-            var query = new Query
-            (
-                Op.And
-                (
-                    Op.EqualTo("sys.versionStatus", "published"),
-                    Op.EqualTo("sys.contentTypeId", "movie")
-                ),
-                Op.Or
-                (
-                    Op.FreeText("overview", "thriller").Weight(10),
-                    Op.FreeText("overview", "exciting").Weight(10),
-                    Op.FreeText("overview", "tense").Weight(10)
-                )
-            );
+var query = new Query
+(
+    Op.And
+    (
+        Op.EqualTo("sys.versionStatus", "published"),
+        Op.EqualTo("sys.contentTypeId", "movie")
+    ),
+    Op.Or
+    (
+        Op.FreeText("overview", "thriller").Weight(10),
+        Op.FreeText("overview", "exciting").Weight(10),
+        Op.FreeText("overview", "tense").Weight(10)
+    )
+);
 ```
 
 As can be seen from the results, weighting each of these terms identically negates the effect, producing the same result as the non-weighted query:
@@ -199,22 +199,22 @@ Query structure can also be used to provide more relevance to specific fields. F
 
 ```cs
 var query = new Query
-            (
-                Op.And
-                (
-                    Op.EqualTo("sys.versionStatus", "published"),
-                    Op.EqualTo("sys.contentTypeId", "movie")
-                ),
-                Op.Or
-                (
-                    Op.FreeText("title", "earth"),
-                    Op.Or
-                    (
-                        Op.FreeText("tagline", "earth"),
-                        Op.FreeText("overview", "earth")
-                    )
-                )
-            );
+(
+    Op.And
+    (
+        Op.EqualTo("sys.versionStatus", "published"),
+        Op.EqualTo("sys.contentTypeId", "movie")
+    ),
+    Op.Or
+    (
+        Op.FreeText("title", "earth"),
+        Op.Or
+        (
+            Op.FreeText("tagline", "earth"),
+            Op.FreeText("overview", "earth")
+        )
+    )
+);
 ```
 
 This yields the following results:
@@ -228,23 +228,23 @@ However, this does not produce the same results as those of the weighted example
 As in the weighted examples, the focus of the query should be ‘thrillers’, with ‘tense’ and ‘exciting’ being adjectives which should be favoured. This can be achieved by restructuring the original query as follows:
 
 ```cs
-            var query = new Query
-            (
-                Op.And
-                (
-                    Op.EqualTo("sys.versionStatus", "published"),
-                    Op.EqualTo("sys.contentTypeId", "movie")
-                ),
-                Op.Or
-                (
-                    Op.FreeText("overview", "thriller"),
-                    Op.Or
-                    (
-                        Op.FreeText("overview", "exciting"),
-                        Op.FreeText("overview", "tense")
-                    )
-                )
-            );
+var query = new Query
+(
+    Op.And
+    (
+        Op.EqualTo("sys.versionStatus", "published"),
+        Op.EqualTo("sys.contentTypeId", "movie")
+    ),
+    Op.Or
+    (
+        Op.FreeText("overview", "thriller"),
+        Op.Or
+        (
+            Op.FreeText("overview", "exciting"),
+            Op.FreeText("overview", "tense")
+        )
+    )
+);
 ```
 
 As you can see from the results, this pushes the exciting and tense thrillers to the top of the results, while also removing any movies which are not also thrillers:
