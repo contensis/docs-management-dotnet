@@ -16,14 +16,9 @@ These are the standard properties that all entries have. An entry can have multi
 | ProjectId | string | The project identifier, e.g. "movieDb". Found in the project overview screen of the management console |
 | DataFormat | string | Either 'entry' or 'asset' |
 | Language | string | The language of the entry instance |
-| AvailableLanguages | IReadonlyCollection&lt;string&gt; | A list of languages which have available translations. |
-| UnavailableLanguages | IReadonlyCollection&lt;string&gt; | A list of languages which the entry can be translated to but have yet to be completed. |
 | Version | [VersionInfo](/model/versioninfo.md) | Version information for the entry |
-| IsPublished | bool | Returns whether the entry is published |
 | Metadata | Metadata | Metadata associated with the entry instance |
 | Owner | string | The id of the entry owner |
-| Workflow | [Workflow](/model/workflow.md) | The current workflow details for the entry |
-| TranslationState | TranslationState enum | The translation status of the entry. Possible values are *None, NeverTranslated, Translated, TranslationOutOfDate, NoDefaultLanguage, AvailableForTranslation, NotAvailableForTranslation*|
 | Slug | string | The entry slug token |
 
 ## Methods
