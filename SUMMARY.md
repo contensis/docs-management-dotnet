@@ -38,12 +38,6 @@
 * [Linking content](/key-concepts/linking-content.md)
 * [Components](/key-concepts/components.md)
 
-* Search
-
-* [Search basics](/search/entry-search.md)
-* [Query operators](/search/query-operators.md)
-* [Query weighting](/search/query-boosting.md)
-
 ---
 
 * Workflow
