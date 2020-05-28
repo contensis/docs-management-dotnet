@@ -21,6 +21,12 @@
 
 ---
 
+* Users and Groups
+
+* [Get a user](/security/users-and-groups/get-a-user.md)
+
+---
+
 * Projects
 
 * [Create a project](/key-concepts/project-new.md)
