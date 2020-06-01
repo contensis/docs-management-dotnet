@@ -24,6 +24,7 @@
 * Users and Groups
 
 * [Get a user](/security/users-and-groups/get-a-user.md)
+* [List users](/security/users-and-groups/list-users.md)
 
 ---
 
@@ -94,6 +95,7 @@
 * [Quote](/model/quote.md)
 * [PagedList](/model/pagedList.md)
 * [PageOptions](/model/pageoptions.md)
+* [SecurityListOptions](/model/securitylistoptions.md)
 * [Role](/model/role.md)
   * [Role methods](/model/role-methods.md)
 * [Workflow](/model/workflow.md)

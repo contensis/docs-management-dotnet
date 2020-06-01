@@ -5,29 +5,32 @@ description: Requesting a user can be achieved by using one of the Get method ov
 
 Requesting an individual user can be achieved by using one of the `Get` methods overloads.
 
-* [Get(Guid uuid)](#get-by-uuid)
+* [Get(Guid id)](#get-by-id)
+* [Get(string id)](#get-by-string-uuid)
+* [Get(string id)](#get-by-username)
+* [Get(string id)](#get-by-email-address)
 
-# Get by uuid
+# Get by id
 
-Gets an entry by its uuid identifier.
+Gets a user by its identifier.
 
 ### Syntax
 
 ```cs
-public User Get(Guid uuid)
+public User Get(Guid id)
 {    
 }
 ```
 
 ### Parameters
 
-*uuid*
+*id*
 > Type: `Guid`
-> The uuid of the user.
+> The id of the user.
 
 ## Remarks
 
-Returns *null* if no user matches the specified uuid.
+Returns *null* if no user matches the specified id.
 
 ### Examples
 
@@ -43,4 +46,110 @@ var userUuid = Guid.Parse("c5da1719-cb3f-4f2e-927b-f678293258f3");
 
 // Get the user
 User user = client.Security.Users.Get(userUuid)
+```
+
+# Get by string uuid
+
+Gets an entry by its uuid identifier.
+
+### Syntax
+
+```cs
+public User Get(string id)
+{    
+}
+```
+
+### Parameters
+
+*uuid*
+> Type: `string`
+> The users identifier, either username, email address, or uuid.
+
+## Remarks
+
+Returns *null* if no user matches the specified uuid.
+
+### Examples
+
+```cs
+using Zengenti.Contensis.Management;
+using Zengenti.Contensis.Management.Users;
+
+// Create a client
+var client = ManagementClient.Create();
+
+
+// Get the user
+User user = client.Security.Users.Get("c5da1719-cb3f-4f2e-927b-f678293258f3")
+```
+
+# Get by username
+
+Gets a user by their username identifier.
+
+### Syntax
+
+```cs
+public User Get(string id)
+{    
+}
+```
+
+### Parameters
+
+*id*
+> Type: `String`
+> The users identifier, either username, email address, or uuid.
+
+## Remarks
+
+Returns *null* if no user matches the specified username.
+
+### Examples
+
+```cs
+using Zengenti.Contensis.Management;
+using Zengenti.Contensis.Management.Users;
+
+// Create a client
+var client = ManagementClient.Create();
+
+// Get the user
+User user = client.Security.Users.Get("r.paulsen")
+```
+
+# Get by email address
+
+Gets a user by their email address.
+
+### Syntax
+
+```cs
+public User Get(string id)
+{    
+}
+```
+
+### Parameters
+
+*username*
+> Type: `String`
+> The users identifier, either username, email address, or uuid.
+
+## Remarks
+
+Returns *null* if no user matches the specified email address.
+
+### Examples
+
+```cs
+using Zengenti.Contensis.Management;
+using Zengenti.Contensis.Management.Users;
+
+// Create a client
+var client = ManagementClient.Create();
+
+// Get the user
+User user = client.Security.Users.Get("robert.paulsen@fightclub.com")
 ```
