@@ -7,8 +7,8 @@ Requesting an individual [user](/model/user.md) can be achieved by using one of 
 
 * [Get(Guid id)](#get-by-id)
 * [GetAsync(Guid id)](#get-by-id-async)
-* [Get(string uuid)](#get-by-string-uuid)
-* [GetAsync(string uuid)](#get-by-string-uuid-async)
+* [Get(string id)](#get-by-string-id)
+* [GetAsync(string id)](#get-by-string-id-async)
 * [Get(string username)](#get-by-username)
 * [GetAsync(string username)](#get-by-username-async)
 * [Get(string emailAddress)](#get-by-email-address)
@@ -46,10 +46,10 @@ using Zengenti.Contensis.Management.Users;
 var client = ManagementClient.Create();
 
 // Mimic a guid value
-var userUuid = Guid.Parse("c5da1719-cb3f-4f2e-927b-f678293258f3");
+var userId = Guid.Parse("c5da1719-cb3f-4f2e-927b-f678293258f3");
 
 // Get the user
-User user = client.Security.Users.Get(userUuid);
+User user = client.Security.Users.Get(userId);
 ```
 
 # Get by id async
@@ -84,15 +84,15 @@ using Zengenti.Contensis.Management.Users;
 var client = ManagementClient.Create();
 
 // Mimic a guid value
-var userUuid = Guid.Parse("c5da1719-cb3f-4f2e-927b-f678293258f3");
+var userId = Guid.Parse("c5da1719-cb3f-4f2e-927b-f678293258f3");
 
 // Get the user
-User user = await client.Security.Users.GetAsync(userUuid);
+User user = await client.Security.Users.GetAsync(userId);
 ```
 
-# Get by string uuid
+# Get by string id
 
-Gets an entry by its uuid identifier.
+Gets an entry by its id identifier.
 
 ### Syntax
 
@@ -104,13 +104,13 @@ public User Get(string id)
 
 ### Parameters
 
-*uuid*
+*id*
 > Type: `string`
-> The users identifier, either username, email address, or uuid.
+> The users identifier, either username, email address, or id.
 
 ## Remarks
 
-Returns *null* if no user matches the specified uuid.
+Returns *null* if no user matches the specified id.
 
 ### Examples
 
@@ -125,9 +125,9 @@ var client = ManagementClient.Create();
 User user = client.Security.Users.Get("c5da1719-cb3f-4f2e-927b-f678293258f3");
 ```
 
-# Get by string uuid async
+# Get by string id async
 
-Gets an entry by its uuid identifier.
+Gets an entry by its id identifier.
 
 ### Syntax
 
@@ -139,13 +139,13 @@ public async Task<User> GetAsync(string id)
 
 ### Parameters
 
-*uuid*
+*id*
 > Type: `string`
-> The users identifier, either username, email address, or uuid.
+> The users identifier, either username, email address, or id.
 
 ## Remarks
 
-Returns *null* if no user matches the specified uuid.
+Returns *null* if no user matches the specified id.
 
 ### Examples
 
@@ -177,7 +177,7 @@ public User Get(string id)
 
 *id*
 > Type: `String`
-> The users identifier, either username, email address, or uuid.
+> The users identifier, either username, email address, or id.
 
 ## Remarks
 
@@ -212,7 +212,7 @@ public async Task<User> GetAsync(string id)
 
 *id*
 > Type: `String`
-> The users identifier, either username, email address, or uuid.
+> The users identifier, either username, email address, or id.
 
 ## Remarks
 
@@ -247,7 +247,7 @@ public User Get(string id)
 
 *username*
 > Type: `String`
-> The users identifier, either username, email address, or uuid.
+> The users identifier, either username, email address, or id.
 
 ## Remarks
 
@@ -282,7 +282,7 @@ public async Task<User> GetAsync(string id)
 
 *username*
 > Type: `String`
-> The users identifier, either username, email address, or uuid.
+> The users identifier, either username, email address, or id.
 
 ## Remarks
 

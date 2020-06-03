@@ -25,6 +25,7 @@
 
 * [Create and update users](/security/users-and-groups/create-and-update-users.md)
 * [Get a user](/security/users-and-groups/get-a-user.md)
+* [Delete a user](/security/users-and-groups/delete-a-user.md)
 * [List users](/security/users-and-groups/list-users.md)
 
 ---
