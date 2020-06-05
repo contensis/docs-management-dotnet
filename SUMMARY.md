@@ -21,13 +21,13 @@
 
 ---
 
-* Users and Groups
-
-* [Create and update users](/security/users-and-groups/create-and-update-users.md)
-* [Delete a user](/security/users-and-groups/delete-a-user.md)
-* [Get a user](/security/users-and-groups/get-a-user.md)
-* [List users](/security/users-and-groups/list-users.md)
-* [Update password](/security/users-and-groups/update-password.md)
+* Users
+* [Check group memberships](/security/users/check-group-memberships.md)
+* [Create and update users](/security/users/create-and-update-users.md)
+* [Delete a user](/security/users/delete-a-user.md)
+* [Get a user](/security/users/get-a-user.md)
+* [List users](/security/users/list-users.md)
+* [Update password](/security/users/update-password.md)
 
 ---
 

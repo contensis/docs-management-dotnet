@@ -5,28 +5,28 @@ description: Updating a users password can be achived by calling the UpdatePassw
 
 Updating a [users](/model/user.md) password can be achived by calling one of the `UpdatePassword` method overloads on the user object.
 
-* [UpdatePassword(string currentPassword, string newPassword)](#update-password)
-* [UpdatePasswordAsync(string currentPassword, string newPassword)](#update-password-async)
+* [UpdatePassword(string existingPassword, string newPassword)](#update-password)
+* [UpdatePasswordAsync(string existingPassword, string newPassword)](#update-password-async)
 * [UpdatePassword(string newPassword)](#update-password-as-system-administrator)
 * [UpdatePasswordAsync(string newPassword)](#update-password-as-system-administrator-async)
 
 # Update password
 
-Updating a password requires the correct current password and a valid new password.
+Updating a password requires the correct existing password and a valid new password.
 
 ### Syntax
 
 ```cs
-public void UpdatePassword(string currentPassword, string newPassword)
+public void UpdatePassword(string existingPassword, string newPassword)
 {    
 }
 ```
 
 ### Parameters
 
-*currentPassword*
+*existingPassword*
 > Type: string
-> The user's current password.
+> The user's existing password.
 
 *newPassword*
 > Type: string
@@ -50,21 +50,21 @@ user.UpdatePassword("d0ntT4lk4boutf1ghtClub!", "F1ghtC1ub1234!")
 
 # Update password async
 
-Updating a password requires the correct current password and a valid new password.
+Updating a password requires the correct existing password and a valid new password.
 
 ### Syntax
 
 ```cs
-public async Task UpdatePasswordAsync(string currentPassword, string newPassword)
+public async Task UpdatePasswordAsync(string existingPassword, string newPassword)
 {    
 }
 ```
 
 ### Parameters
 
-*currentPassword*
+*existingPassword*
 > Type: string
-> The user's current password.
+> The user's existing password.
 
 *newPassword*
 > Type: string
