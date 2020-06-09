@@ -30,12 +30,12 @@ For each of the genres you have added, select them in the tree and make a note o
 
 In the case of this guide our genres nodes have the following keys, your keys will likely have different values.
 
-| Genre | Key |
-| ---------- | ------ |
-| Action | 0/5/1 |
-| Comedy | 0/5/2 |
-| Crime | 0/5/3 |
-| Drama | 0/5/4 |
+| Genre   | Key   |
+|---------|-------|
+| Action  | 0/5/1 |
+| Comedy  | 0/5/2 |
+| Crime   | 0/5/3 |
+| Drama   | 0/5/4 |
 | Romance | 0/5/5 |
 | Western | 0/5/6 |
 
@@ -43,14 +43,14 @@ In the case of this guide our genres nodes have the following keys, your keys wi
 
 You can [create a new content type](https://zenhub.zengenti.com/Contensis/12.0/kb/content-types-and-entries/content-types/create-a-content-type.aspx) using the content type builder. Create a new content type called *Movie* with the following fields.
 
-| Field name | API id | Type | Description |
-| ---------- | ------ | ---- | ----------- |
-| Title | title | Text | The title of the movie. |
-| Overview | overview | Text | An overview of what the movie is about. |
-| Release date | releaseDate | Date | The date the movie was released. |
-| Runtime | runtime | number (integer) | The runtime in minutes. |
-| Genres | genres | Taxonomy | The genre of the movie. |
-| Revenue | revenue | number | The revenue the movie generated. |
+| Field name   | API id      | Type             | Description                             |
+|--------------|-------------|------------------|-----------------------------------------|
+| Title        | title       | Text             | The title of the movie.                 |
+| Overview     | overview    | Text             | An overview of what the movie is about. |
+| Release date | releaseDate | Date             | The date the movie was released.        |
+| Runtime      | runtime     | number (integer) | The runtime in minutes.                 |
+| Genres       | genres      | Taxonomy         | The genre of the movie.                 |
+| Revenue      | revenue     | number           | The revenue the movie generated.        |
 
 ## Import some movies
 

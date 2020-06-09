@@ -18,3 +18,7 @@ This documentation is mainly example-driven with API references to the types.
 * [Creating an entry](key-concepts/entry-new.md)
 * [Linking content](key-concepts/linking-content.md)
 * [Invoking workflow events](key-concepts/workflow.md)
+
+## NuGet Package
+
+The .NET Management API is included with Contensis websites, however it can also be used in any .NET Core and .NET Framework project, and is [available as a NuGet package here](https://www.nuget.org/packages/Zengenti.Contensis.Management/).
