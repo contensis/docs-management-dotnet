@@ -8,9 +8,9 @@
 * Key concepts
 
 * [API instantiation](/key-concepts/api-instantiation.md)
-* [Handling errors](/key-concepts/errors.md)
-* [DataTypes](/key-concepts/data-types.md)
 * [DataFormat](/key-concepts/data-format.md)
+* [DataTypes](/key-concepts/data-types.md)
+* [Handling errors](/key-concepts/errors.md)
 * [Localization](/key-concepts/localization.md)
 
 ---
@@ -26,6 +26,7 @@
 * [Create and update users](/security/users/create-and-update-users.md)
 * [Delete a user](/security/users/delete-a-user.md)
 * [Get a user](/security/users/get-a-user.md)
+* [Get group memberships](/security/users/get-group-memberships.md)
 * [List users](/security/users/list-users.md)
 * [Update password](/security/users/update-password.md)
 
@@ -41,18 +42,18 @@
 
 * Entries
 
-* [Create an entry](/key-concepts/entry-new.md)
-* [Create an asset](/key-concepts/asset-new.md)
-* [Get an entry](/key-concepts/entry-get.md)
-* [Listing entries](/key-concepts/entry-list.md)
-* [Linking content](/key-concepts/linking-content.md)
 * [Components](/key-concepts/components.md)
+* [Create an asset](/key-concepts/asset-new.md)
+* [Create an entry](/key-concepts/entry-new.md)
+* [Get an entry](/key-concepts/entry-get.md)
+* [Linking content](/key-concepts/linking-content.md)
+* [Listing entries](/key-concepts/entry-list.md)
 
 * Search
 
-* [Search basics](/search/entry-search.md)
 * [Query operators](/search/query-operators.md)
 * [Query weighting](/search/query-boosting.md)
+* [Search basics](/search/entry-search.md)
 
 ---
 
@@ -79,28 +80,30 @@
 
 * Models
 
-* [ManagementClientConfiguration](/model/managementclientconfiguration.md)
-* [Project](/model/project.md)
-  * [Project methods](/model/project-methods.md)
+* [Asset](/model/asset.md)
+* [ComposedFieldItem](/model/composedfielditem.md)
+* [ComposedField](/model/composedfield.md)
+* [DateRange](/model/daterange.md)
 * [Entry](/model/entry.md)
   * [Entry methods](/model/entry-methods.md)
-* [Asset](/model/asset.md)
+* [Group](/model/group.md)
+* [ImageTransformations](/model/image-transformations.md)
+* [Image](/model/image.md)
+* [Link](/model/link.md)
+* [Location](/model/location.md)
+* [ManagementClientConfiguration](/model/managementclientconfiguration.md)
 * [Node](/model/node.md)
   * [Node methods](/model/node-methods.md)
-* [VersionInfo](/model/versioninfo.md)
-* [Link](/model/link.md)
-* [ComposedField](/model/composedfield.md)
-* [ComposedFieldItem](/model/composedfielditem.md)
-* [DateRange](/model/daterange.md)
-* [Image](/model/image.md)
-* [ImageTransformations](/model/image-transformations.md)
-* [Location](/model/location.md)
-* [Quote](/model/quote.md)
-* [PagedList](/model/pagedList.md)
 * [PageOptions](/model/pageoptions.md)
-* [SecurityListOptions](/model/securitylistoptions.md)
+* [PagedList](/model/pagedList.md)
+* [Project](/model/project.md)
+  * [Project methods](/model/project-methods.md)
+* [Quote](/model/quote.md)
 * [Role](/model/role.md)
   * [Role methods](/model/role-methods.md)
-* [Workflow](/model/workflow.md)
-* [WorkflowTransition](/model/workflowTransition.md)
+* [SecurityListOptions](/model/securitylistoptions.md)
+* [User](/model/user.md)
+* [VersionInfo](/model/versioninfo.md)
 * [WorkflowExtensions](/model/workflowExtensions.md)
+* [WorkflowTransition](/model/workflowTransition.md)
+* [Workflow](/model/workflow.md)

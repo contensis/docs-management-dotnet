@@ -1,10 +1,9 @@
 ---
-description: The user class represents a user in Contensis.
+description: The group class represents a user group in Contensis.
 ---
+# Group
 
-# User
-
-The user class represents a user in Contensis.
+The group class represents a user group in Contensis.
 
 ## Members
 | Name | Type | Description |

@@ -24,7 +24,6 @@ public void Delete()
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 
 // Create a client
 var client = ManagementClient.Create();
@@ -55,7 +54,6 @@ public async Task DeleteAsync()
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 
 // Create a client
 var client = ManagementClient.Create();
@@ -64,7 +62,7 @@ var client = ManagementClient.Create();
 var userId = Guid.Parse("c5da1719-cb3f-4f2e-927b-f678293258f3");
 
 // Get the user
-User user = client.Security.Users.Get(userId);
+User user = await client.Security.Users.GetAsync(userId);
 
 // Delete the user
 await user.DeleteAsync();

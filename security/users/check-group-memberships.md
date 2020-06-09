@@ -31,11 +31,16 @@ public bool IsMemberOf(string groupName)
 }
 ```
 
+### Parameters
+
+*groupName*
+> Type: string
+> The group name to check membership for.
+
 ### Examples
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 
 // Create a client
 var client = ManagementClient.Create();
@@ -59,11 +64,16 @@ public bool IsMemberOf(params string[] groupNames)
 }
 ```
 
+### Parameters
+
+*groupNames*
+> Type: string[]
+> The group names to check membership for.
+
 ### Examples
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 
 // Create a client
 var client = ManagementClient.Create();
@@ -86,6 +96,12 @@ public async Task<bool> IsMemberOfAsync(string groupName)
 {    
 }
 ```
+
+### Parameters
+
+*groupName*
+> Type: string
+> The group name to check membership for.
 
 ### Examples
 
@@ -115,11 +131,16 @@ public async Task<bool> IsMemberOfAsync(params string[] groupNames)
 }
 ```
 
+### Parameters
+
+*groupNames*
+> Type: string[]
+> The group namea to check membership for.
+
 ### Examples
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 
 // Create a client
 var client = ManagementClient.Create();
@@ -143,11 +164,16 @@ public bool IsMemberOf(Guid groupId)
 }
 ```
 
+### Parameters
+
+*groupId*
+> Type: guid
+> The group identifier to check membership for.
+
 ### Examples
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 
 // Create a client
 var client = ManagementClient.Create();
@@ -174,11 +200,16 @@ public bool IsMemberOf(params Guid[] groupIds)
 }
 ```
 
+### Parameters
+
+*groupIds*
+> Type: guid[]
+> The group identifiers to check membership for.
+
 ### Examples
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 
 // Create a client
 var client = ManagementClient.Create();
@@ -208,11 +239,16 @@ public async Task<bool> IsMemberOfAsync(Guid groupId)
 }
 ```
 
+### Parameters
+
+*groupId*
+> Type: guid
+> The group identifier to check membership for.
+
 ### Examples
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 
 // Create a client
 var client = ManagementClient.Create();
@@ -239,11 +275,16 @@ public async Task<bool> IsMemberOf(params Guid[] groupIds)
 }
 ```
 
+### Parameters
+
+*groupIds*
+> Type: guid[]
+> The group identifiers to check membership for.
+
 ### Examples
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 
 // Create a client
 var client = ManagementClient.Create();
@@ -273,11 +314,16 @@ public bool IsMemberOf(string groupId)
 }
 ```
 
+### Parameters
+
+*groupId*
+> Type: string
+> The group identifier to check membership for.
+
 ### Examples
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 
 // Create a client
 var client = ManagementClient.Create();
@@ -300,12 +346,16 @@ public bool IsMemberOf(params string[] groupIds)
 {    
 }
 ```
+### Parameters
+
+*groupIds*
+> Type: string[]
+> The group identifiers to check membership for.
 
 ### Examples
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 
 // Create a client
 var client = ManagementClient.Create();
@@ -329,11 +379,16 @@ public async Task<bool> IsMemberOfAsync(string groupId)
 }
 ```
 
+### Parameters
+
+*groupId*
+> Type: string
+> The group identifier to check membership for.
+
 ### Examples
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 
 // Create a client
 var client = ManagementClient.Create();
@@ -357,11 +412,16 @@ public async Task<bool> IsMemberOfAsync(params string[] groupIds)
 }
 ```
 
+### Parameters
+
+*groupIds*
+> Type: string[]
+> The group identifiers to check membership for.
+
 ### Examples
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 
 // Create a client
 var client = ManagementClient.Create();

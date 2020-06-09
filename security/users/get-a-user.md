@@ -40,7 +40,6 @@ Returns *null* if no user matches the specified id.
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 
 // Create a client
 var client = ManagementClient.Create();
@@ -78,7 +77,6 @@ Returns *null* if no user matches the specified id.
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 
 // Create a client
 var client = ManagementClient.Create();
@@ -116,7 +114,6 @@ Returns *null* if no user matches the specified id.
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 
 // Create a client
 var client = ManagementClient.Create();
@@ -151,7 +148,6 @@ Returns *null* if no user matches the specified id.
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 
 // Create a client
 var client = ManagementClient.Create();
@@ -187,7 +183,6 @@ Returns *null* if no user matches the specified username.
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 
 // Create a client
 var client = ManagementClient.Create();
@@ -222,7 +217,6 @@ Returns *null* if no user matches the specified username.
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 
 // Create a client
 var client = ManagementClient.Create();
@@ -257,7 +251,6 @@ Returns *null* if no user matches the specified email address.
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 
 // Create a client
 var client = ManagementClient.Create();
@@ -292,7 +285,6 @@ Returns *null* if no user matches the specified email address.
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 
 // Create a client
 var client = ManagementClient.Create();

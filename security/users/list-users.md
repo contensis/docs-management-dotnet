@@ -36,7 +36,6 @@ public PagedList<User> List(SecurityListOptions listOptions = null, string query
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 using Zengenti.Data;
 
 // Create a client
@@ -77,7 +76,6 @@ public async Task<PagedList<User>> ListAsync(SecurityListOptions listOptions = n
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 using Zengenti.Data;
 
 // Create a client
@@ -118,7 +116,6 @@ public PagedList<User> List(SecurityListOptions listOptions = null, string query
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 using Zengenti.Data;
 
 // Create a client
@@ -159,7 +156,6 @@ public async Task<PagedList<User>> ListAsync(SecurityListOptions listOptions = n
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 using Zengenti.Data;
 
 // Create a client

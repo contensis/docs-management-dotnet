@@ -36,7 +36,6 @@ public void UpdatePassword(string existingPassword, string newPassword)
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 
 // Create a client
 var client = ManagementClient.Create();
@@ -74,7 +73,6 @@ public async Task UpdatePasswordAsync(string existingPassword, string newPasswor
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 
 // Create a client
 var client = ManagementClient.Create();
@@ -83,7 +81,7 @@ var client = ManagementClient.Create();
 User user = await client.Security.Users.GetAsync("t.durden");
 
 // Update the password
-await user.UpdatePasswordAsync("d0ntT4lk4boutf1ghtClub!", "F1ghtC1ub1234!")
+await user.UpdatePasswordAsync("d0ntT4lk4boutf1ghtClub!", "F1ghtC1ub1234!");
 ```
 
 # Update password as system administrator
@@ -108,7 +106,6 @@ public void UpdatePassword(string newPassword)
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 
 // Create a client
 var client = ManagementClient.Create();
@@ -142,7 +139,6 @@ public async Task UpdatePasswordAsync(string newPassword)
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 
 // Create a client
 var client = ManagementClient.Create();
@@ -151,5 +147,5 @@ var client = ManagementClient.Create();
 User user = await client.Security.Users.GetAsync("t.durden");
 
 // Update the password
-await user.UpdatePasswordAsync("F1ghtC1ub1234!")
+await user.UpdatePasswordAsync("F1ghtC1ub1234!");
 ```

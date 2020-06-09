@@ -39,7 +39,6 @@ public User New(string username, string email, string password)
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 
 // Create a client
 var client = ManagementClient.Create();
@@ -88,7 +87,6 @@ public User New(Guid id, string username, string email, string password)
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 
 // Create a client
 var client = ManagementClient.Create();
@@ -114,7 +112,6 @@ Updates an existing user.
 
 ```cs
 using Zengenti.Contensis.Management;
-using Zengenti.Contensis.Management.Users;
 
 // Create a client
 var client = ManagementClient.Create();
