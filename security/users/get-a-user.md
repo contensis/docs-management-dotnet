@@ -53,7 +53,7 @@ User user = client.Security.Users.Get(userId);
 
 # Get by id async
 
-Gets a user by its identifier.
+Gets a user by its identifier asynchronously.
 
 ### Syntax
 
@@ -90,7 +90,7 @@ User user = await client.Security.Users.GetAsync(userId);
 
 # Get by string id
 
-Gets an entry by its id identifier.
+Gets a user by its id identifier.
 
 ### Syntax
 
@@ -124,7 +124,7 @@ User user = client.Security.Users.Get("c5da1719-cb3f-4f2e-927b-f678293258f3");
 
 # Get by string id async
 
-Gets an entry by its id identifier.
+Gets a user by its id identifier asynchronously.
 
 ### Syntax
 
@@ -193,7 +193,7 @@ User user = client.Security.Users.Get("r.paulsen");
 
 # Get by username async
 
-Gets a user by their username identifier.
+Gets a user by their username identifier asynchronously.
 
 ### Syntax
 
@@ -261,7 +261,7 @@ User user = client.Security.Users.Get("robert.paulsen@fightclub.com")
 
 # Get by email address async
 
-Gets a user by their email address.
+Gets a user by their email address asynchronously.
 
 ### Syntax
 

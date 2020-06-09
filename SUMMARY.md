@@ -32,6 +32,12 @@
 
 ---
 
+* Groups
+* [Get a group](/security/groups/get-a-group.md)
+* [List groups](/security/groups/list-groups.md)
+
+---
+
 * Projects
 
 * [Create a project](/key-concepts/project-new.md)
