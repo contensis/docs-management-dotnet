@@ -25,11 +25,11 @@ public void UpdatePassword(string existingPassword, string newPassword)
 ### Parameters
 
 *existingPassword*
-> Type: string
+> Type: `string`  
 > The user's existing password.
 
 *newPassword*
-> Type: string
+> Type: `string`  
 > The user's new password.
 
 ### Examples
@@ -62,11 +62,11 @@ public async Task UpdatePasswordAsync(string existingPassword, string newPasswor
 ### Parameters
 
 *existingPassword*
-> Type: string
+> Type: `string`  
 > The user's existing password.
 
 *newPassword*
-> Type: string
+> Type: `string`  
 > The user's new password.
 
 ### Examples
@@ -99,7 +99,7 @@ public void UpdatePassword(string newPassword)
 ### Parameters
 
 *newPassword*
-> Type: string
+> Type: `string`  
 > The user's new password.
 
 ### Examples
@@ -132,7 +132,7 @@ public async Task UpdatePasswordAsync(string newPassword)
 ### Parameters
 
 *newPassword*
-> Type: string
+> Type: `string`  
 > The user's new password.
 
 ### Examples

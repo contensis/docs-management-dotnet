@@ -24,15 +24,15 @@ public User New(string username, string email, string password)
 ### Parameters
 
 *username*
-> Type: string
+> Type: `string`  
 > The user's username.
 
 *email*
-> Type: string
+> Type: `string`  
 > The user's email address.
 
 *password*
-> Type: string
+> Type: `string`  
 > The user's password for login.
 
 ### Examples
@@ -68,19 +68,19 @@ public User New(Guid id, string username, string email, string password)
 ### Parameters
 
 *id*
-> Type: guid
+> Type: `guid`  
 > A unique identifier for the user.
 
 *username*
-> Type: string
+> Type: `string`  
 > The user's username.
 
 *email*
-> Type: string
+> Type: `string`  
 > The user's email address.
 
 *password*
-> Type: string
+> Type: `string`  
 > The user's password for login.
 
 ### Examples

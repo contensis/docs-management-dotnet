@@ -23,11 +23,11 @@ public PagedList<Group> Groups(SecurityListOptions listOptions = null, bool incl
 ### Parameters
 
 *listOptions*
-> Type: [SecurityListOptions](/model/securitylistoptions.md)
+> Type: [`SecurityListOptions`](/model/securitylistoptions.md)  
 > The list options, page size, page index, etc.
 
 *includeInherited*
-> Type: bool
+> Type: `bool`  
 > Whether or not to include all inherited parent groups.
 
 ### Examples
@@ -69,11 +69,11 @@ public async Task<PagedList<Group>> GroupsAsync(SecurityListOptions listOptions 
 ### Parameters
 
 *listOptions*
-> Type: [SecurityListOptions](/model/securitylistoptions.md)
+> Type: [`SecurityListOptions`](/model/securitylistoptions.md)  
 > The list options, page size, page index, etc.
 
 *includeInherited*
-> Type: bool
+> Type: `bool`  
 > Whether or not to include all inherited parent groups.
 
 ### Examples

@@ -34,7 +34,7 @@ public bool IsMemberOf(string groupName)
 ### Parameters
 
 *groupName*
-> Type: string
+> Type: `string`  
 > The group name to check membership for.
 
 ### Examples
@@ -67,7 +67,7 @@ public bool IsMemberOf(params string[] groupNames)
 ### Parameters
 
 *groupNames*
-> Type: string[]
+> Type: `string[]`  
 > The group names to check membership for.
 
 ### Examples
@@ -100,7 +100,7 @@ public async Task<bool> IsMemberOfAsync(string groupName)
 ### Parameters
 
 *groupName*
-> Type: string
+> Type: `string`  
 > The group name to check membership for.
 
 ### Examples
@@ -134,7 +134,7 @@ public async Task<bool> IsMemberOfAsync(params string[] groupNames)
 ### Parameters
 
 *groupNames*
-> Type: string[]
+> Type: `string[]`  
 > The group namea to check membership for.
 
 ### Examples
@@ -167,7 +167,7 @@ public bool IsMemberOf(Guid groupId)
 ### Parameters
 
 *groupId*
-> Type: guid
+> Type: `guid`  
 > The group identifier to check membership for.
 
 ### Examples
@@ -203,7 +203,7 @@ public bool IsMemberOf(params Guid[] groupIds)
 ### Parameters
 
 *groupIds*
-> Type: guid[]
+> Type: `guid[]`  
 > The group identifiers to check membership for.
 
 ### Examples
@@ -242,7 +242,7 @@ public async Task<bool> IsMemberOfAsync(Guid groupId)
 ### Parameters
 
 *groupId*
-> Type: guid
+> Type: `guid`  
 > The group identifier to check membership for.
 
 ### Examples
@@ -278,7 +278,7 @@ public async Task<bool> IsMemberOf(params Guid[] groupIds)
 ### Parameters
 
 *groupIds*
-> Type: guid[]
+> Type: `guid[]`  
 > The group identifiers to check membership for.
 
 ### Examples
@@ -317,7 +317,7 @@ public bool IsMemberOf(string groupId)
 ### Parameters
 
 *groupId*
-> Type: string
+> Type: `string`  
 > The group identifier to check membership for.
 
 ### Examples
@@ -349,7 +349,7 @@ public bool IsMemberOf(params string[] groupIds)
 ### Parameters
 
 *groupIds*
-> Type: string[]
+> Type: `string[]`  
 > The group identifiers to check membership for.
 
 ### Examples
@@ -382,7 +382,7 @@ public async Task<bool> IsMemberOfAsync(string groupId)
 ### Parameters
 
 *groupId*
-> Type: string
+> Type: `string`  
 > The group identifier to check membership for.
 
 ### Examples
@@ -415,7 +415,7 @@ public async Task<bool> IsMemberOfAsync(params string[] groupIds)
 ### Parameters
 
 *groupIds*
-> Type: string[]
+> Type: `string[]`  
 > The group identifiers to check membership for.
 
 ### Examples

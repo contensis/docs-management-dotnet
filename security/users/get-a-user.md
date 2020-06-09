@@ -29,7 +29,7 @@ public User Get(Guid id)
 ### Parameters
 
 *id*
-> Type: `Guid`
+> Type: `Guid`  
 > The id of the user.
 
 ## Remarks
@@ -66,7 +66,7 @@ public async Task<User> GetAsync(Guid id)
 ### Parameters
 
 *id*
-> Type: `Guid`
+> Type: `Guid`  
 > The id of the user.
 
 ## Remarks
@@ -103,7 +103,7 @@ public User Get(string id)
 ### Parameters
 
 *id*
-> Type: `string`
+> Type: `string`  
 > The users identifier, either username, email address, or id.
 
 ## Remarks
@@ -137,7 +137,7 @@ public async Task<User> GetAsync(string id)
 ### Parameters
 
 *id*
-> Type: `string`
+> Type: `string`  
 > The users identifier, either username, email address, or id.
 
 ## Remarks
@@ -172,7 +172,7 @@ public User Get(string id)
 ### Parameters
 
 *id*
-> Type: `String`
+> Type: `string`  
 > The users identifier, either username, email address, or id.
 
 ## Remarks
@@ -206,7 +206,7 @@ public async Task<User> GetAsync(string id)
 ### Parameters
 
 *id*
-> Type: `String`
+> Type: `string`  
 > The users identifier, either username, email address, or id.
 
 ## Remarks
@@ -240,7 +240,7 @@ public User Get(string id)
 ### Parameters
 
 *username*
-> Type: `String`
+> Type: `string`  
 > The users identifier, either username, email address, or id.
 
 ## Remarks
@@ -274,7 +274,7 @@ public async Task<User> GetAsync(string id)
 ### Parameters
 
 *username*
-> Type: `String`
+> Type: `string`  
 > The users identifier, either username, email address, or id.
 
 ## Remarks
