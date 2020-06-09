@@ -103,6 +103,7 @@
   * [Role methods](/model/role-methods.md)
 * [SecurityListOptions](/model/securitylistoptions.md)
 * [User](/model/user.md)
+* [UserStatus](/model/userstatus.md)
 * [VersionInfo](/model/versioninfo.md)
 * [WorkflowExtensions](/model/workflowExtensions.md)
 * [WorkflowTransition](/model/workflowTransition.md)
