@@ -22,6 +22,7 @@
 ---
 
 * Users
+
 * [Check group memberships](/security/users/check-group-memberships.md)
 * [Create and update users](/security/users/create-and-update-users.md)
 * [Delete a user](/security/users/delete-a-user.md)
@@ -33,6 +34,9 @@
 ---
 
 * Groups
+
+* [Create and update groups](/security/groups/create-and-update-groups.md)
+* [Delete a group](/security/groups/delete-a-group.md)
 * [Get a group](/security/groups/get-a-group.md)
 * [List groups](/security/groups/list-groups.md)
 
@@ -93,6 +97,7 @@
 * [Entry](/model/entry.md)
   * [Entry methods](/model/entry-methods.md)
 * [Group](/model/group.md)
+* [GroupType](/model/grouptype.md)
 * [ImageTransformations](/model/image-transformations.md)
 * [Image](/model/image.md)
 * [Link](/model/link.md)

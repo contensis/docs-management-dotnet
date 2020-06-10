@@ -163,7 +163,7 @@ var client = ManagementClient.Create();
 
 SecurityListOptions listOptions = new SecurityListOptions 
 {
-    PageOptions = new PageOptions(0,10)
+    PageOptions = new PageOptions(0, 10)
 };
 
 // List the groups with a query value of "fight club"

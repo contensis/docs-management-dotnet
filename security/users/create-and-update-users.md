@@ -1,9 +1,9 @@
 ---
-description: Creating and updating users can be achieved by using one of the New method overloads in combination with calling Save on the User object.
+description: Creating and updating users can be achieved by using one of the New method overloads in combination with calling Save on the User class.
 ---
 # Create and update users
 
-Creating and updating [users](/model/user.md) can be achieved by using one of the `New` method overloads in combination with calling `Save` on the User object.
+Creating and updating [users](/model/user.md) can be achieved by using one of the `New` method overloads in combination with calling `Save` on the User class.
 
 * [New(string username, string email, string password)](#create-new-user)
 * [New(Guid id, string username, string email, string password)](#create-new-user-with-an-id)
