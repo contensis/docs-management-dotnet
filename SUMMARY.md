@@ -35,10 +35,13 @@
 
 * Groups
 
+* [Add child groups to a group](/security/groups/add-child-group-to-a-group.md)
+* [Add users to a group](/security/groups/add-users-to-a-group.md)
 * [Create and update groups](/security/groups/create-and-update-groups.md)
 * [Delete a group](/security/groups/delete-a-group.md)
 * [Get a group](/security/groups/get-a-group.md)
 * [List groups](/security/groups/list-groups.md)
+* [Remove child groups from a group](/security/groups/remove-child-group-from-group.md)
 
 ---
 
