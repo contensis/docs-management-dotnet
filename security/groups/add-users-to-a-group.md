@@ -29,9 +29,13 @@ public void AddUser(Guid groupId, Guid userId)
 
 ### Parameters
 
-*user*
-> Type: [`user`](/model/user.md)  
-> The user to add to the group.
+*groupId*
+> Type: `guid`  
+> The group identifier to add the user to.
+
+*userId*
+> Type: `guid`  
+> The user identifier to add to the group.
 
 
 ### Examples
@@ -66,9 +70,13 @@ public void AddUser(Guid groupId, Guid userId)
 
 ### Parameters
 
-*user*
-> Type: [`user`](/model/user.md)  
-> The user to add to the group.
+*groupId*
+> Type: `guid`  
+> The group identifier to add the user to.
+
+*userId*
+> Type: `guid`  
+> The user identifier to add to the group.
 
 
 ### Examples
@@ -103,9 +111,13 @@ public void AddUsers(Guid groupId, params Guid[] userIds)
 
 ### Parameters
 
-*user*
-> Type: [`user[]`](/model/user.md)  
-> The users to add to the group.
+*groupId*
+> Type: `guid`  
+> The group identifier to add the users to.
+
+*userIds*
+> Type: `guid[]`  
+> The user identifiers to add to the group.
 
 
 ### Examples
@@ -141,9 +153,13 @@ public async Task AddUsersAsync(Guid groupId, params Guid[] userIds)
 
 ### Parameters
 
-*user*
-> Type: [`user[]`](/model/user.md)  
-> The users to add to the group.
+*groupId*
+> Type: `guid`  
+> The group identifier to add the users to.
+
+*userIds*
+> Type: `guid[]`  
+> The user identifiers to add to the group.
 
 
 ### Examples
