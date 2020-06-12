@@ -11,7 +11,9 @@
       "-highlight",
       "prism",
       "ga",
-      "scripts"
+      "scripts",
+      "heading-anchors",
+      "copy-code-button"
     ],
     "pluginsConfig": {
       "fontsettings": {
@@ -36,6 +38,11 @@
           "./scripts/fetch.min.js",
           "./scripts/api-docs.js"
         ]
+      },
+      "heading-anchors":{
+        "icon": "#",
+        "placement": "right",
+        "visible": "always"
       }
     }
 }

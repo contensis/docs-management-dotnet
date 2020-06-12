@@ -42,6 +42,7 @@
 * [Get a group](/security/groups/get-a-group.md)
 * [List groups](/security/groups/list-groups.md)
 * [Remove child groups from a group](/security/groups/remove-child-group-from-group.md)
+* [Remove users from a group](/security/groups/remove-user-from-group.md)
 
 ---
 

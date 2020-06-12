@@ -14,6 +14,12 @@ Adding [users](/model/user.md) to [groups](/model/group.md) can be achieved usin
 * [AddUserAsync(User user)](#add-user-from-group-async)
 * [AddUsers(params User[] users)](#add-users-from-group)
 * [AddUsersAsync(params User[] users)](#add-users-from-group-async)
+* [AddUser(Guid userId)](#add-user-from-group-with-user-id)
+* [AddUserAsync(Guid userId)](#add-user-from-group-with-user-id-async)
+* [AddUsers(params Guid[] userIds)](#add-users-from-group-with-user-ids)
+* [AddUsersAsync(params Guid[] userIds)](#add-users-from-group-with-user-ids-async)
+* [AddUsers(params string[] userIds)](#add-users-from-group-with-user-string-ids)
+* [AddUsersAsync(params string[] userIds)](#add-users-from-group-with-user-string-ids-async)
 
 ## Add user to group
 
@@ -26,7 +32,6 @@ public void AddUser(Guid groupId, Guid userId)
 {    
 }
 ```
-
 ### Parameters
 
 *groupId*
@@ -329,4 +334,235 @@ User robert = await client.Security.Users.GetAsync("robert.paulsen");
 
 // Add the users to the group
 await group.AddUsersAsync(tyler, robert);
+```
+
+## Add user from group with user id
+
+Add a user to a group using a group instance and a user identifier.
+
+### Syntax
+
+```cs
+public void AddUser(Guid userId)
+{    
+}
+```
+
+### Parameters
+
+*userId*
+> Type: `guid`  
+> The user identifier to add.
+
+
+### Examples
+
+```cs
+using Zengenti.Contensis.Management;
+
+// Create a client
+var client = ManagementClient.Create();
+
+// Get the group
+Group group = client.Security.Groups.Get("Fight Club Members");
+
+// Mimic a user id
+Guid userId = Guid.Parse("8243d100-22e8-4f95-bee1-e03ca94c7245");
+
+// Add the user to the group
+group.AddUser(userId);
+```
+
+## Add user from group with user id async
+
+Add a to a group using a group instance and a user identifier asynchronously.
+
+### Syntax
+
+```cs
+public async Task AddUserAsync(Guid userId)
+{    
+}
+```
+
+### Parameters
+
+*userId*
+> Type: `guid`  
+> The user identifier to add.
+
+
+### Examples
+
+```cs
+using Zengenti.Contensis.Management;
+
+// Create a client
+var client = ManagementClient.Create();
+
+// Get the group
+Group group = await client.Security.Groups.GetAsync("Fight Club Members");
+
+// Mimic a user id
+Guid userId = Guid.Parse("8243d100-22e8-4f95-bee1-e03ca94c7245");
+
+// Add the user to the group
+await group.AddUserAsync(userId);
+```
+
+## Add users from group with user ids
+
+Add many users to a group using a group instance and a user identifier.
+
+### Syntax
+
+```cs
+public void AddUsers(parmas Guid[] userIds)
+{    
+}
+```
+
+### Parameters
+
+*userIds*
+> Type: `guid[]`  
+> The user identifiers to add.
+
+
+### Examples
+
+```cs
+using Zengenti.Contensis.Management;
+
+// Create a client
+var client = ManagementClient.Create();
+
+// Get the group
+Group group = client.Security.Groups.Get("Fight Club Members");
+
+// Mimic user ids
+Guid userId1 = Guid.Parse("8243d100-22e8-4f95-bee1-e03ca94c7245");
+Guid userId2 = Guid.Parse("9636f573-ea39-48e4-9d2f-6e985f7298bd");
+
+// Add the users to the group
+group.AddUsers(userId1. userId2);
+```
+
+## Add users from group with user ids async
+
+Add many users to a group using a group instance and a user identifier asynchronously.
+
+### Syntax
+
+```cs
+public async Task AddUsersAsync(params Guid[] userIds)
+{    
+}
+```
+
+### Parameters
+
+*userIds*
+> Type: `guid[]`  
+> The user identifiers to add.
+
+### Examples
+
+```cs
+using Zengenti.Contensis.Management;
+
+// Create a client
+var client = ManagementClient.Create();
+
+// Get the group
+Group group = await client.Security.Groups.GetAsync("Fight Club Members");
+
+// Mimic user ids
+Guid userId1 = Guid.Parse("8243d100-22e8-4f95-bee1-e03ca94c7245");
+Guid userId2 = Guid.Parse("9636f573-ea39-48e4-9d2f-6e985f7298bd");
+
+// Add the users to the group
+await group.AddUsersAsync(userId1, userId2);
+```
+
+
+
+
+
+
+
+
+## Add users from group with user string ids
+
+Add many users to a group using a group instance and a user identifier.
+
+### Syntax
+
+```cs
+public void AddUsers(parmas string userIds)
+{    
+}
+```
+
+### Parameters
+
+*userIds*
+> Type: `string[]`  
+> The user identifiers to add.
+
+
+### Examples
+
+```cs
+using Zengenti.Contensis.Management;
+
+// Create a client
+var client = ManagementClient.Create();
+
+// Get the group
+Group group = client.Security.Groups.Get("Fight Club Members");
+
+// Mimic user ids
+string userId1 = "8243d100-22e8-4f95-bee1-e03ca94c7245";
+string userId2 = "9636f573-ea39-48e4-9d2f-6e985f7298bd";
+
+// Add the users to the group
+group.AddUsers(userId1. userId2);
+```
+
+## Add users from group with user string ids async
+
+Add many users to a group using a group instance and a user identifier asynchronously.
+
+### Syntax
+
+```cs
+public async Task AddUsersAsync(params string[] userIds)
+{    
+}
+```
+
+### Parameters
+
+*userIds*
+> Type: `string[]`  
+> The user identifiers to add.
+
+### Examples
+
+```cs
+using Zengenti.Contensis.Management;
+
+// Create a client
+var client = ManagementClient.Create();
+
+// Get the group
+Group group = await client.Security.Groups.GetAsync("Fight Club Members");
+
+// Mimic user ids
+string userId1 = "8243d100-22e8-4f95-bee1-e03ca94c7245";
+string userId2 = "1dfa6915-51d8-4070-9ec1-6bcb7396032b";
+
+// Add the users to the group
+await group.AddUsersAsync(userId1, userId2);
 ```
