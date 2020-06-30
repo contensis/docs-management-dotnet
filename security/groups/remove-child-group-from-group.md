@@ -4,7 +4,7 @@ description: Removing child groups from groups can be achieved using one of the 
 ---
 # Remove child groups from a group
 
-Removing child [groups](/model/group.md) from groups can be achieved using one of the RemoveChildGroup overloads on either the group class, or directly from the management client without the need for a group instance.
+Removing child [groups](/model/group.md) from groups can be achieved using one of the `RemoveChildGroup` overloads on either the group class, or directly from the management client without the need for a group instance.
 
 * [RemoveChildGroup(Guid parentGroupId, Group childGroupId)](#remove-child-group)
 * [RemoveChildGroupAsync(Guid parentGroupId, Group childGroupId)](#remove-child-group-async)

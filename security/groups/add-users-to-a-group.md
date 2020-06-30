@@ -4,7 +4,7 @@ description: Adding users to groups can be achieved using one of the AddUser ove
 ---
 # Add users to groups
 
-Adding [users](/model/user.md) to [groups](/model/group.md) can be achieved using one of the AddUser overloads on either the group class, or directly from the management client without the need for a group instance.
+Adding [users](/model/user.md) to [groups](/model/group.md) can be achieved using one of the `AddUser` overloads on either the group class, or directly from the management client without the need for a group instance.
 
 * [AddUser(Guid groupId, Guid userId)](#add-user-to-group)
 * [AddUserAsync(Guid groupId, Guid userId)](#add-user-to-group-async)
@@ -41,7 +41,6 @@ public void AddUser(Guid groupId, Guid userId)
 *userId*
 > Type: `guid`  
 > The user identifier to add to the group.
-
 
 ### Examples
 
@@ -188,7 +187,7 @@ await client.Security.Groups.AddUsersAsync(groupId, userId1, userId2);
 
 ## Add user from group
 
-Adds a user to a group using a group instance.
+Adds a user to a group using a group and user instance.
 
 ### Syntax
 
@@ -225,7 +224,7 @@ group.AddUser(user);
 
 ## Add user from group async
 
-Adds a user to a group using a group instance asynchronously.
+Adds a user to a group using a group and user instance asynchronously.
 
 ### Syntax
 

@@ -4,7 +4,7 @@ description: Adding child groups to groups can be achieved using one of the AddG
 ---
 # Add child groups to a group
 
-Adding child groups to [groups](/model/group.md) can be achieved using one of the AddUGroup overloads on either the group class, or directly from the management client without the need for a group instance.
+Adding child groups to [groups](/model/group.md) can be achieved using one of the `AddGroup` overloads on either the group class, or directly from the management client without the need for a group instance.
 
 * [AddChildGroup(Guid parentGroupId, Guid childGroupId)](#add-child-group)
 * [AddChildGroupAsync(Group childGroup)](#add-child-group-async)
