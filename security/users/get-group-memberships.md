@@ -1,6 +1,7 @@
 ---
-description: Getting the group memberships for a user can be achived by using one of the `Groups` method overloads.loads.
+description: Getting the group memberships for a user can be achived by using one of the `Groups` method overloads.
 ---
+
 # Get group memberships
 
 Getting the [group](/model/group.md) memberships for a [user](/model/user.md) can be achived by using one of the `Groups` method overloads.
