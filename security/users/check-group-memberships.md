@@ -21,7 +21,7 @@ Checking a [users](/model/user.md) group memberships can be achieved by using on
 
 ## By group name
 
-Checks the user's group membership by the group name.
+Checks the user is a member of the specified group.
 
 ### Syntax
 
@@ -54,7 +54,7 @@ bool isSystemAdmin = user.IsMemberOf("System Administrators");
 
 ## By group names
 
-Checks the user's group membership by a list of group names.
+Checks the user is a member of a least one of the specified groups.
 
 ### Syntax
 
@@ -87,7 +87,7 @@ bool isSystemAdmin = user.IsMemberOf("System Administrators", "Developers");
 
 ## By group name async
 
-Checks the user's group membership by the group name asynchronously.
+Checks the user is a member of the specified group asynchronously.
 
 ### Syntax
 
@@ -121,7 +121,7 @@ bool isSystemAdmin = await user.IsMemberOfAsync("System Administrators");
 
 ## By group names async
 
-Checks the user's group membership by a list of group names asynchronously.
+Checks the user is a member of a least one of the specified groups asynchronously.
 
 ### Syntax
 
@@ -135,7 +135,7 @@ public async Task<bool> IsMemberOfAsync(params string[] groupNames)
 
 *groupNames*
 > Type: `string[]`  
-> The group namea to check membership for.
+> The group name to check membership for.
 
 ### Examples
 
